@@ -37,7 +37,7 @@ class User < ApplicationRecord
         self.save!
         self.session_token
     end
-    
+
     private
 
     def ensure_session_token
