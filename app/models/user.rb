@@ -10,4 +10,43 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
+
+    ### TODO: associations ###
+
+    validates :email, :session_token, presence: true, uniqueness: true
+    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Invalid email' },
+        length: { in: 3..255, message: 'Email addresses must be between 3 and 255 characters' }
+    validates :password_digest, presence: true
+    validates :password, length: { minimum: 8, message: 'Passwords must be longer than 8 characters'},
+        allow_nil: true
+
+    has_secure_password # handles password getter, setter, and is_password?
+    before_validation :ensure_session_token
+
+    def self.find_by_credentials(email, password)
+        user = User.find_by(email: email)
+        if user && user.authenticate(password)
+            return user
+        else
+            nil
+        end
+    end
+
+    def ensure_session_token
+        self.session_token ||= generate_session_token
+    end
+
+    def reset_session_token!
+        self.session_token = generate_session_token
+        self.save!
+        self.session_token
+    end
+
+    def generate_session_token
+        while true
+            token = SecureRandom.urlsafe_base64
+            return token unless User.exists?(session_token: token)
+        end
+    end
+
 end
