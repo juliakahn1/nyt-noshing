@@ -3,7 +3,6 @@ class Api::SessionsController < ApplicationController
   before_action :require_logged_in, only: [:destroy]
 
   def show
-    # hi
     @user = current_user
     if @user
       render 'api/users/show' # may change depending on where you want to route users
