@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_04_204624) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_05_190904) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,7 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_04_204624) do
     t.text "ingredients", default: [], null: false, array: true
     t.string "cook_time", null: false
     t.text "preparation", default: [], null: false, array: true
-    t.string "image_url", null: false
     t.string "tags", default: [], null: false, array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
