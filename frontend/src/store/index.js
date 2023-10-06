@@ -1,8 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
+import sessionReducer from './session';
 
 const rootReducer = combineReducers({
-
+    session: sessionReducer
 })
 
 // set to difference store enhancers depending on if in prod

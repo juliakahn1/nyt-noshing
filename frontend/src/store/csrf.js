@@ -11,10 +11,9 @@ const csrfFetch = async (url, options = {}) => {
         options.headers['X-CSRF-Token'] = sessionStorage.getItem('X-CSRF-Token'); // assumes token has been set
 
     }
-
     // fetch with URL and updated options hash
     const response = await fetch(url, options)
-
+    // console.log(response)
     // throw error
     if (response.status >= 400) throw response
 
