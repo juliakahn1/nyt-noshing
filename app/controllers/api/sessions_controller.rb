@@ -5,9 +5,9 @@ class Api::SessionsController < ApplicationController
   def show
     @user = current_user
     if @user
-      render 'api/users/show' # may change depending on where you want to route users
+      render 'api/users/show' # renders user info
     else
-      render json: nil
+      render json: { user: nil } # change in future to index
     end
   end
 
@@ -15,7 +15,7 @@ class Api::SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:email], params[:password])
     if @user
       login!(@user)
-      render 'api/users/show' # render to index page after login?
+      render 'api/users/show' # renders user info
     else
       render json: { errors: ['Invalid email or password combination'] }, status: 422
     end

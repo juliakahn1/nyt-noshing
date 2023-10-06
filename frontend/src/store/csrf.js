@@ -13,7 +13,6 @@ const csrfFetch = async (url, options = {}) => {
     }
     // fetch with URL and updated options hash
     const response = await fetch(url, options)
-    // console.log(response)
     // throw error
     if (response.status >= 400) throw response
 
@@ -27,11 +26,11 @@ export function storeCSRFToken(response) {
     if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
 }
 
-export async function restoreCSRF() {
-    const response = await csrfFetch("/api/session");
-    // debugger
-    storeCSRFToken(response);
-    return response;
-}
+// export async function restoreCSRF() {
+//     const response = await csrfFetch("/api/session");
+//     // debugger
+//     storeCSRFToken(response);
+//     return response;
+// }
 
 export default csrfFetch

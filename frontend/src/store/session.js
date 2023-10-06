@@ -27,9 +27,12 @@ const storeCSRFToken = response => {
     if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
 }
 
-const storeCurrentUser = user => {
-    if (user) sessionStorage.setItem("currentUser", JSON.stringify(user));
-    else sessionStorage.removeItem("currentUser");
+const storeCurrentUser = (user) => {
+    if (user) {
+        sessionStorage.setItem("currentUser", JSON.stringify(user));
+    } else {
+        sessionStorage.removeItem("currentUser");
+    }
 }
 
 // grabs user data from backend and adds to session slice of state
@@ -42,18 +45,28 @@ export const login = ({ email, password }) => async dispatch => {
     storeCurrentUser(data.user);
     dispatch(setCurrentUser(data.user));
     return response;
-  };
+};
+
+export const signup = ({ email, password }) => async (dispatch) => {
+    const response = await csrfFetch("/api/users", {
+        method: "POST",
+        body: JSON.stringify({ email, password })
+      });
+    const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+}
 
 export const restoreSession = () => async dispatch => {
     const response = await csrfFetch("/api/session");
     storeCSRFToken(response);
     const data = await response.json();
     storeCurrentUser(data.user);
-    dispatch(setCurrentUser(data.user));
+    dispatch(setCurrentUser(data.user)); // setting current user
     return response;
 };
 
-const initialState = {
+const initialState = { // default value for user
     user: JSON.parse(sessionStorage.getItem("currentUser"))
 };
 
