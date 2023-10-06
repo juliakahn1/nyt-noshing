@@ -7,14 +7,14 @@ import csrfFetch from "./csrf";
 const SET_CURRENT_USER = 'session/setCurrentUser';
 const REMOVE_CURRENT_USER = 'session/removeCurrentUser';
 
-const setCurrentUser = (user) => {
+export const setCurrentUser = (user) => {
     return {
         type: SET_CURRENT_USER,
         payload: user
     };
 };
 
-const removeCurrentUser = () => {
+export const removeCurrentUser = () => {
     return {
         type: REMOVE_CURRENT_USER
     };
@@ -22,23 +22,40 @@ const removeCurrentUser = () => {
 
 // -- THUNK ACTION -- //
 
+const storeCSRFToken = response => {
+    const csrfToken = response.headers.get("X-CSRF-Token");
+    if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
+}
+
+const storeCurrentUser = user => {
+    if (user) sessionStorage.setItem("currentUser", JSON.stringify(user));
+    else sessionStorage.removeItem("currentUser");
+}
+
 // grabs user data from backend and adds to session slice of state
-export const login = (user) => async (dispatch) => {
-    const { email, password } = user;
-    const response = await csrfFetch('/api/session', {
-        method: 'POST',
-        body: JSON.stringify({
-            email,
-            password
-        })
+export const login = ({ email, password }) => async dispatch => {
+    const response = await csrfFetch("/api/session", {
+      method: "POST",
+      body: JSON.stringify({ email, password })
     });
-    console.log(response)
     const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return response;
+  };
+
+export const restoreSession = () => async dispatch => {
+    const response = await csrfFetch("/api/session");
+    storeCSRFToken(response);
+    const data = await response.json();
+    storeCurrentUser(data.user);
     dispatch(setCurrentUser(data.user));
     return response;
 };
 
-const initialState = { user: null };
+const initialState = {
+    user: JSON.parse(sessionStorage.getItem("currentUser"))
+};
 
 const sessionReducer = (state = initialState, action) => {
     switch (action.type) {
