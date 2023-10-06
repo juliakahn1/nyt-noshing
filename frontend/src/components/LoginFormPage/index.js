@@ -33,28 +33,39 @@ const LoginFormPage = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+    <h2 className='session-form-header'>Enter your email address to log in or create an account.</h2>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+      <label className='session-form-field-label'>Email Address
+        <div className='session-form-field-label-outer-container'>
+          <div className='session-form-field-label-inner-container'>
+            <input
+              type="text"
+              value={email}
+              className='session-form-input-box'
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+        </div>
       </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+      <label className='session-form-field-label'>Password
+        <div className='session-form-field-label-outer-container'>
+          <div className='session-form-field-label-inner-container'>
+            <input
+              type="password"
+              value={password}
+              className='session-form-input-box'
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+        </div>
       </label>
-      <button type="submit">Log In</button>
+      <div className='session-form-button-container'>
+        <button className="session-form-button" type="submit">Log In</button>
+      </div>
     </form>
   );
 }

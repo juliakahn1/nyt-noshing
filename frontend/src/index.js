@@ -7,6 +7,7 @@ import App from './App';
 import configureStore from './store';
 import csrfFetch, { restoreCSRF } from './store/csrf';
 import * as sessionActions from './store/session';
+import './index.css'
 
 
 // var to access store
