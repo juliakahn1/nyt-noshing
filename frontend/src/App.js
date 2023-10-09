@@ -8,7 +8,7 @@ import RecipesHome from './components/RecipesHome';
 const App = () => {
   return (
     <>
-      {/* <Navigation /> */}
+      <Navigation />
       <Switch>
         <Route path="/login">
           <LoginFormPage />
