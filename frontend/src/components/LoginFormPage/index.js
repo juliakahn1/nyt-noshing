@@ -33,7 +33,7 @@ const LoginFormPage = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-    <h2 className='session-form-header'>Enter your email address to log in or create an account.</h2>
+      <h2 className='session-form-header'>Enter your email address to log in or create an account.</h2>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
