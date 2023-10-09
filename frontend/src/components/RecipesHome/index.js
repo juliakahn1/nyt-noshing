@@ -18,9 +18,12 @@ export const RecipesHome = () => {
     (
         <>
             <RecipesHero recipe={recipesArr[0]} />
-            { recipesArr.slice(1, recipesArr.length - 1).map( recipe => {
-                return <RecipeItem recipe={recipe} />
-            })}
+            <h2 className="recipes-index-pantry-header">Latest Recipes</h2>
+            <ul className="recipes-index-pantry-tiles">
+                { recipesArr.slice(1).map( recipe => {
+                    return <RecipeItem recipe={recipe} />
+                })}
+            </ul>
         </>
     ) :
     (<></>)

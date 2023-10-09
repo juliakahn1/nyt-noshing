@@ -1,0 +1,80 @@
+.recipe-index-card-wrapper {
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    /* border: 1px solid #e6e6e6; */
+    transition: box-shadow .2s ease-in-out;
+    width: 260px;
+}
+
+.recipe-index-card-wrapper:hover {
+    box-shadow: 1px 1px 4px 3px rgba(217, 214, 214, 0.8);
+}
+
+.recipe-index-card-image {
+    aspect-ratio: 3/2;
+}
+
+.recipe-index-card-metadata {
+    height: 132px;
+    padding: 10px;
+}
+
+h4.recipe-index-card-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: .02em;
+}
+
+p.recipe-index-card-author {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    letter-spacing: .02em;
+    line-height: 1.45;
+    font-size: 0.75rem;
+    padding-bottom: 15%;
+}
+
+.recipe-index-card-details {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+}
+
+.recipe-index-card-rating {
+    display: flex;
+}
+
+.recipe-index-card-review-count {
+    padding-left: 3%;
+    font-size: .7rem;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    letter-spacing: .02em;
+    line-height: 1.45;
+}
+
+.recipe-index-card-cooktime {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .7rem;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    letter-spacing: .02em;
+    line-height: 1.45;
+}
