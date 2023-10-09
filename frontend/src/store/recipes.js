@@ -17,14 +17,12 @@ export const receiveRecipe = (recipe) => {
     }
 }
 
-
 // --- THUNK ACTIONS --- //
 
 export const fetchRecipes = () => async (dispatch) => {
     const res = await fetch('/api/recipes')
     if (res.ok) {
         const recipes = await res.json()
-        console.log(recipes)
         dispatch(receiveRecipes(recipes))
     }
 }
@@ -40,14 +38,14 @@ export const fetchRecipe = (recipeId) => async (dispatch) => {
 // --- REDUCER --- //
 
 
-export const recipesReducer = (state = {}, action) => {
+export const recipesReducer = (store = {}, action) => {
     switch (action.type) {
         case RECEIVE_RECIPES:
-            return { ...state, ...action.recipes }
+            return { ...store, ...action.recipes }
         case RECEIVE_RECIPE:
-            return { ...state, [action.recipe.id]: action.recipe }
+            return { ...store, [action.recipe.id]: action.recipe }
         default:
-            return state
+            return store
     }
 }
 

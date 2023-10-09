@@ -1,4 +1,7 @@
+
+
 .navbar-elements-wrapper {
+    display: none;
     align-items: center;
     display: flex;
     flex-direction: row;
