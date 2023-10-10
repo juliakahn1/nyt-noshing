@@ -84,5 +84,101 @@ ApplicationRecord.transaction do
       tags: ['breakfast']
     )
 
+    Recipe.create!(
+      name: 'Cinnamon Babka',
+      author: 'Clair Saffitz',
+      blurb: 'This dairy-free babka, enriched with olive oil and flavored with a ribbon of almond flour, brown sugar and cinnamon,
+        starts with a classic challah bread dough. In the oven, the oil and sugar mingle to create a chewy,
+        caramelized coating. You can omit the almond flour to make this nut-free, but the cinnamon ribbon will not be as
+        pronounced. Be sure to let the babkas proof fully before baking, which will ensure a light, supple texture.',
+      ingredients: ['1 recipe Challah Bread dough, prepared as directed below',
+        '4 tablespoons olive oil, plus more for the pans',
+        '1 cup grams light brown sugar',
+        '1 cup almond flour',
+        "1 tablespoon ground cinnamon",
+        "½ teaspoon finely grated orange zest",
+        "½ teaspoon Diamond Crystal kosher salt or ¼ teaspoon Morton coarse kosher salt",
+        "All-purpose flour, for rolling",
+        '1 large egg'],
+      cook_time: '1 hour 30 minutes, plus proofing and cooling',
+      preparation: ['Prepare the dough: Prepare the Challah Bread through Step 5. Let it sit in a warm spot until it’s doubled in size, 1 to 2 hours.',
+        'Meanwhile, prepare the pans and make the cinnamon mixture: Brush the bottoms and sides of 2 loaf pans with a thin layer of olive oil, then line the bottom
+        and 2 longer sides with pieces of parchment paper, leaving an overhang on the sides. Brush the parchment with more oil, then set the pans aside. In a medium bowl,
+        toss together the brown sugar, almond flour, cinnamon, orange zest and a generous pinch of salt until evenly combined, breaking up any lumps of brown sugar
+        with your fingertips. Measure out ¼ cup of the mixture and set aside for sprinkling over the tops of the babkas, then set the remaining mixture aside.',
+        'Roll out and fill the dough: Scrape the dough out of the bowl and onto a lightly floured surface. Flatten it with the heel of your hand to expel the gas,
+        then cut the dough in half (each piece will weigh about 570 grams). Place one half on a small rimmed baking sheet, cover and refrigerate while you roll out
+        the other. Press and tug the piece of dough on the work surface into a flat, narrow rectangular shape. Then, roll the dough into a long, thin rectangle measuring
+        about 24 inches long and 8 inches wide, dusting the top and underneath with just a bit of flour as needed to keep the dough gliding across the surface (don’t use
+        too much flour, as you want some friction between the surface and the dough). Brush off any excess flour, then drizzle the dough with 2 tablespoons of olive oil
+        and brush the oil in an even layer all the way to the edges, leaving a clean ½-inch border on one of the longer sides. Sprinkle half of the cinnamon mixture,
+        about 1 cup, (not including the ¼ cup you set aside for the top) evenly across the surface and pat it gently into the dough.',
+        'Form and chill the babkas: Starting at the longer side opposite the clean border, roll the dough into a tight, spiraled log. Pinch the dough together at the
+        seam so it closes, then squeeze the log to lengthen and thin it out until it measures about 28 inches long. Use a knife to trim off just the
+        irregular ends, then cut the log in half crosswise. Place one half over the other, crossing them in the middle, then twist the halves together.
+        Transfer the twist to one of the prepared pans and flatten it gently so it fills out the bottom of the pan. Cover the pan with plastic wrap and
+        transfer it to the refrigerator, then remove the second piece of dough from the refrigerator and repeat the rolling and forming process, using the
+        remaining 2 tablespoons of olive oil and the remaining cinnamon mixture. Cover the second pan and refrigerate. Chill the babkas for at least 4 and up to 12 hours.',
+        'Proof the babkas: Remove the babkas from the refrigerator and let them sit at room temperature until they’re nearly triple their original size and they come up to
+        about ¾ of the pan, 3 to 4 hours.',
+        'Heat the oven: Arrange an oven rack in the center position and heat the oven to 350 degrees.',
+        'Brush with egg and bake: Beat the egg in a small bowl until it’s streak-free. Uncover the pans and brush the egg across the surfaces of the dough.
+        Sprinkle the babkas with the reserved ¼ cup of cinnamon mixture, dividing evenly. Bake the babkas side by side (but not touching) until they’re deep
+        golden brown, 40 to 45 minutes. Let them cool in the pans for 10 minutes, then run a paring knife down along the shorter sides of the pans to loosen them.
+        Use the parchment paper to lift the babkas out of the pans and place on a wire rack. Let them cool completely.'],
+      tags: ['dessert']
+    )
+
+    Recipe.create!(
+      name: 'Crispy Potato Kugel',
+      author: 'Melissa Clark',
+      blurb: 'At its core, kugel is a casserole. It comes in both savory and sweet varieties, often made with egg noodles and vaguely sweetened. This version, made with potatoes,
+        is decidedly salty and savory, with onions in the mixture and chives to finish. It can best be described as something between a Spanish tortilla and a giant latke; the potatoes
+        are shredded, not sliced, there are eggs but no flour, and it’s got crispy edges and a creamy interior. Sounds dreamy, doesn’t it? The most annoying parts of this kugel
+        are also the most important: grating the potatoes (I use a box grater, but you can use a food processor with the shredding blade) and wringing out their moisture. For that,
+        I use my hands and a colander or strainer to save a kitchen towel or a cheesecloth, but you can use those, if you like. Traditionally made in a casserole-style baking dish,
+        this kugel starts off in a cast-iron skillet, but a stainless-steel skillet would do the job, and honestly so would a baking dish, just know you may be sacrificing that crunchy underside.',
+      ingredients: ['4 pounds russet potatoes (about 5 to 7 potatoes), peeled',
+        '1 large yellow onion',
+        '6 large eggs',
+        '10 tablespoons chicken fat, melted or use vegetable oil',
+        'Kosher salt and freshly ground black pepper',
+        '⅓ cup finely chopped chives, for serving',
+        'Flaky sea salt, for serving'],
+      cook_time: '1 hour 20 minutes',
+      preparation: ['Heat oven to 425 degrees. Using a box grater or the shredding attachment on the food processor, grate the potatoes and onion into a colander fitted inside a large bowl
+        (or in the sink).',
+        'Using your hands and working with a bit at a time, squeeze as much water from the potatoes and onions as humanly possible and transfer the dry potatoes to a large bowl (you can use that same bowl,
+        just make sure it’s drained and dry). For added insurance, you can also do this with cheesecloth or a porous kitchen towel, if you like.',
+        'Add eggs and 6 tablespoons chicken fat to the potatoes, and season with salt and plenty of pepper, mixing well. Heat another 2 tablespoons fat in a 9- or 10-inch cast-iron skillet over medium-high.
+        (This recipe will work in a 9- or 10-inch skillet, but the kugel will be slightly taller in a 9-inch.) Delicately place the potato mixture into the skillet, taking care not to pack it in tightly.
+        (You want to keep the kugel light and airy.)',
+        'Cook the potatoes, rotating the skillet occasionally to promote even browning, until it’s golden brown on the edges and up the sides, 10 to 12 minutes.',
+        'Drizzle the top of the potatoes with the remaining 2 tablespoons fat and place in the oven. Bake until the top of the kugel is deeply golden brown, the edges are wispy and crispy, and the potatoes
+        are completely and totally tender and cooked through, 45 to 50 minutes.',
+        'Remove from oven and top with more pepper, chives and flaky sea salt. Slice and serve warm.'],
+      tags: ['sides']
+    )
+
+    Recipe.create!(
+      name: 'Classic Matzo Brei',
+      author: 'Melissa Clark',
+      blurb: 'In this matzo brei (rhymes with fry) recipe, the matzo sheets are browned in butter until crisp before being lightly scrambled with eggs. You make this either sweet or savory
+        as you prefer. Add black pepper, plenty of salt and chives for a savory version, or Demerara sugar and maple syrup or honey if you would like something sweeter. It’s a fine breakfast
+        or brunch any time of the year, and especially during Passover.',
+      ingredients: ['2 sheets matzo',
+        '2 to 3 tablespoons unsalted butter',
+        '4 large eggs, beaten with 1 tablespoon water',
+        'Large pinch fine sea salt, more to taste'],
+      cook_time: "15 minutes",
+      preparation: ['Under cool running water, rinse matzo sheets until they are quite wet. Set it aside and let sit to soften while you prepare the pan.',
+        'Place a large, preferably nonstick skillet over medium-high heat and add butter. Once it melts and the foam subsides, break matzo sheets into bite-size pieces and add to pan.
+        Sauté matzo in butter until it browns all over, about 2 minutes.',
+        'Add eggs, salt and pepper (if you’re making the dish savory) to pan and scramble the mixture until it is just set but still light and fluffy, about 1 minute. Sprinkle with sugar
+        (if you’re making it sweet) and toss well.',
+        'Serve matzo brei sprinkled with salt and topped with chives (savory).'],
+      tags: ['breakfast']
+    )
+
     puts "Done!"
   end
