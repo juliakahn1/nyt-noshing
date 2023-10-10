@@ -16,6 +16,7 @@ const LoginFormModal = ({loginModalMounted, setLoginModalMounted}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+    setLoginModalMounted(false)
     return dispatch(sessionActions.login({ email, password }))
       .catch(async (res) => {
         let data;
@@ -33,9 +34,12 @@ const LoginFormModal = ({loginModalMounted, setLoginModalMounted}) => {
 
   return (
     <>
-        <div className="modal-window-container" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>
+        <div className="modal-window-container">
             <div className="modal-content-box">
                 <div className="modal-photo-container">
+                    <span className="modal-photo-text">
+                        Unlock New York Times recipes and your personal recipe box with a free account.
+                    </span>
                     <img className="modal-photo" src="https://cooking.nytimes.com/assets/regiwall-souffle-tall.jpg"></img>
                 </div>
                 <div className="modal-form-container">
