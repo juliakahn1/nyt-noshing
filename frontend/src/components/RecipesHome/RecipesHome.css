@@ -13,6 +13,7 @@
 .recipes-index-pantry-tiles {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 30px;
     margin: 0% 100px 0% 100px;
 }
 
@@ -42,7 +43,7 @@ img.recipe-index-hero-image-photo {
     font-family: nyt-karnak,nyt-stymie,Georgia,Times New Roman,serif;
     font-weight: 700;
     font-size: 1.0rem;
-    letter-spacing: .08em;
+    letter-spacing: .05em;
     line-height: 1.45;
     text-transform: uppercase;
     padding: 16px 0 0;
