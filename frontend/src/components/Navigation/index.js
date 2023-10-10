@@ -31,7 +31,7 @@ export const Navigation = () => {
         )
     }
 
-    return( // add search bar above sessionLinks
+    return( 
         <>
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
