@@ -3,68 +3,36 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
-import { login } from "../../store/session"
+import "./LoginFormModal.css"
+import LoginFormModal from "./LoginFormModal"
 
 export const Navigation = () => {
     const sessionUser = useSelector(state => state.session.user)
     let sessionLinks;
+    let loginModal;
     const [loginModalMounted, setLoginModalMounted] = useState(false)
     const [signupModalMounted, setSignupModalMounted] = useState(false)
 
-    if (sessionUser) { // if someone is logged in
-        sessionLinks = (
-            <>
-                <li className='navbar-button-recipebox'>
-                    <NavLink to='/recipe-box'>Your Recipe Box</NavLink>
-                </li>
-                <li>
-                    <ProfileButton user={sessionUser} />
-                </li>
-            </>
-        )
-    } else { // if not logged in
-        sessionLinks = (
-            <>
-                <li>
-                    <button className="navbar-session-buttons login" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>Log In</button>
-                </li>
-                <li>
-                    <button className="navbar-session-buttons signup" onClick={() => setSignupModalMounted(true)}>Create Account</button>
-                </li>
-            </>
-        )
-    }
+    // --- SESSION HTML COMPONENTS --- //
 
-    let loginModal;
-    if (loginModalMounted) {
-        loginModal = (
-            <>
-                <div className="modal-window-container" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>
-                    <div className="modal-window-content">
-                        <div className="modal-content-container">
-                            <div className="modal-picture-container">
-                                <div className="modal-picture-container-body">
-                                    <button aria-label="close" className="modal-close-button" type="button">
-                                        <span className="button_buttonText__75JJj">
-                                            <svg width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg" data-icon-type="handle-close">
-                                                <path fillRule="evenodd" clipRule="evenodd" d="m21 21.707 5.646 5.647.708-.707L21.707 21l5.647-5.646-.708-.707L21 20.293l-5.646-5.646-.708.707L20.293 21l-5.647 5.646.708.708L21 21.707Z" fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </>
-        )
-    } else {
-        loginModal = (<></>)
-    }
+  sessionUser ? sessionLinks = (
+        <>
+            <li className='navbar-button-recipebox'><NavLink to='/recipe-box'>Your Recipe Box</NavLink></li>
+            <li><ProfileButton user={sessionUser} /></li>
+        </>)
+    : sessionLinks = (
+        <>
+            <li><button className="navbar-session-buttons login" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>Log In</button></li>
+            <li><button className="navbar-session-buttons signup" onClick={(e) => setSignupModalMounted(true)}>Create Account</button></li>
+        </>)
 
+    // --- LOGIN MODAL COMPONENTS --- //
 
+    // <LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />
 
-
+    loginModalMounted ?
+        loginModal = (<LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />)
+        : loginModal = (<></>)
 
     return(
         <>
