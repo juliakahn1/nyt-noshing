@@ -3,7 +3,7 @@ const RecipesHero = ({ recipe }) => {
         <>
             <div className="recipe-index-hero-wrapper">
                 <div className="recipe-index-hero-image">
-                    <p>image placeholder</p>
+                    <img className="recipe-index-hero-image-photo" src="https://static01.nyt.com/images/2019/09/25/dining/23eggrex2/23eggrex2-master768.jpg?w=1280&q=75"></img>
                 </div>
                 <div className="recipe-index-hero-content">
                     <p className="recipe-index-hero-byeline">recipe of the day</p>

@@ -7,26 +7,30 @@
     font-size: 1.6rem;
     letter-spacing: .01em;
     line-height: 1.3;
-    margin: 4% 12% 4% 12%;
+    margin: 4% 100px 4% 100px;
 }
 
 .recipes-index-pantry-tiles {
     display: flex;
-    margin: 0% 12% 0% 12%;
+    margin: 0% 100px 0% 100px;
 }
 
 .recipe-index-hero-wrapper {
     display: flex;
     align-items: center;
     margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 100px;
+    margin-right: 100px;
     z-index: 0;
     padding-top: 120px;
 }
 
 .recipe-index-hero-image {
     width: 60%;
+}
+
+img.recipe-index-hero-image-photo {
+    max-width: 85%;
 }
 
 .recipe-index-hero-content {
@@ -104,4 +108,20 @@
 
 .recipe-index-hero-button-icon {
     fill: none;
+}
+
+.recipe-index-card-save-ribbon {
+    height: 44px;
+    width: 44px;
+    text-indent: -99999px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(https://cooking.nytimes.com/assets/save-ribbon-gray-outline.svg);
+    background-color: unset;
+    border: 0;
+}
+
+.recipe-index-card-save-ribbon:hover{
+    background-image: url(https://cooking.nytimes.com/assets/save-ribbon-gray.svg)
 }

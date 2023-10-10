@@ -21,7 +21,7 @@ export const RecipesHome = () => {
             <h2 className="recipes-index-pantry-header">Latest Recipes</h2>
             <ul className="recipes-index-pantry-tiles">
                 { recipesArr.slice(1).map( recipe => {
-                    return <RecipeItem recipe={recipe} />
+                    return (<li key={recipe.id}><RecipeItem recipe={recipe} /></li>)
                 })}
             </ul>
         </>
