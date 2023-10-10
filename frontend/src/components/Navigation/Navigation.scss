@@ -102,3 +102,53 @@
     font-size: 30px;
     color: #df321b;
 }
+
+.navbar-site-title-link {
+    text-decoration: none;
+}
+
+.navbar-searchbar-wrapper {
+    flex: 1 1;
+    // position: relative;
+
+    .navbar-searchbar-input-wrapper {
+        height: 40px;
+        margin-right: 20px;
+        margin-left: 20px;
+        position: relative;
+        display: flex;
+    }
+
+    .navbar-searchbar-icon {
+        color: #9b9b9b;
+        height: 22px;
+        left: 10px;
+        top: 18.5px;
+        transform: translateY(-50%);
+        width: 21px;
+        position: absolute;
+    }
+
+    .navbar-searchbar-input-text {
+        border: 1px solid transparent;
+        font-size: 1.0rem;
+        line-height: 1;
+        padding: 4px 0 4px 41px;
+        height: calc(100% - 1px);
+        width: 100%;
+        border-radius: 4px;
+        font-weight: 500;
+        letter-spacing: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background-color: #f8f8f5;
+        color: #222;
+        font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+
+        &:focus {
+            outline-color: #222;
+            outline-width: thin;
+            outline-style: solid;
+        }
+    }
+}
