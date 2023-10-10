@@ -1,3 +1,5 @@
+import "./RecipesHero.css"
+
 const RecipesHero = ({ recipe }) => {
     return(
         <>

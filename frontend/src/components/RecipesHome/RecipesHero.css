@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+.recipe-index-hero-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 100px;
+    margin-right: 100px;
+    z-index: 0;
+    padding-top: 120px;
+}
+
+.recipe-index-hero-image {
+    width: 60%;
+}
+
+img.recipe-index-hero-image-photo {
+    max-width: 85%;
+}
+
+img.recipe-index-hero-image-photo:hover {
+    cursor: pointer;
+}
+
+.recipe-index-hero-content {
+    width: 40%;
+}
+
+.recipe-index-hero-byeline {
+    font-family: 'Bevan', serif;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: .05em;
+    line-height: 1.45;
+    text-transform: uppercase;
+    padding: 16px 0 0;
+    color: #df321b;
+}
+
+.recipe-index-hero-byeline:hover {
+    cursor: pointer;
+}
+
+.recipe-index-hero-name {
+    font-size: 2.9rem;
+    font-family: nyt-cheltenham,Georgia,Times New Roman,serif;
+    font-weight: 200;
+    letter-spacing: .01em;
+    line-height: 1.1;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    cursor: pointer;
+}
+
+.recipe-index-hero-name:hover {
+    color: #616161;
+}
+
+.recipe-index-hero-author {
+    line-height: 1.2;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: .02em;
+    margin-bottom: 4%;
+}
+
+.recipe-index-hero-blurb {
+    font-size: 1.1rem;
+    font-family: nyt-cheltenham,Georgia,Times New Roman,serif;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.45;
+    margin-bottom: 4%;
+}
+
+.recipe-index-hero-save-button {
+    background-color: #df321b;
+    border: 1px solid #df321b;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color .2s ease-out;
+    border-radius: 20px;
+    align-items: center;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    letter-spacing: .02em;
+    font-size: 0.9rem;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.recipe-index-hero-save-button:hover {
+    background-color: #D03A27;
+}
+
+.recipe-index-hero-button-icon {
+    fill: none;
+}

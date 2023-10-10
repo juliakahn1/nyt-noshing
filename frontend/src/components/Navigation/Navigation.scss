@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+.navbar-elements-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    height: 114px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    color: #222;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 1;
+}
+
+.navbar-list-items-wrapper {
+    display: flex;
+}
+
+.navbar-session-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.navbar-session-buttons {
+    font-size: 1.0rem;
+    line-height: 1.6rem;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color .2s ease-out;
+    padding: 11px 19px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    letter-spacing: .02em;
+    border-radius: 30px;
+
+
+    &.login {
+        margin-left: 0;
+        color: #222;
+        background-color: #fff;
+        border: 1px solid #ccc;
+
+        &:hover{
+            background-color: #bababa;
+        }
+    }
+
+    &.signup {
+        background-color: #df321b;
+        border: 1px solid #df321b;
+        color: #fff;
+        margin-left: 8px;
+        margin-right: 0;
+
+        &:hover{
+            background-color: #D03A27;
+        }
+    }
+}
+
+.navbar-button-recipebox {
+    font-weight: 600;
+    display: flex;
+    /* margin-right: 15px; */
+    letter-spacing: .02em;
+}
+
+.navbar-logo-wrapper {
+    width: 32px;
+    height: 31px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+.navbar-logo-home {
+    position: absolute;
+    color: #df321b;
+    transform: none;
+    box-sizing: border-box;
+    transform: translate(0, 1%);
+}
+
+.navbar-logo-title-wrapper {
+    display: flex;
+}
+
+.navbar-site-title {
+    font-family: 'Bevan';
+    font-size: 30px;
+    color: #df321b;
+}
