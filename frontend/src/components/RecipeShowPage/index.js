@@ -33,7 +33,32 @@ const RecipeShowPage = () => {
                         </div>
                     </div>
                     <div className="show-recipe-stats-wrapper">
-                        
+                        <dl className="show-recipe-stats-table">
+                            <dt className="show-recipe-stats-table-row-label">Time</dt>
+                            <dd className="show-recipe-stats-table-row-data-cook-time">{recipe.cookTime}</dd>
+                            <dt className="show-recipe-stats-table-row-label">Rating</dt>
+                            <dd className="show-recipe-stats-table-row-data-rating">
+                                <span className="show-recipe-stats-table-row-data-avg-rating">5</span>
+                                <span className="show-recipe-stats-table-row-data-avg-rating-stars">
+                                    <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-data-rating-star"><path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path></svg>
+                                    <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-data-rating-star"><path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path></svg>
+                                    <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-data-rating-star"><path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path></svg>
+                                    <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-data-rating-star"><path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path></svg>
+                                    <svg width="30" height="30" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-data-rating-star"><path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path></svg>
+                                </span>
+                                <span className="show-recipe-stats-table-row-data-num-ratings">(12)</span>
+                            </dd>
+                            <dt className="show-recipe-stats-table-row-label">Notes</dt>
+                            <dd className="show-recipe-stats-table-row-data-num-notes">
+                                <a className="show-recipe-stats-table-row-data-link-notes" href="#notes-section">
+                                    Read 3 community notes
+                                    <svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-jump-icon"><path d="M2.895 4.167h5v9" stroke="currentColor" strokeWidth="1.25"></path><path d="m3.652 8.924 4.243 4.242 4.242-4.242" stroke="currentColor" strokeWidth="1.25"></path></svg>
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div className="show-recipe-blurb-wrapper">
+
                     </div>
                 </div>
             </div>
