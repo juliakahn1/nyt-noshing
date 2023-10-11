@@ -1,0 +1,78 @@
+.show-grid-container {
+    display: grid;
+    padding-top: 120px;
+    grid-template-columns: [page-start] 100px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 100px [page-end];
+    grid-template-rows: auto auto 1fr;
+
+}
+
+.show-content {
+    display: grid;
+    grid-template-columns: [page-start] 100px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 100px [page-end];
+    grid-template-rows: auto auto 1fr;
+    grid-column: 1/-1;
+}
+
+.show-intro-header {
+    border-bottom: 1px solid #ccc;
+    grid-column-end: col-end 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 40px);
+    padding-top: 30px;
+    grid-column: col-start 1/col-end 8;
+}
+
+.show-recipe-name-author {
+    margin-top: 0;
+}
+
+.show-recipe-name {
+    font-family: nyt-cheltenham,Georgia,Times New Roman,serif;
+    font-weight: 200;
+    font-size: 2.6rem;
+    letter-spacing: .01em;
+    line-height: 1.1;
+}
+
+.show-recipe-author {
+    line-height: 1.2;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: .02em;
+    padding-top: 15px;
+}
+
+.show-intro-image-wrapper {
+    grid-column: col-start 4/col-end 8;
+}
+
+.show-intro-recipe-image {
+    margin: 30px 0 20px;
+}
+
+.show-intro-recipe-photo {
+    position: relative;
+    aspect-ratio: 3/2;
+}
+
+.show-intro-actual-photo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    color: transparent;
+}
+
+.show-recipe-stats-wrapper {
+    border-bottom: 0;
+    padding-bottom: 0;
+    grid-column: col-start 1/col-end 3;
+    padding-top: 5px;
+}
