@@ -1,7 +1,6 @@
 import React, { useEffect }  from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import RecipeShowHero from "./RecipeShowHero.js"
 import { fetchRecipe } from '../../store/recipes.js';
 import "./RecipeShowPage.scss"
 
@@ -9,6 +8,9 @@ const RecipeShowPage = () => {
     const { recipeId } = useParams()
     const dispatch = useDispatch()
     const recipe = useSelector(store => store.recipes[recipeId])
+    const recipeIngredients = recipe.ingredients
+    const recipePrepSteps = recipe.preparation
+
 
     useEffect(() => {
         dispatch(fetchRecipe(recipeId))
@@ -16,7 +18,6 @@ const RecipeShowPage = () => {
 
     return recipe ? (
         <>
-            {/* <RecipeShowHero recipe={recipe} /> */}
             <div className="show-grid-container">
                 <div className="show-content">
                     <div className="show-intro-header">
@@ -58,6 +59,37 @@ const RecipeShowPage = () => {
                         </dl>
                     </div>
                     <div className="show-recipe-blurb-wrapper">
+                        <div className="show-recipe-blurb-inner-wrapper">
+                            <div className="show-recipe-blurb-text-container">
+                                <p className="show-recipe-blurb-text">{recipe.blurb}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul className="show-recipe-tools-wrapper">
+                        <li>
+                            <div className="show-recipe-tools-button-wrapper">
+                                <button className="show-recipe-tools-save-button">
+                                    <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.706 4.294H6.294v10.587l4.206-2.669 4.206 2.67V4.293ZM5 3h11v14.235l-5.5-3.49-5.5 3.49V3Z" fill="#fff"></path></svg>
+                                <span className="show-recipe-tools-save-button-text">Save</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div className="show-recipe-ingredients-wrapper">
+                        <div className="show-recipe-ingredients-inner-wrapper">
+                            <h2 className="show-recipe-ingredients-header">ingredients</h2>
+                            <div className="show-recipe-ingredients-yield-wrapper">
+                                <span className="show-recipe-ingredients-yield">Yield:</span>
+                                <span className="show-recipe-ingredients-yield yield-data">Fill this in in db</span>
+                            </div>
+                            <ul>
+                                {recipeIngredients.map((ingredient) => {
+                                    return <li className="show-recipe-ingredients-item">{ingredient}</li>
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="show-recipe-prep-wrapper">
 
                     </div>
                 </div>
