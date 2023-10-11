@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Navigation />
       <Switch>
-        <Route path="/recipe/:recipeId" component={RecipeShowPage}/>
+        <Route path="/recipes/:recipeId" component={RecipeShowPage}/>
         <Route path="/" component={RecipesHome} />
       </Switch>
     </>
