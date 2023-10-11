@@ -1,38 +1,43 @@
-import React from "react"
+import React, { useState } from "react"
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
+import LoginFormModal from "./LoginFormModal"
+import SignUpFormModal from "./SignUpFormModal"
 
 export const Navigation = () => {
     const sessionUser = useSelector(state => state.session.user)
     let sessionLinks;
-    if (sessionUser) { // if someone is logged in
-        sessionLinks = (
-            <>
-                <li className='navbar-button-recipebox'>
-                    <NavLink to='/recipe-box'>Your Recipe Box</NavLink>
-                </li>
-                <li>
-                    <ProfileButton user={sessionUser} />
-                </li>
-            </>
-        )
-    } else {
-        sessionLinks = (
-            <>
-                <li>
-                    <NavLink className='navbar-session-buttons login' to='/login'>Log In</NavLink>
-                </li>
-                <li>
-                    <NavLink className='navbar-session-buttons signup' to='/signup/'>Create Account</NavLink>
-                </li>
-            </>
-        )
-    }
+    let loginModal;
+    let signupModal;
+    const [loginModalMounted, setLoginModalMounted] = useState(false)
+    const [signupModalMounted, setSignupModalMounted] = useState(false)
 
-    return( 
+  sessionUser ? sessionLinks = (
         <>
+            <li className='navbar-button-recipebox'><NavLink to='/recipe-box'>Your Recipe Box</NavLink></li>
+            <li><ProfileButton user={sessionUser} /></li>
+        </>)
+    : sessionLinks = (
+        <>
+            <li><button className="navbar-session-buttons login" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>Log In</button></li>
+            <li><button className="navbar-session-buttons signup" onClick={(e) => setSignupModalMounted(true)}>Create Account</button></li>
+        </>)
+
+
+    loginModalMounted ?
+        loginModal = (<LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />)
+        : loginModal = (<></>)
+
+    signupModalMounted ?
+        signupModal = (<SignUpFormModal signupModalMounted={signupModalMounted} setSignupModalMounted={setSignupModalMounted}/>)
+        : signupModal = (<></>)
+
+    return(
+        <>
+            {loginModal}
+            {signupModal}
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
                     <li className='navbar-logo-wrapper'>
@@ -49,8 +54,8 @@ export const Navigation = () => {
                 <div className='navbar-searchbar-wrapper'>
                     <form role='search'>
                         <div className='navbar-searchbar-input-wrapper'>
-                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" className="navbar-searchbar-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="m19.56 17.44-3.532-3.534A6.46 6.46 0 0 0 17 10.5a6.5 6.5 0 1 0-6.5 6.5 6.46 6.46 0 0 0 3.407-.973l3.533 3.533c.292.293.676.44 1.06.44s.768-.147 1.06-.44a1.496 1.496 0 0 0 0-2.12ZM10.5 15a4.5 4.5 0 1 1 0-9.002 4.5 4.5 0 0 1 0 9.002Z" fill="#222"></path></svg>
-                            <input className="navbar-searchbar-input-text" placeholder="What would you like to cook?" type="search" aria-label="Search NYT Cooking" value="" />
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" className="navbar-searchbar-icon"><path fillRule="evenodd" clipRule="evenodd" d="m19.56 17.44-3.532-3.534A6.46 6.46 0 0 0 17 10.5a6.5 6.5 0 1 0-6.5 6.5 6.46 6.46 0 0 0 3.407-.973l3.533 3.533c.292.293.676.44 1.06.44s.768-.147 1.06-.44a1.496 1.496 0 0 0 0-2.12ZM10.5 15a4.5 4.5 0 1 1 0-9.002 4.5 4.5 0 0 1 0 9.002Z" fill="#222"></path></svg>
+                            <input className="navbar-searchbar-input-text" placeholder="What would you like to cook?" type="search" aria-label="Search NYT Cooking" />
                         </div>
                     </form>
                 </div>
