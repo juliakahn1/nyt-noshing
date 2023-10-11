@@ -313,3 +313,95 @@
     grid-column: col-start 1/col-end 3;
     margin-bottom: 60px;
 }
+
+.show-recipe-avg-rating-wrapper {
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+}
+
+.store-recipe-avg-rating-big-star {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+}
+
+.show-recipe-avg-rating-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.show-recipe-avg-rating-text {
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: .02em;
+    line-height: 1.45;
+
+    &.avg-rating-score {
+        font-weight: 700;
+    }
+
+    &.num-ratings {
+        color: #717171;
+        font-weight: 500;
+        font-size: 0.85rem;
+    }
+}
+
+.show-recipe-your-rating-wrapper {
+    padding-bottom: 20px;
+}
+
+.show-recipe-your-rating-header {
+    position: relative;
+    margin-bottom: 16px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .02em;
+    line-height: 1.45;
+}
+.show-recipe-your-rating-stars-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.show-recipe-your-rating-stars-form {
+    display: inline-flex;
+    margin-left: -5px;
+}
+
+.show-recipe-interactive-stars {
+    position: relative;
+
+}
+
+.star-radio {
+    border: 0;
+    border-radius: 0;
+    position: absolute;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.your-rating-star {
+    color: #ccc;
+    display: inline-block;
+    cursor: pointer;
+    height: 35px;
+    // padding: 0 5px;
+    width: 40px;
+
+    &:hover {
+        color: #df321b;
+    }
+}
