@@ -3,37 +3,41 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
+import LoginFormModal from "./LoginFormModal"
+import SignUpFormModal from "./SignUpFormModal"
 
 export const Navigation = () => {
     const sessionUser = useSelector(state => state.session.user)
     let sessionLinks;
+    let loginModal;
+    let signupModal;
+    const [loginModalMounted, setLoginModalMounted] = useState(false)
+    const [signupModalMounted, setSignupModalMounted] = useState(false)
 
-    if (sessionUser) { // if someone is logged in
-        sessionLinks = (
-            <>
-                <li className='navbar-button-recipebox'>
-                    <NavLink to='/recipe-box'>Your Recipe Box</NavLink>
-                </li>
-                <li>
-                    <ProfileButton user={sessionUser} />
-                </li>
-            </>
-        )
-    } else { // if not logged in
-        sessionLinks = (
-            <>
-                <li>
-                    <button className="navbar-session-buttons login">Log In</button>
-                </li>
-                <li>
-                    <button className="navbar-session-buttons signup">Create Account</button>
-                </li>
-            </>
-        )
-    }
+  sessionUser ? sessionLinks = (
+        <>
+            <li className='navbar-button-recipebox'><NavLink to='/recipe-box'>Your Recipe Box</NavLink></li>
+            <li><ProfileButton user={sessionUser} /></li>
+        </>)
+    : sessionLinks = (
+        <>
+            <li><button className="navbar-session-buttons login" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>Log In</button></li>
+            <li><button className="navbar-session-buttons signup" onClick={(e) => setSignupModalMounted(true)}>Create Account</button></li>
+        </>)
+
+
+    loginModalMounted ?
+        loginModal = (<LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />)
+        : loginModal = (<></>)
+
+    signupModalMounted ?
+        signupModal = (<SignUpFormModal signupModalMounted={signupModalMounted} setSignupModalMounted={setSignupModalMounted}/>)
+        : signupModal = (<></>)
 
     return(
         <>
+            {loginModal}
+            {signupModal}
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
                     <li className='navbar-logo-wrapper'>
