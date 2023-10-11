@@ -8,9 +8,13 @@ const RecipeShowPage = () => {
     const { recipeId } = useParams()
     const dispatch = useDispatch()
     const recipe = useSelector(store => store.recipes[recipeId])
-    const recipeIngredients = recipe.ingredients
-    const recipePrepSteps = recipe.preparation
+    let recipeIngredients
+    let recipePrepSteps
 
+    if (recipe) {
+        recipeIngredients = recipe.ingredients
+        recipePrepSteps = recipe.preparation
+    }
 
     useEffect(() => {
         dispatch(fetchRecipe(recipeId))
@@ -77,7 +81,7 @@ const RecipeShowPage = () => {
                     </ul>
                     <div className="show-recipe-ingredients-wrapper">
                         <div className="show-recipe-ingredients-inner-wrapper">
-                            <h2 className="show-recipe-ingredients-header">ingredients</h2>
+                            <h2 className="show-recipe-header">ingredients</h2>
                             <div className="show-recipe-ingredients-yield-wrapper">
                                 <span className="show-recipe-ingredients-yield">Yield:</span>
                                 <span className="show-recipe-ingredients-yield yield-data">Fill this in in db</span>
@@ -90,7 +94,20 @@ const RecipeShowPage = () => {
                         </div>
                     </div>
                     <div className="show-recipe-prep-wrapper">
+                        <h2 className="show-recipe-header preparation-header">preparation</h2>
+                        <ul className="show-recipe-prep-list">
+                            {recipePrepSteps.map((step, index) => {
+                                return(
+                                    <>
+                                        <div className="show-recipe-prep-step-wrapper">
+                                            <li className="show-recipe-prep-step step-num">Step {index + 1}</li>
+                                            <li className="show-recipe-prep-step step-content">{step}</li>
 
+                                        </div>
+                                    </>
+                                )
+                            })}
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -219,13 +219,14 @@
 
 .show-recipe-ingredients-wrapper {
     grid-column: col-start 1/col-end 3;
+    padding-top: 50px;
 }
 
 .show-recipe-ingredients-inner-wrapper {
     margin-bottom: 60px;
 }
 
-.show-recipe-ingredients-header {
+.show-recipe-header {
     border-top: 5px solid #222;
     font-family: 'Bevan', serif;
     font-weight: 00;
@@ -233,7 +234,11 @@
     letter-spacing: .08em;
     line-height: 1.45;
     text-transform: uppercase;
-    padding-top: 4px;
+    padding-top: 6px;
+
+    &.preparation-header {
+        margin-bottom: 32px;
+    }
 }
 
 .show-recipe-ingredients-yield-wrapper {
@@ -258,15 +263,6 @@
     }
 }
 
-.show-recipe-ingredient-item {
-    font-size: 1.7rem;
-    padding-bottom: 16px;
-    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
-    font-weight: 500;
-    letter-spacing: .02em;
-    line-height: 1.45;
-}
-
 .show-recipe-ingredients-item {
     font-size: 1.0rem;
     padding-bottom: 16px;
@@ -278,4 +274,30 @@
 
 .show-recipe-prep-wrapper {
     grid-column: col-start 4/col-end 8;
+    padding-top: 50px;
+}
+
+.show-recipe-prep-step-wrapper {
+    padding-bottom: 38px;
+}
+
+.show-recipe-prep-step {
+
+    &.step-num {
+        margin-bottom: 4px;
+        font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: .02em;
+        line-height: 1.45;
+    }
+
+    &.step-content {
+        font-family: nyt-imperial,Georgia,Times New Roman,serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        letter-spacing: .01em;
+        line-height: 1.55;
+    }
+
 }
