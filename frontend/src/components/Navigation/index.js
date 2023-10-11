@@ -14,9 +14,14 @@ export const Navigation = () => {
     const [loginModalMounted, setLoginModalMounted] = useState(false)
     const [signupModalMounted, setSignupModalMounted] = useState(false)
 
-  sessionUser ? sessionLinks = (
+    // --- NAVBAR BUTTON COMPONENT VARIABLES --- //
+
+    sessionUser ? sessionLinks = ( // if signed in
         <>
-            <li className='navbar-button-recipebox'><NavLink to='/recipe-box'>Your Recipe Box</NavLink></li>
+            <NavLink className="navbar-recipebox-nav-link-wrapper" to='/recipe-box'>
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.875 19a.875.875 0 0 1-1.421.684L12 16.126l-4.454 3.558A.875.875 0 0 1 6.125 19V4.125h11.75V19Z" fill="#222"></path></svg>
+                <li className='navbar-button-recipebox'>Your Recipe Box</li>
+            </NavLink>
             <li><ProfileButton user={sessionUser} /></li>
         </>)
     : sessionLinks = (
@@ -25,6 +30,7 @@ export const Navigation = () => {
             <li><button className="navbar-session-buttons signup" onClick={(e) => setSignupModalMounted(true)}>Create Account</button></li>
         </>)
 
+    // --- LOG IN/SIGN UP MODALS --- //
 
     loginModalMounted ?
         loginModal = (<LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />)
