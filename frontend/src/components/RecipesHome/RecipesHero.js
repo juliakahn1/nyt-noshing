@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import "./RecipesHero.css"
 
 const RecipesHero = ({ recipe }) => {
@@ -8,8 +9,10 @@ const RecipesHero = ({ recipe }) => {
                     <img className="recipe-index-hero-image-photo" src="https://static01.nyt.com/images/2019/09/25/dining/23eggrex2/23eggrex2-master768.jpg?w=1280&q=75"></img>
                 </div>
                 <div className="recipe-index-hero-content">
-                    <p className="recipe-index-hero-byeline">recipe of the day</p>
-                    <h2 className='recipe-index-hero-name'>{recipe.name}</h2>
+                    <NavLink className="nav-link" to={`/recipes/${recipe.id}`}>
+                        <p className="recipe-index-hero-byeline">recipe of the day</p>
+                        <h2 className='recipe-index-hero-name'>{recipe.name}</h2>
+                    </NavLink>
                     <h3 className='recipe-index-hero-author'>By {recipe.author}</h3>
                     <p className='recipe-index-hero-blurb'>
                         If your goal is perfectly smooth, blemish-free boiled eggs that jump out of their shells

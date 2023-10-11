@@ -10,6 +10,11 @@
     padding-top: 120px;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .recipe-index-hero-image {
     width: 60%;
 }
@@ -50,6 +55,8 @@ img.recipe-index-hero-image-photo:hover {
     margin-top: 4%;
     margin-bottom: 4%;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 .recipe-index-hero-name:hover {
