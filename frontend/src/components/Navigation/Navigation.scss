@@ -70,11 +70,34 @@
     }
 }
 
-.navbar-button-recipebox {
-    font-weight: 600;
+.navbar-recipebox-wrapper {
     display: flex;
-    /* margin-right: 15px; */
+    align-items: center;
+}
+
+.navbar-button-recipebox {
+    font-size: 1.0rem;
+    line-height: 1.6rem;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color .2s ease-out;
+    padding-right: 25px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 600;
     letter-spacing: .02em;
+}
+
+.navbar-profile-icon {
+    cursor: pointer;
+}
+
+.navbar-recipebox-nav-link-wrapper {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: inherit;
 }
 
 .navbar-logo-wrapper {
@@ -82,7 +105,6 @@
     height: 31px;
     position: relative;
     overflow: hidden;
-    margin-left: 100px;
 }
 
 .navbar-logo-home {
@@ -95,6 +117,7 @@
 
 .navbar-logo-title-wrapper {
     display: flex;
+    margin-left: 100px;
 }
 
 .navbar-site-title {

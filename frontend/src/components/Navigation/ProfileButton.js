@@ -29,9 +29,10 @@ export const ProfileButton = ({ user }) => {
 
     return (
         <>
-          <button onClick={openMenu}>
+          {/* <button onClick={openMenu}>
             <i className="fa-solid fa-user" />
-          </button>
+          </button> */}
+          <svg onClick={openMenu} className="navbar-profile-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM18.998 16.571A1.06 1.06 0 0 0 19 16.5c0-1.38-3.686-3-7-3s-7 1.62-7 3c0 .024 0 .048.002.071H5V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.429h-.002Z" fill="#121212"></path></svg>
           {showMenu && (
             <ul className="profile-dropdown">
               <li>{user.email}</li>
