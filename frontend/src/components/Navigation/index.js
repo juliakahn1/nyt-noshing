@@ -5,15 +5,15 @@ import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
 import "./LoginFormModal.css"
 import LoginFormModal from "./LoginFormModal"
+import { signup } from "../../store/session"
 
 export const Navigation = () => {
     const sessionUser = useSelector(state => state.session.user)
     let sessionLinks;
     let loginModal;
+    let signupModal;
     const [loginModalMounted, setLoginModalMounted] = useState(false)
     const [signupModalMounted, setSignupModalMounted] = useState(false)
-
-    // --- SESSION HTML COMPONENTS --- //
 
   sessionUser ? sessionLinks = (
         <>
@@ -26,13 +26,14 @@ export const Navigation = () => {
             <li><button className="navbar-session-buttons signup" onClick={(e) => setSignupModalMounted(true)}>Create Account</button></li>
         </>)
 
-    // --- LOGIN MODAL COMPONENTS --- //
-
-    // <LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />
 
     loginModalMounted ?
         loginModal = (<LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />)
         : loginModal = (<></>)
+
+    signupModalMounted ?
+        signupModal = (<></>)
+        : signupModal = (<></>)
 
     return(
         <>
