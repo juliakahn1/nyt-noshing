@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: nyt_noshing_production
-  username: nyt_noshing
-  password: <%= ENV["NYT_NOSHING_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: nyt_noshing_production
+  # username: nyt_noshing
+  # password: <%= ENV["NYT_NOSHING_DATABASE_PASSWORD"] %>

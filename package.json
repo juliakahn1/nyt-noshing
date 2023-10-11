@@ -1,0 +1,25 @@
+{
+  "name": "nyt-noshing",
+  "version": "1.0.0",
+  "description": "A play on the NYT Cooking site with the developer's favorite recipes.",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": "16.20.1"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliakahn1/nyt-noshing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliakahn1/nyt-noshing/issues"
+  },
+  "homepage": "https://github.com/juliakahn1/nyt-noshing#readme"
+}
