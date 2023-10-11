@@ -301,3 +301,15 @@
     }
 
 }
+
+.show-ratings-notes-wrapper {
+    grid-template-columns: [page-start] 100px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 100px [page-end];
+    grid-template-rows: auto auto 1fr;
+    grid-column: 1/-1;
+    display: grid;
+}
+
+.show-ratings-wrapper {
+    grid-column: col-start 1/col-end 3;
+    margin-bottom: 60px;
+}
