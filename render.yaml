@@ -1,12 +1,12 @@
 databases:
-  - name: nyt-noshing
-    user: nyt-noshing
+  - name: nytnoshing
+    user: nytnoshing
     plan: free
     region: oregon
 
 services:
   - type: web
-    name: nyt-noshing
+    name: nytnoshing
     plan: free
     region: oregon
     branch: main

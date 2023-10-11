@@ -86,7 +86,7 @@ ApplicationRecord.transaction do
 
     Recipe.create!(
       name: 'Cinnamon Babka',
-      author: 'Clair Saffitz',
+      author: 'Claire Saffitz',
       blurb: 'This dairy-free babka, enriched with olive oil and flavored with a ribbon of almond flour, brown sugar and cinnamon,
         starts with a classic challah bread dough. In the oven, the oil and sugar mingle to create a chewy,
         caramelized coating. You can omit the almond flour to make this nut-free, but the cinnamon ribbon will not be as
