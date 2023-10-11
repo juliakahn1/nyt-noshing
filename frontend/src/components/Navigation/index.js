@@ -3,9 +3,8 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
-import "./LoginFormModal.css"
 import LoginFormModal from "./LoginFormModal"
-import { signup } from "../../store/session"
+import SignUpFormModal from "./SignUpFormModal"
 
 export const Navigation = () => {
     const sessionUser = useSelector(state => state.session.user)
@@ -32,12 +31,13 @@ export const Navigation = () => {
         : loginModal = (<></>)
 
     signupModalMounted ?
-        signupModal = (<></>)
+        signupModal = (<SignUpFormModal signupModalMounted={signupModalMounted} setSignupModalMounted={setSignupModalMounted}/>)
         : signupModal = (<></>)
 
     return(
         <>
             {loginModal}
+            {signupModal}
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
                     <li className='navbar-logo-wrapper'>
