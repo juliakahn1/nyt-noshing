@@ -8,6 +8,8 @@ ApplicationRecord.transaction do
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('recipes')
+    ApplicationRecord.connection.reset_pk_sequence!('notes')
+
 
 
     puts "Creating users..."
@@ -198,14 +200,14 @@ ApplicationRecord.transaction do
     Note.create!(
       body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
       name: "Jerry",
-      user_id: 3,
+      user_id: 4,
       recipe_id: 1
     )
 
     Note.create!(
       body: "Even George doesn't like cinnamon, who does?",
       name: "Elaine",
-      user_id: 4,
+      user_id: 5,
       recipe_id: 1
     )
   end
