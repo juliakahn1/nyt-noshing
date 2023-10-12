@@ -34,8 +34,8 @@ const RecipesHero = ({ recipe }) => {
                     </NavLink> */}
                     <h3 className='recipe-index-hero-author'>By {recipe.author}</h3>
                     <p className='recipe-index-hero-blurb'>
-                        If your goal is perfectly smooth, blemish-free boiled eggs that jump out of their shells
-                        every single time, I’ve got bad news: No technique in the world can promise that level of perfection.
+                        We totally disagree that Jerry and Elaine consider cinnamon babka the "lesser babka" between it and its chocolate
+                        counterpart. We can't, however, endorse Jerry's black and white cookie.
                     </p>
                     <button className="recipe-index-hero-save-button">Save
                         {/* <span className="recipe-index-hero-save-button-text">Save</span> */}
