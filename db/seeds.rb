@@ -25,6 +25,10 @@ ApplicationRecord.transaction do
       email: 'boolia@email.com',
       password: 'password'
     )
+    User.create!(
+      email: 'demouser@email.com',
+      password: 'demopassword'
+    )
 
     puts "Creating recipes..."
     Recipe.create!(

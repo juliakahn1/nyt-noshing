@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_12_153634) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_12_161020) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "notes", force: :cascade do |t|
+    t.text "body", null: false
+    t.string "name", null: false
+    t.bigint "user_id"
+    t.bigint "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_notes_on_recipe_id", unique: true
+    t.index ["user_id"], name: "index_notes_on_user_id"
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "name", null: false
@@ -38,4 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_153634) do
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end
 
+  add_foreign_key "notes", "recipes"
+  add_foreign_key "notes", "users"
 end

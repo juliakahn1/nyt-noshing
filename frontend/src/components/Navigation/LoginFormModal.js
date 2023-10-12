@@ -3,6 +3,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './Modals.css';
+import DemoUser from './DemoUser';
 
 const LoginFormModal = ({ loginModalMounted, setLoginModalMounted }) => {
     const dispatch = useDispatch();
@@ -79,6 +80,7 @@ const LoginFormModal = ({ loginModalMounted, setLoginModalMounted }) => {
                                 <button className="session-form-button" type="submit">Log In</button>
                             </div>
                         </form>
+                        <DemoUser modalSetter={setLoginModalMounted}/>
                     </div>
                 </div>
             </div>
