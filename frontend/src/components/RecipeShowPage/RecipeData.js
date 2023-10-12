@@ -36,7 +36,7 @@ const RecipeData = ({ recipe }) => {
                             </dd>
                             <dt className="show-recipe-stats-table-row-label">Notes</dt>
                             <dd className="show-recipe-stats-table-row-data-num-notes">
-                                <a className="show-recipe-stats-table-row-data-link-notes" href="#notes-section">
+                                <a className="show-recipe-stats-table-row-data-link-notes" href="#notes-beginning">
                                     Read 3 community notes
                                     <svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-jump-icon"><path d="M2.895 4.167h5v9" stroke="currentColor" strokeWidth="1.25"></path><path d="m3.652 8.924 4.243 4.242 4.242-4.242" stroke="currentColor" strokeWidth="1.25"></path></svg>
                                 </a>
