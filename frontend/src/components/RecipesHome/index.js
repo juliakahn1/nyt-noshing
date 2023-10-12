@@ -25,8 +25,7 @@ export const RecipesHome = () => {
                 })}
             </ul>
         </>
-    ) :
-    (<></>)
+    ) : (<></>)
 
 }
 
