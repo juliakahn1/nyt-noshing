@@ -83,7 +83,6 @@ const RecipeData = ({ recipe }) => {
                                         <div className="show-recipe-prep-step-wrapper">
                                             <li className="show-recipe-prep-step step-num">Step {index + 1}</li>
                                             <li className="show-recipe-prep-step step-content">{step}</li>
-
                                         </div>
                                     </>)
                             })}

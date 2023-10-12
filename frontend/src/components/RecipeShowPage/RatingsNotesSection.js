@@ -21,6 +21,41 @@ const RatingsNotesSection = ({ recipe }) => {
                         </div>
                     </div>
                 </div>
+                <div className="show-notes-wrapper">
+                    <h2 className="show-recipe-header">cooking notes</h2>
+                    <form className="show-note-form">
+                        <div className="show-form-body-label-wrapper">
+                            <label className="show-form-label" for="notesBodyInput">Add Note</label>
+                            <textarea
+                                className="show-form-body-input"
+                                placeholder="Share your notes with others cooks..."
+                                type="text"
+                                id="notesBodyInput">
+                            </textarea>
+                            <div className="show-note-form-errors-container"></div>
+                        </div>
+                        <div className="show-form-name-label-wrapper">
+                            <label className="show-form-label" for="notesNameInput">Your Name</label>
+                            <textarea
+                                className="show-form-name-input"
+                                placeholder="Enter your name"
+                                type="text"
+                                id="notesNameInput">
+                            </textarea>
+                        </div>
+                        <div className="show-form-actions">
+                            <div></div>
+                            <div className="show-form-buttons">
+                                <button className="show-form-button-clear" type="reset">
+                                    Cancel
+                                </button>
+                                <button className="show-form-button-submit" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </>
     )
