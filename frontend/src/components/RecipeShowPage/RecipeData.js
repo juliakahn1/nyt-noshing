@@ -14,7 +14,7 @@ const RecipeData = ({ recipe }) => {
                     <div className="show-intro-image-wrapper">
                         <div className="show-intro-recipe-image">
                             <div className="show-intro-recipe-photo">
-                                <img className="show-intro-actual-phot" src="https://static01.nyt.com/images/2019/09/25/dining/23eggrex2/23eggrex2-master768.jpg?w=1280&q=75"></img>
+                                <img className="show-intro-actual-phot" src={recipe.photoUrl}></img>
                             </div>
                         </div>
                     </div>

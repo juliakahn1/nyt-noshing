@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
 
 ApplicationRecord.transaction do
     puts "Destroying tables..."
@@ -18,6 +12,10 @@ ApplicationRecord.transaction do
 
     puts "Creating users..."
     User.create!(
+      email: 'demouser@email.com',
+      password: 'demopassword'
+    )
+    User.create!(
       email: 'julia@email.com',
       password: 'password'
     )
@@ -25,13 +23,8 @@ ApplicationRecord.transaction do
       email: 'boolia@email.com',
       password: 'password'
     )
-    User.create!(
-      email: 'demouser@email.com',
-      password: 'demopassword'
-    )
 
     puts "Creating recipes..."
-
     Recipe.create!(
       name: 'Cinnamon Babka',
       author: 'Claire Saffitz',
@@ -191,5 +184,14 @@ ApplicationRecord.transaction do
       tags: ['breakfast']
     )
 
+
     puts "Done!"
+  end
+
+  puts "Attaching images to recipes..."
+  Recipe.all.each_with_index do |recipe, index|
+    recipe.photo.attach(
+      io: URI.open("https://nytnoshing-seeds.s3.us-west-1.amazonaws.com/nytnoshing-#{index}.jpg"),
+      filename: "nytnoshing-#{index}.jpg"
+    )
   end

@@ -8,7 +8,7 @@ const RecipeItem = ({ recipe }) => {
             <NavLink className="recipe-item-navlink" to={`/recipes/${recipe.id}`}>
                 <div className="recipe-index-card-wrapper">
                     <figure className="recipe-index-card-image">
-                        <img className="recipe-index-card-photo" src="https://static01.nyt.com/images/2019/09/25/dining/23eggrex2/23eggrex2-master768.jpg?w=1280&q=75"/>
+                        <img className="recipe-index-card-photo" src={recipe.photoUrl}/>
                     </figure>
                     <div className="recipe-index-card-metadata">
                         <div className="recipe-index-card-name-author">

@@ -14,24 +14,19 @@ const RecipesHero = ({ recipe }) => {
         </NavLink>
         </>
     ) : showPageAccess = ( // TODO: add STORE UI: MODAL STATE FOR EACH MODAL
-        <>
+        <NavLink className="nav-link" to={`/recipes/${recipe.id}`}>
             <p className="recipe-index-hero-byeline">recipe of the day</p>
             <h2 className='recipe-index-hero-name'>{recipe.name}</h2>
-        </>
+        </NavLink>
     )
-
     return(
         <>
             <div className="recipe-index-hero-wrapper">
                 <div className="recipe-index-hero-image">
-                    <img className="recipe-index-hero-image-photo" src="https://static01.nyt.com/images/2019/09/25/dining/23eggrex2/23eggrex2-master768.jpg?w=1280&q=75"></img>
+                    <img className="recipe-index-hero-image-photo" src={recipe.photoUrl}></img>
                 </div>
                 <div className="recipe-index-hero-content">
                     {showPageAccess}
-                    {/* <NavLink className="nav-link" to={`/recipes/${recipe.id}`}>
-                        <p className="recipe-index-hero-byeline">recipe of the day</p>
-                        <h2 className='recipe-index-hero-name'>{recipe.name}</h2>
-                    </NavLink> */}
                     <h3 className='recipe-index-hero-author'>By {recipe.author}</h3>
                     <p className='recipe-index-hero-blurb'>
                         We totally disagree that Jerry and Elaine consider cinnamon babka the "lesser babka" between it and its chocolate
