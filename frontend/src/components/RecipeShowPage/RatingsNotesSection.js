@@ -1,6 +1,19 @@
 import RatingStarRadios from "./RatingStarRadios"
+import NoteItem from "./NoteItem"
+import { useDispatch, useSelector } from "react-redux"
+import { receiveNotes } from "../../store/notes"
+import { fetchNotes } from "../../store/notes"
+import React, { useEffect } from "react"
 
 const RatingsNotesSection = ({ recipe }) => {
+    const dispatch = useDispatch()
+    const notes = (useSelector(store => store.notes))
+    const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
+    console.log(notesSubset)
+
+    useEffect(() => {
+        dispatch(fetchNotes(recipe.id))
+    }, [dispatch])
 
     return(
         <>
@@ -56,6 +69,7 @@ const RatingsNotesSection = ({ recipe }) => {
                         </div>
                     </form>
                     <a id="notes-beginning"><h3 className="show-notes-header">All Notes (30)</h3></a>
+
                 </div>
             </div>
         </>
