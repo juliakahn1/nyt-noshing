@@ -1,5 +1,5 @@
 class Api::RecipesController < ApplicationController
-  # before_action :require_logged_in, only: [:show]
+  before_action :require_logged_in, only: [:show]
 
   def index
     ## TODO: build logic for filtering

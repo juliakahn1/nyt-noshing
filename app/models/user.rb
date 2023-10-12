@@ -10,9 +10,6 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-
-    ### TODO: associations ###
-
     validates :email, :session_token, presence: true, uniqueness: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Invalid email' },
         length: { in: 3..255, message: 'Email addresses must be between 3 and 255 characters' }
@@ -22,6 +19,9 @@ class User < ApplicationRecord
 
     has_secure_password # handles password getter, setter, and is_password?
     before_validation :ensure_session_token
+
+    has_many :notes
+
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

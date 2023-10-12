@@ -24,6 +24,16 @@ ApplicationRecord.transaction do
       password: 'password'
     )
 
+    User.create!(
+      email: 'jerry@email.com',
+      password: 'password'
+    )
+
+    User.create!(
+      email: 'elaine@email.com',
+      password: 'password'
+    )
+
     puts "Creating recipes..."
     Recipe.create!(
       name: 'Cinnamon Babka',
@@ -184,8 +194,20 @@ ApplicationRecord.transaction do
       tags: ['breakfast']
     )
 
+    puts "Reviewing recipes..."
+    Note.create!(
+      body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
+      name: "Jerry",
+      user_id: 3,
+      recipe_id: 1
+    )
 
-    puts "Done!"
+    Note.create!(
+      body: "Even George doesn't like cinnamon, who does?",
+      name: "Elaine",
+      user_id: 4,
+      recipe_id: 1
+    )
   end
 
   puts "Attaching images to recipes..."
@@ -195,3 +217,5 @@ ApplicationRecord.transaction do
       filename: "nytnoshing-#{index}.jpg"
     )
   end
+
+  puts "Done!"
