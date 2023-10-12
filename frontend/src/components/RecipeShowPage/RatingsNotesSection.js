@@ -55,6 +55,7 @@ const RatingsNotesSection = ({ recipe }) => {
                             </div>
                         </div>
                     </form>
+                    <h3 className="show-notes-header">All Notes (30)</h3>
                 </div>
             </div>
         </>
