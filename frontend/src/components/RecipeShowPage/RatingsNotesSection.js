@@ -9,7 +9,6 @@ const RatingsNotesSection = ({ recipe }) => {
     const dispatch = useDispatch()
     const notes = (useSelector(store => store.notes))
     const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
-    console.log(notesSubset)
 
     useEffect(() => {
         dispatch(fetchNotes(recipe.id))
@@ -69,7 +68,9 @@ const RatingsNotesSection = ({ recipe }) => {
                         </div>
                     </form>
                     <a id="notes-beginning"><h3 className="show-notes-header">All Notes (30)</h3></a>
-
+                    {notesSubset.map(note => {
+                        return <NoteItem note={ note }/>
+                    })}
                 </div>
             </div>
         </>

@@ -1,0 +1,35 @@
+.show-note-item-wrapper {
+    border-bottom: 1px solid #ccc;
+    padding: 24px 0;
+}
+
+.show-note-item-name-timestamp{
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.show-note-item-name {
+    margin-right: 5px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: .02em;
+    line-height: 1.45;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.show-note-item-body-buttons-wrapper {
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.show-note-item-body {
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: .02em;
+    line-height: 1.45;
+}
