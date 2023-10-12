@@ -34,6 +34,7 @@ ApplicationRecord.transaction do
         But armed with data from scientific tests done with more than 90 testers and more than 700 boiled eggs, this technique for boiled eggs — technically steamed, as they cook in just an inch of water —
         will maximize your odds. Fresher eggs will take slightly longer to peel, but they should peel just as cleanly as older eggs. The eggs in this recipe should be cooked straight from the refrigerator;
         reduce cooking times by 1 minute if using room-temperature eggs.',
+      yield: '12 eggs',
       ingredients: ['Up to 12 eggs'],
       cook_time: 'Around 10 minutes',
       preparation: ['Find a lidded saucepan large enough to allow your eggs to comfortably fit on the bottom in a single layer. Add 1 inch of water, cover and bring to a boil.',
@@ -49,6 +50,7 @@ ApplicationRecord.transaction do
       name: 'Classic Potato Latkes',
       author: 'Melissa Clark',
       blurb: 'This recipe is for a classic, unadorned latke; no kohlrabi or cumin here. Serve them hot and make more than you think you need. They go fast.',
+      yield: 'About 3 dozen',
       ingredients: ['2 large Russet potatoes (about 1 pound), scrubbed and cut lengthwise into quarters', '1 large onion (8 ounces), peeled and cut into quarters', '2 large eggs', '1/2 cup all-purpose flour',
         '2 teaspoons course kosher salt, plus more for sprinkling', '1 teaspoon baking powder', '1/2 teaspoon freshly ground black pepper', 'Safflour or other oil, for frying'],
       cook_time: '45 minutes',
@@ -78,6 +80,7 @@ ApplicationRecord.transaction do
         "6 large eggs",
         "Chopped cilantro, for serving",
         "Hot sauce, for serving"],
+      yield: '4 to 6 servings',
       cook_time: '50 minutes',
       preparation: ['Heat oven to 375 degrees. Heat oil in a large skillet over medium-low. Add onion and bell pepper. Cook gently until very soft, about 20 minutes. Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cayenne, and cook 1 minute. Pour in tomatoes and season with ¾ teaspoon salt and ¼ teaspoon pepper; simmer until tomatoes have thickened, about 10 minutes. Taste and add more salt and pepper if needed. Stir in crumbled feta.',
        'Gently crack eggs into skillet over tomatoes. Season eggs with salt and pepper. Transfer skillet to oven and bake until eggs are just set, 7 to 10 minutes. Sprinkle with cilantro and serve with hot sauce.'],
@@ -91,6 +94,7 @@ ApplicationRecord.transaction do
         starts with a classic challah bread dough. In the oven, the oil and sugar mingle to create a chewy,
         caramelized coating. You can omit the almond flour to make this nut-free, but the cinnamon ribbon will not be as
         pronounced. Be sure to let the babkas proof fully before baking, which will ensure a light, supple texture.',
+      yield: '2 babkas',
       ingredients: ['1 recipe Challah Bread dough, prepared as directed below',
         '4 tablespoons olive oil, plus more for the pans',
         '1 cup grams light brown sugar',
@@ -138,6 +142,7 @@ ApplicationRecord.transaction do
         are also the most important: grating the potatoes (I use a box grater, but you can use a food processor with the shredding blade) and wringing out their moisture. For that,
         I use my hands and a colander or strainer to save a kitchen towel or a cheesecloth, but you can use those, if you like. Traditionally made in a casserole-style baking dish,
         this kugel starts off in a cast-iron skillet, but a stainless-steel skillet would do the job, and honestly so would a baking dish, just know you may be sacrificing that crunchy underside.',
+      yield: '8 to 10 servings',
       ingredients: ['4 pounds russet potatoes (about 5 to 7 potatoes), peeled',
         '1 large yellow onion',
         '6 large eggs',
@@ -166,6 +171,7 @@ ApplicationRecord.transaction do
       blurb: 'In this matzo brei (rhymes with fry) recipe, the matzo sheets are browned in butter until crisp before being lightly scrambled with eggs. You make this either sweet or savory
         as you prefer. Add black pepper, plenty of salt and chives for a savory version, or Demerara sugar and maple syrup or honey if you would like something sweeter. It’s a fine breakfast
         or brunch any time of the year, and especially during Passover.',
+      yield: '2 servings',
       ingredients: ['2 sheets matzo',
         '2 to 3 tablespoons unsalted butter',
         '4 large eggs, beaten with 1 tablespoon water',

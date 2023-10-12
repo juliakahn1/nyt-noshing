@@ -65,11 +65,11 @@ const RecipeData = ({ recipe }) => {
                             <h2 className="show-recipe-header">ingredients</h2>
                             <div className="show-recipe-ingredients-yield-wrapper">
                                 <span className="show-recipe-ingredients-yield">Yield:</span>
-                                <span className="show-recipe-ingredients-yield yield-data">Fill this in in db</span>
+                                <span className="show-recipe-ingredients-yield yield-data">{recipe.yield}</span>
                             </div>
                             <ul>
-                                {recipeIngredients.map((ingredient) => {
-                                    return <li className="show-recipe-ingredients-item">{ingredient}</li>
+                                {recipeIngredients.map((ingredient, index) => {
+                                    return <li className="show-recipe-ingredients-item" key={index}>{ingredient}</li>
                                 })}
                             </ul>
                         </div>
@@ -81,10 +81,11 @@ const RecipeData = ({ recipe }) => {
                                 return(
                                     <>
                                         <div className="show-recipe-prep-step-wrapper">
-                                            <li className="show-recipe-prep-step step-num">Step {index + 1}</li>
-                                            <li className="show-recipe-prep-step step-content">{step}</li>
+                                            <li className="show-recipe-prep-step step-num" key={index}>Step {index + 1}</li>
+                                            <li className="show-recipe-prep-step step-content" key={index + 100} >{step}</li>
                                         </div>
-                                    </>)
+                                    </>
+                                )
                             })}
                         </ul>
                     </div>
