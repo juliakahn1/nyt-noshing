@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { Redirect } from "react-router-dom"
 import * as sessionActions from "../../store/session"
 import "./Modals.css"
+import DemoUser from "./DemoUser"
 
 const SignUpFormModal = ({signupModalMounted, setSignupModalMounted}) => {
     const dispatch = useDispatch()
@@ -98,6 +99,7 @@ const SignUpFormModal = ({signupModalMounted, setSignupModalMounted}) => {
                                 <button className="session-form-button" type="submit">Create Account</button>
                             </div>
                         </form>
+                        <DemoUser modalSetter={setSignupModalMounted}/>
                     </div>
                 </div>
             </div>
