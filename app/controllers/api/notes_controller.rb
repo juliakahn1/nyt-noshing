@@ -3,7 +3,6 @@ class Api::NotesController < ApplicationController
     def index
         recipe_id = params[:recipe_id]
         @notes = Note.where(recipe_id: recipe_id)
-        # @notes.sort_by {|note| note.created_at} # revisit sorting if doesn't work
 
         if @notes
             render :index
@@ -34,7 +33,8 @@ class Api::NotesController < ApplicationController
     end
 
     def destroy
-
+        @note = Note.find_by(id: params[:id])
+        @note.destroy!
     end
 
     private

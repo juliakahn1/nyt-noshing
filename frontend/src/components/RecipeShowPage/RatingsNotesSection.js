@@ -69,7 +69,7 @@ const RatingsNotesSection = ({ recipe }) => {
                     </form>
                     <a id="notes-beginning"><h3 className="show-notes-header">All Notes (30)</h3></a>
                     {notesSubset.map(note => {
-                        return <NoteItem note={ note }/>
+                        return <NoteItem note={ note } recipeId = { recipe.id }/>
                     })}
                 </div>
             </div>

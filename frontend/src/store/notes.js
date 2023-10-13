@@ -74,12 +74,11 @@ export const updateNote = (note, recipeId) => async (dispatch) => {
     }
 }
 
-export const deleteNote = (notIde, recipeId) => async (dispatch) => {
-    const res = await fetch(`/api/recipes/${recipeId}/notes`, {
+export const deleteNote = (noteId, recipeId) => async (dispatch) => {
+    const res = await csrfFetch(`/api/recipes/${recipeId}/notes/${noteId}`, {
         method: "DELETE"
     })
     if (res.ok) {
-        const noteId = await res.json()
         dispatch(removeNote(noteId))
     }
 }

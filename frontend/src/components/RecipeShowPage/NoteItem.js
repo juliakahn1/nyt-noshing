@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import "./RecipeNoteItem.scss"
+import { deleteNote } from "../../store/notes"
 
-const NoteItem = ({ note }) => {
-    // const now = new Date()
-    // const past = Date.parse(note.createdAt)
-    // const timestamp = (now - past).to_i
+const NoteItem = ({ note, recipeId }) => {
+    const dispatch = useDispatch()
+
     let currentUser = useSelector(store => {
         return store.session.user ? store.session.user.id : null
     })
@@ -13,7 +13,7 @@ const NoteItem = ({ note }) => {
     (note.userId === currentUser) ? authorButtons = (
         <div className="show-note-item-buttons-wrapper">
             <button className="show-note-item-button">Edit</button>
-            <button className="show-note-item-button">Delete</button>
+            <button className="show-note-item-button" onClick={() => dispatch(deleteNote(note.id, recipeId))}>Delete</button>
         </div>
     ) : authorButtons = (<></>)
 
