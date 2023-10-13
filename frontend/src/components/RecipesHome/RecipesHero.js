@@ -23,14 +23,14 @@ const RecipesHero = ({ recipe }) => {
         <>
             <div className="recipe-index-hero-wrapper">
                 <div className="recipe-index-hero-image">
-                    <img className="recipe-index-hero-image-photo" src={recipe.photoUrl}></img>
+                    <img className="recipe-index-hero-image-photo" alt="image of recipe" src={recipe.photoUrl}></img>
                 </div>
                 <div className="recipe-index-hero-content">
                     {showPageAccess}
                     <h3 className='recipe-index-hero-author'>By {recipe.author}</h3>
                     <p className='recipe-index-hero-blurb'>
-                        We totally disagree that Jerry and Elaine consider cinnamon babka the "lesser babka" between it and its chocolate
-                        counterpart. We can't, however, endorse Jerry's black and white cookie.
+                        We totally disagree with Jerry and Elaine's opinion that cinnamon babka is the "lesser babka" between it and its chocolate
+                        counterpart. And despite what Jerry might think, we will always endorse a black and white cookie.
                     </p>
                     <button className="recipe-index-hero-save-button">Save
                         {/* <span className="recipe-index-hero-save-button-text">Save</span> */}

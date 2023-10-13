@@ -1,7 +1,6 @@
 import RatingStarRadios from "./RatingStarRadios"
 import NoteItem from "./NoteItem"
 import { useDispatch, useSelector } from "react-redux"
-import { receiveNotes } from "../../store/notes"
 import { fetchNotes } from "../../store/notes"
 import React, { useEffect } from "react"
 
@@ -12,7 +11,7 @@ const RatingsNotesSection = ({ recipe }) => {
 
     useEffect(() => {
         dispatch(fetchNotes(recipe.id))
-    }, [dispatch])
+    }, [dispatch, recipe.id])
 
     return(
         <>
