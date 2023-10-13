@@ -13,7 +13,7 @@ const RecipeShowPage = () => {
 
     useEffect(() => {
         dispatch(fetchRecipe(recipeId))
-    }, [dispatch])
+    }, [dispatch, recipeId])
 
     return recipe ? (
         <>

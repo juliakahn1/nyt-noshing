@@ -1,7 +1,7 @@
 // --- ACTION CREATORS --- //
 
 const RECEIVE_RECIPES = 'recipes/receiveRecipes'
-const RECEIVE_RECIPE = 'recipes/receiveRecipe'
+export const RECEIVE_RECIPE = 'recipes/receiveRecipe'
 
 export const receiveRecipes = (recipes) => {
     return {
@@ -10,10 +10,10 @@ export const receiveRecipes = (recipes) => {
     }
 }
 
-export const receiveRecipe = (recipe) => {
+export const receiveRecipe = (payload) => {
     return {
         type: RECEIVE_RECIPE,
-        recipe
+        payload // contains both recipe + notes
     }
 }
 
@@ -28,10 +28,11 @@ export const fetchRecipes = () => async (dispatch) => {
 }
 
 export const fetchRecipe = (recipeId) => async (dispatch) => {
-    const res = await fetch(`/api/recipes/${recipeId}`)
-    if (res.ok) {
-        const recipe = await res.json()
-        dispatch(receiveRecipe(recipe))
+    // payload, because you're getting recipe AND notes
+    const data = await fetch(`/api/recipes/${recipeId}`)
+    if (data.ok) {
+        const payload = await data.json()
+        dispatch(receiveRecipe(payload))
     }
 }
 
@@ -43,7 +44,7 @@ export const recipesReducer = (store = {}, action) => {
         case RECEIVE_RECIPES:
             return { ...store, ...action.recipes }
         case RECEIVE_RECIPE:
-            return { ...store, [action.recipe.id]: action.recipe }
+            return { ...store, [action.payload.recipe.id]: action.payload.recipe }
         default:
             return store
     }

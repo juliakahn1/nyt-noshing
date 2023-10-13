@@ -16,7 +16,6 @@
 class Recipe < ApplicationRecord
     validates :name, :author, :blurb, :ingredients, :cook_time, :preparation, :tags, presence: true
 
-    ## TODO: ASSOCIATIONS
-
     has_one_attached :photo
+    has_many :notes
 end

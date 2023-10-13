@@ -2,10 +2,12 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import sessionReducer from './session';
 import recipesReducer from './recipes';
+import notesReducer from './notes';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
-    recipes: recipesReducer
+    recipes: recipesReducer,
+    notes: notesReducer
 })
 
 // set to difference store enhancers depending on if in prod

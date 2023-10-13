@@ -8,6 +8,8 @@ ApplicationRecord.transaction do
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('recipes')
+    ApplicationRecord.connection.reset_pk_sequence!('notes')
+
 
 
     puts "Creating users..."
@@ -21,6 +23,16 @@ ApplicationRecord.transaction do
     )
     User.create!(
       email: 'boolia@email.com',
+      password: 'password'
+    )
+
+    User.create!(
+      email: 'jerry@email.com',
+      password: 'password'
+    )
+
+    User.create!(
+      email: 'elaine@email.com',
       password: 'password'
     )
 
@@ -184,8 +196,91 @@ ApplicationRecord.transaction do
       tags: ['breakfast']
     )
 
+    puts "Reviewing recipes..."
+    Note.create!(
+      body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
+      name: "Jerry",
+      user_id: 4,
+      recipe_id: 1
+    )
 
-    puts "Done!"
+    Note.create!(
+      body: "Even George doesn't like cinnamon, who does?",
+      name: "Elaine",
+      user_id: 5,
+      recipe_id: 1
+    )
+
+    Note.create!(
+      body: "I recently embarked on a culinary expedition of epic proportions: the quest for the perfect
+        hard-boiled egg. Armed with nothing but a pot of water, some eggs, and a slightly overinflated sense
+        of confidence, I dove headfirst into this daring culinary adventure. With this recipe, in the end,
+        my quest for the perfect hard-boiled egg was a success, and it left me with a newfound appreciation
+        for these humble kitchen heroes. So, if you're ever in need of a little adventure in your cooking
+        life, try your hand at hard-boiling eggs. Who knows, you might just find yourself on an egg-citing
+        journey that's egg-sactly what you needed. Egg-cellent!",
+      name: "Shelly",
+      user_id: 3,
+      recipe_id: 2
+    )
+
+    Note.create!(
+      body: "This hard-boiled egg recipe is a game-changer! It's simple, reliable, and delivers fantastic
+        results. Fresh eggs, a quick boil, and an ice bath give you perfect yolks every time. The process
+        is easy to follow, making it ideal for beginners. However, peeling the eggs can be a tad tricky, so
+        a dash of vinegar in the boiling water might help. The eggs come out tender and delicious, great for
+        snacking or adding to salads. A quick fix for your protein needs, this recipe is a kitchen essential,
+        although a bit of trial and error may be required for flawless peeling.",
+      name: "Yolko",
+      user_id: 2,
+      recipe_id: 2
+    )
+
+    Note.create!(
+      body: "I recently tried this latke recipe, and it's nothing short of perfection! These latkes are a delightful
+        blend of crispy and tender, just like the ones grandma used to make. The recipe's step-by-step instructions
+        are easy to follow, making it accessible for cooks of all skill levels.",
+      name: "Spud",
+      user_id: 1,
+      recipe_id: 3
+    )
+
+    Note.create!(
+      body: "Not only is this Shakshuka recipe a joy to eat, but it's also a wonderful dish to serve when you have guests
+        over. It's a conversation starter, and the aroma alone will have your kitchen smelling divine.",
+      name: "Tom Ato",
+      user_id: 1,
+      recipe_id: 4
+    )
+
+    Note.create!(
+      body: "This kugel recipe is a true comfort food classic. With its simple yet satisfying blend of egg noodles, creamy
+        custard, and a touch of cinnamon and sugar, it's the ultimate dish for those seeking a cozy, nostalgia-infused meal.
+        The sweet and creamy notes of this kugel evoke memories of family gatherings and holiday celebrations. Easy to prepare
+         and endlessly delicious, this kugel recipe is a warm embrace on a plate, perfect for any occasion.",
+      name: "N. Oodle",
+      user_id: 5,
+      recipe_id: 5
+    )
+
+    Note.create!(
+      body: "Combining the traditional elements of matzah and eggs, it offers a canvas for culinary creativity. Whether you
+        prefer it savory with onions and herbs or sweet with a sprinkle of cinnamon and maple syrup, the texture strikes
+        the perfect balance between crispy and tender.",
+      name: "Motti",
+      user_id: 5,
+      recipe_id: 6
+    )
+
+    Note.create!(
+      body: "Back when I was a kid, we just dunked matzah into eggs and threw them on a skillet. This generation and their
+        silly recipes for things that we just knew how to make back in my day! Also, sweet brei? Only in this century.",
+      name: "Grandma Tza",
+      user_id: 5,
+      recipe_id: 6
+    )
+
+
   end
 
   puts "Attaching images to recipes..."
@@ -195,3 +290,5 @@ ApplicationRecord.transaction do
       filename: "nytnoshing-#{index}.jpg"
     )
   end
+
+  puts "Done!"
