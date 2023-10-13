@@ -1,6 +1,20 @@
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { fetchNotes } from "../../store/notes"
+
 const RecipeData = ({ recipe }) => {
     const recipeIngredients = recipe.ingredients
     const recipePrepSteps = recipe.preparation
+
+    const dispatch = useDispatch()
+    const notes = (useSelector(store => store.notes))
+    const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
+    const numNotes = notesSubset.length
+
+    useEffect(() => {
+        dispatch(fetchNotes(recipe.id))
+    }, [dispatch, recipe.id])
+
 
     return(
         <div className="show-grid-container">
@@ -37,7 +51,7 @@ const RecipeData = ({ recipe }) => {
                             <dt className="show-recipe-stats-table-row-label">Notes</dt>
                             <dd className="show-recipe-stats-table-row-data-num-notes">
                                 <a className="show-recipe-stats-table-row-data-link-notes" href="#notes-beginning">
-                                    Read 3 community notes
+                                    Read {numNotes} community notes
                                     <svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" className="show-recipe-stats-table-row-jump-icon"><path d="M2.895 4.167h5v9" stroke="currentColor" strokeWidth="1.25"></path><path d="m3.652 8.924 4.243 4.242 4.242-4.242" stroke="currentColor" strokeWidth="1.25"></path></svg>
                                 </a>
                             </dd>
