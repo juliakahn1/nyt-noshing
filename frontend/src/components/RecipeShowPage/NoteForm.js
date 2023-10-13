@@ -1,18 +1,29 @@
-import { useDispatch } from "react-redux"
-import { createNote } from "../../store/notes"
-import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { createNote, fetchNotes } from "../../store/notes"
+import { useState, useEffect  } from "react"
+import { fetchRecipe } from "../../store/recipes"
 
 const NoteForm = ({ recipeId }) => {
-
+    useSelector(store => store.notes)
     const [name, setName] = useState("")
     const [body, setBody] = useState("")
     const dispatch = useDispatch()
     let note
 
+    // useEffect(() => {
+    //     dispatch(fetchRecipe(recipeId))
+    // }, [note])
+
     const handleSubmit = (e) => {
         e.preventDefault()
         note = { name, body }
         dispatch(createNote(note, recipeId))
+        clearForm()
+    }
+
+    const clearForm = () => {
+        setBody('')
+        setName('')
     }
 
     const update = (field) => {
@@ -24,10 +35,10 @@ const NoteForm = ({ recipeId }) => {
                 case 'body':
                     setBody(e.currentTarget.value)
                     break
-                case 'clear':
-                    setBody('')
-                    setName('')
-                    break;
+                // case 'clear':
+                //     setBody('')
+                //     setName('')
+                //     break;
                 default:
                     console.error('Try again later.')
                 break;
@@ -39,7 +50,7 @@ const NoteForm = ({ recipeId }) => {
         <>
         <form className="show-note-form" onSubmit={handleSubmit}>
             <div className="show-form-body-label-wrapper">
-                <label className="show-form-label" for="notesBodyInput">Add Note</label>
+                <label className="show-form-label" htmlFor="notesBodyInput">Add Note</label>
                 <textarea
                     className="show-form-body-input"
                     placeholder="Share your notes with others cooks..."
@@ -51,7 +62,7 @@ const NoteForm = ({ recipeId }) => {
                 <div className="show-note-form-errors-container"></div>
             </div>
             <div className="show-form-name-label-wrapper">
-                <label className="show-form-label" for="notesNameInput">Your Name</label>
+                <label className="show-form-label" htmlFor="notesNameInput">Your Name</label>
                 <textarea
                     className="show-form-name-input"
                     placeholder="Enter your name"
@@ -64,12 +75,10 @@ const NoteForm = ({ recipeId }) => {
             <div className="show-form-actions">
                 <div></div>
                 <div className="show-form-buttons">
-                    <button className="show-form-button-clear" type="reset" onClick={() => update('clear')}>
+                    <button className="show-form-button-clear" type="reset" onClick={() => clearForm()}>
                         Cancel
                     </button>
-                    <button className="show-form-button-submit" type="submit">
-                        Submit
-                    </button>
+                    <input className="show-form-button-submit" type="submit" value="Submit"/>
                 </div>
             </div>
         </form></>

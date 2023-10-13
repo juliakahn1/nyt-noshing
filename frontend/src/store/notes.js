@@ -1,6 +1,7 @@
 // --- ACTION CREATORS --- //
 
 import csrfFetch from "./csrf"
+import { RECEIVE_RECIPE } from "./recipes.js"
 
 export const RECEIVE_NOTES = 'api/receiveNotes'
 export const ADD_NOTE = 'api/addNote'
@@ -89,8 +90,8 @@ export const deleteNote = (noteId, recipeId) => async (dispatch) => {
 
 export const notesReducer = (store = {}, action) => {
     switch (action.type) {
-        case RECEIVE_NOTES:
-            return { ...store, ...action.notes}
+        case RECEIVE_RECIPE:
+            return { ...store, ...action.payload.notes}
         case ADD_NOTE:
             return { ...store, [action.note.id]: action.note }
         case EDIT_NOTE:

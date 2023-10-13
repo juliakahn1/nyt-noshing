@@ -7,13 +7,14 @@ import NoteForm from "./NoteForm"
 
 const RatingsNotesSection = ({ recipe }) => {
     const dispatch = useDispatch()
-    const notes = (useSelector(store => store.notes))
+    const notes = useSelector(store => store.notes)
     const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
     notesSubset.reverse()
 
-    useEffect(() => {
-        dispatch(fetchNotes(recipe.id))
-    }, [dispatch, recipe.id])
+    // you don't need this I think
+    // useEffect(() => {
+    //     dispatch(fetchNotes(recipe.id))
+    // }, [dispatch, recipe.id])
 
     return(
         <>
@@ -39,7 +40,7 @@ const RatingsNotesSection = ({ recipe }) => {
                     <NoteForm recipeId={ recipe.id } />
                     <a id="notes-beginning"><h3 className="show-notes-header">All Notes (30)</h3></a>
                     {notesSubset.map(note => {
-                        return <NoteItem note={ note } recipeId = { recipe.id }/>
+                        return <NoteItem key={note.id} note={ note } recipeId = { recipe.id }/>
                     })}
                 </div>
             </div>

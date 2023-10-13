@@ -93,12 +93,10 @@ const RecipeData = ({ recipe }) => {
                         <ul className="show-recipe-prep-list">
                             {recipePrepSteps.map((step, index) => {
                                 return(
-                                    <>
-                                        <div className="show-recipe-prep-step-wrapper">
-                                            <li className="show-recipe-prep-step step-num" key={index}>Step {index + 1}</li>
-                                            <li className="show-recipe-prep-step step-content" key={index + 100} >{step}</li>
-                                        </div>
-                                    </>
+                                    <div className="show-recipe-prep-step-wrapper" key={index}>
+                                        <li className="show-recipe-prep-step step-num">Step {index + 1}</li>
+                                        <li className="show-recipe-prep-step step-content">{step}</li>
+                                    </div>
                                 )
                             })}
                         </ul>

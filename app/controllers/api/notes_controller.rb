@@ -12,10 +12,9 @@ class Api::NotesController < ApplicationController
     end
 
     def create
-        puts params
         @note = Note.new(notes_params)
         @note.recipe_id = params[:recipe_id]
-        @note.user_id = current_user.id # make sure this works
+        @note.user_id = current_user.id
 
         if @note.save
             render :create
