@@ -13,7 +13,15 @@ class Api::NotesController < ApplicationController
     end
 
     def create
-        # pull from session token, userID
+        @note = Note.new(notes_params)
+        @note.recipe_id = params[:recipe_id]
+        @note.user_id = current_user.id # make sure this works
+
+        if @note.save
+            render :create
+        else
+            render json: { errors: @note.errors.full_messages }
+        end
     end
 
     def edit
