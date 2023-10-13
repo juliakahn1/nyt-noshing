@@ -14,11 +14,20 @@
     margin-right: 5px;
     font-family: nyt-franklin,Arial,Helvetica,sans-serif;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     letter-spacing: .02em;
     line-height: 1.45;
-    margin-bottom: 8px;
     word-break: break-word;
+}
+
+.show-note-item-timestamp {
+    color: #717171;
+    margin-right: -2px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    letter-spacing: .02em;
+    line-height: 1.45;
+    font-size: 0.8rem;
 }
 
 .show-note-item-body-buttons-wrapper {
@@ -32,4 +41,27 @@
     font-size: 0.9rem;
     letter-spacing: .02em;
     line-height: 1.45;
+}
+
+.show-note-item-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show-note-item-button {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    font-weight: 500;
+    letter-spacing: .02em;
+    line-height: 1.45;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    color: #717171;
+    background: none;
+    border-radius: 0;
+    border: none;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    padding-right: 7px;
 }
