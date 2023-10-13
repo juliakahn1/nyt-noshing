@@ -8,8 +8,9 @@ import configureStore from './store';
 import csrfFetch from './store/csrf';
 import { restoreSession } from './store/session';
 import * as sessionActions from './store/session';
-import * as recipeActions from './store/recipes'
-import './index.css'
+import * as recipeActions from './store/recipes';
+import * as noteActions from './store/notes';
+import './index.css';
 
 
 // var to access store
@@ -20,7 +21,8 @@ if (process.env.NODE_ENV !== 'production') {
   window.store = store;
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
-  window.recipeActions = recipeActions
+  window.recipeActions = recipeActions;
+  window.noteActions = noteActions
 }
 
 const Root = () => {

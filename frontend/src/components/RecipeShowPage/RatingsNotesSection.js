@@ -8,6 +8,7 @@ const RatingsNotesSection = ({ recipe }) => {
     const dispatch = useDispatch()
     const notes = (useSelector(store => store.notes))
     const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
+    notesSubset.reverse()
 
     useEffect(() => {
         dispatch(fetchNotes(recipe.id))
