@@ -8,11 +8,7 @@ const RatingsNotesSection = ({ recipe }) => {
     const notes = useSelector(store => store.notes)
     const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
     notesSubset.reverse()
-
-    // you don't need this I think
-    // useEffect(() => {
-    //     dispatch(fetchNotes(recipe.id))
-    // }, [dispatch, recipe.id])
+    const numNotes = notesSubset.length
 
     return(
         <>
@@ -36,7 +32,7 @@ const RatingsNotesSection = ({ recipe }) => {
                 <div className="show-notes-wrapper">
                     <h2 className="show-recipe-header">cooking notes</h2>
                     <NoteForm recipeId={ recipe.id } />
-                    <a id="notes-beginning"><h3 className="show-notes-header">All Notes (30)</h3></a>
+                    <a id="notes-beginning"><h3 className="show-notes-header">All Notes ({numNotes})</h3></a>
                     {notesSubset.map(note => {
                         return <NoteItem key={note.id} note={ note } recipeId = { recipe.id }/>
                     })}

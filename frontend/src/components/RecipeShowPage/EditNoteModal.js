@@ -79,10 +79,10 @@ const EditNoteModal = ({ noteModalOpen, setNoteModalOpen, note }) => {
                             <label className='edit-note-form-field-label'>Edit Note
                                 <div className='edit-note-form-field-label-outer-container'>
                                     <div className='edit-note-form-field-label-inner-container'>
-                                        <input
-                                            type="text"
+                                        <textarea
+                                            // type="textarea"
                                             value={body}
-                                            className='edit-note-form-input-box'
+                                            className='edit-note-form-input-box edit-body'
                                             onChange={(e) => setBody(e.target.value)}
                                             required
                                         />
