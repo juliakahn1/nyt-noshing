@@ -9,7 +9,6 @@ import { closeModal } from '../../store/modals';
 const LoginFormModal = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(store => store.session.user);
-    const modalState = useSelector(store => store.modals)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);

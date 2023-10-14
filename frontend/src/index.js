@@ -6,7 +6,6 @@ import './index.css';
 import App from './App';
 import configureStore from './store';
 import csrfFetch from './store/csrf';
-import { restoreSession } from './store/session';
 import * as sessionActions from './store/session';
 import * as recipeActions from './store/recipes';
 import * as noteActions from './store/notes';

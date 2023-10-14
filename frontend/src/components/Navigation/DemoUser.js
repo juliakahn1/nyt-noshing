@@ -1,10 +1,9 @@
 import * as sessionActions from '../../store/session';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { closeModal } from '../../store/modals';
 
 const DemoUser = () => {
     const dispatch = useDispatch()
-    const modalState = useSelector(store => store.modals)
 
     const loginDemoUser = (e) => {
         e.preventDefault();

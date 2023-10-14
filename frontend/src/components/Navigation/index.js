@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
 import ProfileButton from "./ProfileButton"

@@ -10,10 +10,10 @@ export const receiveRecipes = (recipes) => {
     }
 }
 
-export const receiveRecipe = (recipe) => {
+export const receiveRecipe = (payload) => {
     return {
         type: RECEIVE_RECIPE,
-        recipe
+        payload
     }
 }
 
@@ -43,7 +43,7 @@ export const recipesReducer = (store = {}, action) => {
         case RECEIVE_RECIPES:
             return { ...store, ...action.recipes }
         case RECEIVE_RECIPE:
-            return { ...store, [action.recipe.id]: action.recipe }
+            return { ...store, [action.payload.recipe.id]: action.payload.recipe }
         default:
             return store
     }
