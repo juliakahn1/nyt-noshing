@@ -10,10 +10,6 @@ const NoteForm = ({ recipeId }) => {
     const dispatch = useDispatch()
     let note
 
-    // useEffect(() => {
-    //     dispatch(fetchRecipe(recipeId))
-    // }, [note])
-
     const handleSubmit = (e) => {
         e.preventDefault()
         note = { name, body }
@@ -35,10 +31,6 @@ const NoteForm = ({ recipeId }) => {
                 case 'body':
                     setBody(e.currentTarget.value)
                     break
-                // case 'clear':
-                //     setBody('')
-                //     setName('')
-                //     break;
                 default:
                     console.error('Try again later.')
                 break;

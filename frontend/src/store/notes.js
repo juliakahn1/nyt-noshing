@@ -61,8 +61,8 @@ export const createNote = (note, recipeId) => async (dispatch) => {
     }
 }
 
-export const updateNote = (note, recipeId) => async (dispatch) => {
-    const res = await fetch(`/api/recipes/${recipeId}/notes`, {
+export const updateNote = (note, noteId, recipeId) => async (dispatch) => {
+    const res = await csrfFetch(`/api/recipes/${recipeId}/notes/${noteId}`, {
         method: "PATCH",
         headers: {
             'Content-Type': 'application/json'

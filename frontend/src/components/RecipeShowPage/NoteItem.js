@@ -23,7 +23,6 @@ const NoteItem = ({ note, recipeId }) => {
     let modal
     noteModalOpen ? modal = (
         <EditNoteModal
-            noteModalOpen={noteModalOpen}
             setNoteModalOpen={setNoteModalOpen}
             note={note}
         />
