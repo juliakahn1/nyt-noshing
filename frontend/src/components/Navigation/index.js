@@ -5,16 +5,16 @@ import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
 import LoginFormModal from "./LoginFormModal"
 import SignUpFormModal from "./SignUpFormModal"
+import { useDispatch } from "react-redux"
+import { openModal } from "../../store/modals"
 
 export const Navigation = () => {
-    const sessionUser = useSelector(state => state.session.user)
+    const dispatch = useDispatch()
+    const sessionUser = useSelector(store => store.session.user)
+    const modalStates = useSelector(store => store.modals)
     let sessionLinks;
     let loginModal;
     let signupModal;
-
-    // THESE SHOULD BE GLOBAL STORE...
-    const [loginModalMounted, setLoginModalMounted] = useState(false)
-    const [signupModalMounted, setSignupModalMounted] = useState(false)
 
     // --- NAVBAR BUTTON COMPONENT VARIABLES --- //
 
@@ -28,24 +28,33 @@ export const Navigation = () => {
         </>)
     : sessionLinks = (
         <>
-            <li><button className="navbar-session-buttons login" onClick={(e) => setLoginModalMounted(!loginModalMounted)}>Log In</button></li>
-            <li><button className="navbar-session-buttons signup" onClick={(e) => setSignupModalMounted(true)}>Create Account</button></li>
+            <li><button
+                className="navbar-session-buttons login"
+                onClick={(e) => dispatch(openModal("login"))}>
+                    Log In
+                </button>
+            </li>
+            <li><button className="navbar-session-buttons signup"
+                onClick={(e) => dispatch(openModal("signup"))}>
+                    Create Account
+                </button>
+            </li>
         </>)
 
     // --- LOG IN/SIGN UP MODALS --- //
 
-    loginModalMounted ?
-        loginModal = (<LoginFormModal loginModalMounted={loginModalMounted} setLoginModalMounted={setLoginModalMounted} />)
+    modalStates["login"] ?
+        loginModal = (<LoginFormModal />)
         : loginModal = (<></>)
 
-    signupModalMounted ?
-        signupModal = (<SignUpFormModal signupModalMounted={signupModalMounted} setSignupModalMounted={setSignupModalMounted}/>)
+    modalStates["signup"] ?
+        signupModal = (<SignUpFormModal />)
         : signupModal = (<></>)
 
     return(
         <>
-            {loginModal}
-            {signupModal}
+            { loginModal }
+            { signupModal }
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
                     <li className='navbar-logo-wrapper'>

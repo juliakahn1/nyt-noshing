@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './Modals.css';
 import DemoUser from './DemoUser';
+import { closeModal } from '../../store/modals';
 
-const LoginFormModal = ({ loginModalMounted, setLoginModalMounted }) => {
+const LoginFormModal = () => {
     const dispatch = useDispatch();
-    const sessionUser = useSelector(state => state.session.user);
+    const sessionUser = useSelector(store => store.session.user);
+    const modalState = useSelector(store => store.modals)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
@@ -17,7 +19,7 @@ const LoginFormModal = ({ loginModalMounted, setLoginModalMounted }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-        setLoginModalMounted(false)
+        dispatch(closeModal("login"))
         return dispatch(sessionActions.login({ email, password }))
             .catch(async (res) => {
                 let data;
@@ -37,7 +39,7 @@ const LoginFormModal = ({ loginModalMounted, setLoginModalMounted }) => {
         <>
             <div className="modal-window-container">
                 <div className="modal-content-box">
-                    <svg className="modal-close-button" onClick={(e) => setLoginModalMounted(false)} width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg" data-icon-type="handle-close"><path fillRule="evenodd" clipRule="evenodd" d="m21 21.707 5.646 5.647.708-.707L21.707 21l5.647-5.646-.708-.707L21 20.293l-5.646-5.646-.708.707L20.293 21l-5.647 5.646.708.708L21 21.707Z" fill="currentColor"></path></svg>
+                    <svg className="modal-close-button" onClick={(e) => dispatch(closeModal("login"))} width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg" data-icon-type="handle-close"><path fillRule="evenodd" clipRule="evenodd" d="m21 21.707 5.646 5.647.708-.707L21.707 21l5.647-5.646-.708-.707L21 20.293l-5.646-5.646-.708.707L20.293 21l-5.647 5.646.708.708L21 21.707Z" fill="currentColor"></path></svg>
                     <div className="modal-photo-container">
                         <span className="modal-photo-text">
                             Unlock New York Times recipes and your personal recipe box with a free account.
@@ -80,7 +82,7 @@ const LoginFormModal = ({ loginModalMounted, setLoginModalMounted }) => {
                                 <button className="session-form-button" type="submit">Log In</button>
                             </div>
                         </form>
-                        <DemoUser modalSetter={setLoginModalMounted}/>
+                        <DemoUser />
                     </div>
                 </div>
             </div>

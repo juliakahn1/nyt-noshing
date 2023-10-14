@@ -1,19 +1,22 @@
 import * as sessionActions from '../../store/session';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeModal } from '../../store/modals';
 
-const DemoUser = ({modalSetter}) => {
+const DemoUser = () => {
     const dispatch = useDispatch()
+    const modalState = useSelector(store => store.modals)
 
     const loginDemoUser = (e) => {
         e.preventDefault();
-        modalSetter(false)
+        dispatch(closeModal("login"))
+        dispatch(closeModal("signup"))
         return dispatch(sessionActions.login({ email:'demouser@email.com', password:'demopassword' }))
             .catch(async (res) => {
                 let data;
                 try {
                     data = await res.clone().json();
                 } catch {
-                    data = await res.text(); 
+                    data = await res.text();
                 }
             });
     }
