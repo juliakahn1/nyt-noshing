@@ -11,6 +11,8 @@ export const Navigation = () => {
     let sessionLinks;
     let loginModal;
     let signupModal;
+
+    // THESE SHOULD BE GLOBAL STORE...
     const [loginModalMounted, setLoginModalMounted] = useState(false)
     const [signupModalMounted, setSignupModalMounted] = useState(false)
 

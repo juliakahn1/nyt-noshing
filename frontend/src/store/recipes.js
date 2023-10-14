@@ -10,10 +10,10 @@ export const receiveRecipes = (recipes) => {
     }
 }
 
-export const receiveRecipe = (payload) => {
+export const receiveRecipe = (recipe) => {
     return {
         type: RECEIVE_RECIPE,
-        payload // contains both recipe + notes
+        recipe
     }
 }
 
@@ -28,11 +28,10 @@ export const fetchRecipes = () => async (dispatch) => {
 }
 
 export const fetchRecipe = (recipeId) => async (dispatch) => {
-    // payload, because you're getting recipe AND notes
-    const data = await fetch(`/api/recipes/${recipeId}`)
-    if (data.ok) {
-        const payload = await data.json()
-        dispatch(receiveRecipe(payload))
+    const res = await fetch(`/api/recipes/${recipeId}`)
+    if (res.ok) {
+        const recipe = await res.json()
+        dispatch(receiveRecipe(recipe))
     }
 }
 
@@ -44,7 +43,7 @@ export const recipesReducer = (store = {}, action) => {
         case RECEIVE_RECIPES:
             return { ...store, ...action.recipes }
         case RECEIVE_RECIPE:
-            return { ...store, [action.payload.recipe.id]: action.payload.recipe }
+            return { ...store, [action.recipe.id]: action.recipe }
         default:
             return store
     }

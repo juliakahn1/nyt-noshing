@@ -10,6 +10,7 @@ import { restoreSession } from './store/session';
 import * as sessionActions from './store/session';
 import * as recipeActions from './store/recipes';
 import * as noteActions from './store/notes';
+import * as modalActions from './store/modals'
 import './index.css';
 
 
@@ -22,7 +23,8 @@ if (process.env.NODE_ENV !== 'production') {
   window.csrfFetch = csrfFetch;
   window.sessionActions = sessionActions;
   window.recipeActions = recipeActions;
-  window.noteActions = noteActions
+  window.noteActions = noteActions;
+  window.modalActions = modalActions
 }
 
 const Root = () => {
