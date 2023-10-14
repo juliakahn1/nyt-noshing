@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
-import { createNote, fetchNotes } from "../../store/notes"
-import { useState, useEffect  } from "react"
-import { fetchRecipe } from "../../store/recipes"
+import { createNote } from "../../store/notes"
+import { useState } from "react"
 
 const NoteForm = ({ recipeId }) => {
     useSelector(store => store.notes)

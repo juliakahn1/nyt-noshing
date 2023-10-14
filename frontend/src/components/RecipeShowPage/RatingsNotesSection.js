@@ -1,12 +1,10 @@
 import RatingStarRadios from "./RatingStarRadios"
 import NoteItem from "./NoteItem"
-import { useDispatch, useSelector } from "react-redux"
-import { fetchNotes } from "../../store/notes"
-import React, { useEffect } from "react"
+import { useSelector } from "react-redux"
+import React from "react"
 import NoteForm from "./NoteForm"
 
 const RatingsNotesSection = ({ recipe }) => {
-    const dispatch = useDispatch()
     const notes = useSelector(store => store.notes)
     const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
     notesSubset.reverse()

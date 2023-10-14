@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800;900&display=swap');
 
-.modal-window-container {
+.edit-note-modal-window-container {
 	position: fixed;
 	width: 100%;
 	height: 100%;
     top: 0;
     left: 0;
-	background-color: rgba(0, 0, 0, 0.06);
+	background-color: rgba(0, 0, 0, 0.6);
 	z-index: 20;
     animation: .3s ease-out;
     opacity: 1;
 }
 
-.modal-content-box {
+.edit-note-modal-content-box {
     background-color: #fff;
     border-radius: 4px;
     position: fixed;
@@ -21,7 +21,7 @@
     transform: translate(-50%, -50%);
 }
 
-.modal-close-button {
+.edit-note-modal-close-button {
     position: absolute;
     top: 3%;
     left: 98%;
@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 
-.modal-form-container {
+.edit-note-modal-form-container {
     width: 87%;
     padding: 70px 40px 50px 40px;
 }
