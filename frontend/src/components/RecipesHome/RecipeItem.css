@@ -21,7 +21,7 @@
 }
 
 .recipe-index-card-photo {
-    object-fit: contain;
+    /* object-fit: contain; */
     position: absolute;
     height: 100%;
     width: 100%;

@@ -3,11 +3,13 @@ import thunk from 'redux-thunk'
 import sessionReducer from './session';
 import recipesReducer from './recipes';
 import notesReducer from './notes';
+import modalsReducer from './modals';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
     recipes: recipesReducer,
-    notes: notesReducer
+    notes: notesReducer,
+    modals: modalsReducer
 })
 
 // set to difference store enhancers depending on if in prod

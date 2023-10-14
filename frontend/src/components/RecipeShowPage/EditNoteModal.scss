@@ -6,7 +6,7 @@
 	height: 100%;
     top: 0;
     left: 0;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.35);
 	z-index: 20;
     animation: .3s ease-out;
     opacity: 1;
@@ -88,8 +88,9 @@
     line-height: 24px;
 
     &.edit-body {
-        height: 5.5rem;
+        height: 6.5rem;
         padding: 12px 0.75rem;
+        overflow-y: scroll;
     }
 }
 

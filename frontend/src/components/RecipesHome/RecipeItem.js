@@ -1,11 +1,17 @@
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
 import './RecipeItem.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { openModal } from '../../store/modals'
 
 const RecipeItem = ({ recipe }) => {
     // if saved, icon is this: https://cooking.nytimes.com/assets/save-ribbon-gray.svg
+    const currentUser = useSelector(store => store.session)
+    const dispatch = useDispatch()
+
+
     return(
         <>
-            <NavLink className="recipe-item-navlink" to={`/recipes/${recipe.id}`}>
+            <NavLink className="recipe-item-navlink" to={currentUser.user ? `/recipes/${recipe.id}` : dispatch(openModal("signup"))}>
                 <div className="recipe-index-card-wrapper">
                     <figure className="recipe-index-card-image">
                         <img className="recipe-index-card-photo" src={recipe.photoUrl}/>
