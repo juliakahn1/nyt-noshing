@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
-import { createNote, fetchNotes } from "../../store/notes"
-import { useState, useEffect  } from "react"
-import { fetchRecipe } from "../../store/recipes"
+import { createNote } from "../../store/notes"
+import { useState } from "react"
 
 const NoteForm = ({ recipeId }) => {
     useSelector(store => store.notes)
@@ -9,10 +8,6 @@ const NoteForm = ({ recipeId }) => {
     const [body, setBody] = useState("")
     const dispatch = useDispatch()
     let note
-
-    // useEffect(() => {
-    //     dispatch(fetchRecipe(recipeId))
-    // }, [note])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -35,10 +30,6 @@ const NoteForm = ({ recipeId }) => {
                 case 'body':
                     setBody(e.currentTarget.value)
                     break
-                // case 'clear':
-                //     setBody('')
-                //     setName('')
-                //     break;
                 default:
                     console.error('Try again later.')
                 break;

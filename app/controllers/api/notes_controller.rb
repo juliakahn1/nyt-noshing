@@ -23,12 +23,13 @@ class Api::NotesController < ApplicationController
         end
     end
 
-    def edit
-
-    end
-
     def update
-
+        @note = Note.find_by(id: params[:id])
+        if @note.update(notes_params)
+            render :update
+        else
+            render json: { errors: @note.errors.full_messages }
+        end
     end
 
     def destroy
