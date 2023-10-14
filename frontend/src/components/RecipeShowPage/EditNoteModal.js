@@ -10,7 +10,6 @@ const EditNoteModal = ({ noteModalOpen, setNoteModalOpen, note }) => {
     const [body, setBody] = useState(note.body)
     const dispatch = useDispatch()
     let newNote
-    console.log("hi")
 
     const handleSubmit = (e) => {
         e.preventDefault()
