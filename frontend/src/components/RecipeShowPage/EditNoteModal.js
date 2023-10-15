@@ -1,12 +1,11 @@
 import './EditNoteModal.scss'
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { useState } from 'react'
 import { updateNote } from '../../store/notes'
-import { closeModal } from '../../store/modals'
 
 
-const EditNoteModal = ({ note }) => {
-    useSelector(store => store.notes)
+const EditNoteModal = ({ note, setMountModal }) => {
+    console.log(note)
     const [name, setName] = useState(note.name)
     const [body, setBody] = useState(note.body)
     const dispatch = useDispatch()
@@ -16,14 +15,14 @@ const EditNoteModal = ({ note }) => {
         e.preventDefault()
         newNote = { name, body }
         dispatch(updateNote(newNote, note.id, note.recipeId))
-        dispatch(closeModal("editNote"))
+        setMountModal(false)
     }
 
     return (
         <>
             <div className="edit-note-modal-window-container">
                 <div className="edit-note-modal-content-box">
-                    <svg className="edit-note-modal-close-button" onClick={(e) => dispatch(closeModal("editNote"))}width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg" data-icon-type="handle-close"><path fillRule="evenodd" clipRule="evenodd" d="m21 21.707 5.646 5.647.708-.707L21.707 21l5.647-5.646-.708-.707L21 20.293l-5.646-5.646-.708.707L20.293 21l-5.647 5.646.708.708L21 21.707Z" fill="currentColor"></path></svg>
+                    <svg className="edit-note-modal-close-button" onClick={(e) => setMountModal(false)}width="42" height="42" fill="none" xmlns="http://www.w3.org/2000/svg" data-icon-type="handle-close"><path fillRule="evenodd" clipRule="evenodd" d="m21 21.707 5.646 5.647.708-.707L21.707 21l5.647-5.646-.708-.707L21 20.293l-5.646-5.646-.708.707L20.293 21l-5.647 5.646.708.708L21 21.707Z" fill="currentColor"></path></svg>
                     <div className="edit-note-modal-form-container">
                         <form onSubmit={handleSubmit}>
                             <h2 className='edit-note-form-header'>Edit your note</h2>
