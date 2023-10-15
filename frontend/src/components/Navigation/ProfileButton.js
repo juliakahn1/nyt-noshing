@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import * as sessionActions from '../../store/session'
+import { clearSaves } from "../../store/savedRecipes"
+import { closeModal } from "../../store/modals"
 
 export const ProfileButton = ({ user }) => {
     const dispatch = useDispatch()
@@ -24,6 +26,7 @@ export const ProfileButton = ({ user }) => {
 
     const logout = (e) => {
         e.preventDefault()
+        dispatch(clearSaves())
         dispatch(sessionActions.logout())
     }
 

@@ -5,7 +5,6 @@ import { updateNote } from '../../store/notes'
 
 
 const EditNoteModal = ({ note, setMountModal }) => {
-    console.log(note)
     const [name, setName] = useState(note.name)
     const [body, setBody] = useState(note.body)
     const dispatch = useDispatch()

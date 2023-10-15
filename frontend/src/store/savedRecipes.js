@@ -3,6 +3,7 @@ import csrfFetch from "./csrf"
 export const RECEIVE_SAVES = "api/receiveSaves"
 export const ADD_SAVE = "api/addSave"
 export const REMOVE_SAVE = "api/removeSave"
+export const CLEAR_SAVES = "api/clearSaves"
 
 export const receiveSaves = (saves) => {
     return {
@@ -22,6 +23,12 @@ export const removeSave = (saveId) => {
     return {
         type: REMOVE_SAVE,
         saveId
+    }
+}
+
+export const clearSaves = () => {
+    return {
+        type: CLEAR_SAVES
     }
 }
 
@@ -52,7 +59,7 @@ export const deleteSave = (noteId, userId) => async (dispatch) => {
         method: "DELETE"
     })
     if (res.ok) {
-        dispatch(removeSaves(noteId))
+        dispatch(removeSave(noteId))
     }
 }
 
@@ -66,6 +73,8 @@ export const savedRecipesReducer = (store = {}, action) => {
             const newState = { ...store }
             delete newState[action.saveId]
             return newState
+        case CLEAR_SAVES:
+            return {}
         default:
             return store
     }
