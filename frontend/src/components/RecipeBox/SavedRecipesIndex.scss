@@ -1,18 +1,5 @@
-// .recipe-box-flexbox {
-//     display: flex;
-// }
-
-.saved-index-outer-container {
-    // left: 235px;
-    // min-height: 100vh;
-    // width: calc(100% - 235px);
-    // position: relative;
-    // padding-top: 112px;
-    // background-color: #f2f3ef;
-}
 
 .saved-index-inner-container {
-    // display: block;
     margin: auto;
     width: 1020px
 }
@@ -55,4 +42,7 @@
 
 .saved-index-tiles-wrapper {
     padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 20px;
 }
