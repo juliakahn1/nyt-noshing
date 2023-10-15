@@ -4,15 +4,18 @@ import { fetchRecipes } from "../../store/recipes"
 import RecipesHero from "./RecipesHero"
 import RecipeItem from "./RecipeItem"
 import "./RecipesHome.css"
+import { fetchSaves } from "../../store/savedRecipes"
 
 export const RecipesHome = () => {
     const dispatch = useDispatch()
     const recipes = useSelector(store => store.recipes)
     const recipesArr = Object.values(recipes) // empty arrays are still truthy
+    const currentUser = useSelector(store => store.session.user)
 
     useEffect(() => {
         dispatch(fetchRecipes()) // state updates
-    }, [dispatch])
+        if (currentUser) dispatch(fetchSaves(currentUser.id)) // refactor to grab saved recipes from backend ***
+    }, [dispatch, currentUser])
 
     return recipesArr.length > 0 ?
     (

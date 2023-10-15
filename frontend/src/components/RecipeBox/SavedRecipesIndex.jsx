@@ -18,7 +18,7 @@ const SavedRecipesIndex = ({ savedRecipes }) => {
                                 <p className="saved-index-header-save-count">{savedRecipes.length} recipes</p>
                             </div>
                         </div>
-                        <div className="saved-index-tiles-wrapper">
+                        <ul className="saved-index-tiles-wrapper">
                             { savedRecipes.map(recipe => {
                                 if (recipesHash[recipe.id]) {
                                     return (
@@ -28,7 +28,7 @@ const SavedRecipesIndex = ({ savedRecipes }) => {
                                     )
                                 }
                             })}
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>

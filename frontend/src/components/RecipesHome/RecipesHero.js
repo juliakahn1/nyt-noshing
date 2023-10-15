@@ -4,7 +4,9 @@ import { useSelector } from "react-redux"
 
 const RecipesHero = ({ recipe }) => {
     const sessionUser = useSelector(state => state.session.user)
+    const savedRecipes = useSelector(state => state.savedRecipes)
     let showPageAccess;
+    let saveButton;
 
     sessionUser ? showPageAccess = ( // signed in
         <>
@@ -19,6 +21,24 @@ const RecipesHero = ({ recipe }) => {
             <h2 className='recipe-index-hero-name'>{recipe.name}</h2>
         </NavLink>
     )
+
+    savedRecipes[recipe.id] ? saveButton = (
+        <>
+            <button className="recipe-index-hero-save-button">Save
+                {/* <span className="recipe-index-hero-save-button-text">Save</span> */}
+                <svg className="recipe-index-hero-button-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M14.706 4.294H6.294v10.587l4.206-2.669 4.206 2.67V4.293ZM5 3h11v14.235l-5.5-3.49-5.5 3.49V3Z" fill="#fff"></path></svg>
+            </button>
+        </>
+    ) : saveButton = (
+        <>
+            <button className="recipe-index-hero-save-button">Save
+                    {/* <span className="recipe-index-hero-save-button-text">Save</span> */}
+                    <svg className="recipe-index-hero-button-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M14.706 4.294H6.294v10.587l4.206-2.669 4.206 2.67V4.293ZM5 3h11v14.235l-5.5-3.49-5.5 3.49V3Z" fill="#fff"></path></svg>
+            </button>
+        </>
+    )
+
+
     return(
         <>
             <div className="recipe-index-hero-wrapper">
