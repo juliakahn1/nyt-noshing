@@ -58,5 +58,15 @@ export const deleteSave = (noteId, userId) => async (dispatch) => {
 
 export const savedRecipesReducer = (store = {}, action) => {
     switch (action.type) {
+        case RECEIVE_SAVES:
+            return { ...store, ...action.saves}
+        case ADD_SAVE:
+            return { ...store, [action.save.id]: action.save}
+        case REMOVE_SAVE:
+            const newState = { ...store }
+            delete newState[action.saveId]
+            return newState
+        default:
+            return store
     }
 }

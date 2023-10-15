@@ -1,8 +1,7 @@
 class Api::SavedRecipesController < ApplicationController
     def index
-        user_id = current_user.id
-        @saved_recipes = SavedRecipe.where(user_id: user_id)
-
+        user = current_user
+        @saved_recipes = user.saved_recipes
         if @saved_recipes
             render :index
         else
