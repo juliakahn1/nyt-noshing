@@ -4,11 +4,15 @@ ApplicationRecord.transaction do
     puts "Destroying tables..."
     User.destroy_all
     Recipe.destroy_all
+    Note.destroy_all
+    SavedRecipe.destroy_all
+
 
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('recipes')
     ApplicationRecord.connection.reset_pk_sequence!('notes')
+    ApplicationRecord.connection.reset_pk_sequence!('saved_recipes')
 
 
 
@@ -280,7 +284,21 @@ ApplicationRecord.transaction do
       recipe_id: 6
     )
 
+    puts "Saving recipes to Recipe Boxes..."
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 1
+    )
 
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 2
+    )
+
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 3
+    )
   end
 
   puts "Attaching images to recipes..."
