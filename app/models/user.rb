@@ -21,6 +21,7 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
 
     has_many :notes
+    has_many :saved_recipes
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
