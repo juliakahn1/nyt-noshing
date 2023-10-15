@@ -2,29 +2,28 @@ import { useSelector, useDispatch } from "react-redux"
 import "./RecipeNoteItem.scss"
 import { deleteNote } from "../../store/notes"
 import EditNoteModal from "./EditNoteModal"
-import { openModal } from "../../store/modals"
+import { useState } from "react"
 
 const NoteItem = ({ note, recipeId }) => {
     const dispatch = useDispatch()
-    const modalState = useSelector(store => store.modals)
+    const [mountModal, setMountModal] = useState(false)
 
     let currentUser = useSelector(store => {
         return store.session.user ? store.session.user.id : null
     })
 
-    let modal
-    modalState["editNote"] ? modal = (
-        <EditNoteModal note={note} />
-    ) : modal = (<></>)
-
     let authorButtons
     (note.userId === currentUser) ? authorButtons = (
         <div className="show-note-item-buttons-wrapper">
-            <button className="show-note-item-button" onClick={(e) => dispatch(openModal("editNote"))}>Edit</button>
+            <button className="show-note-item-button" onClick={(e) => setMountModal(true)}>Edit</button>
             <button className="show-note-item-button" onClick={() => dispatch(deleteNote(note.id, recipeId))}>Delete</button>
         </div>
     ) : authorButtons = (<></>)
 
+    let modal
+    mountModal ? modal = (
+        <EditNoteModal note={note} setMountModal={setMountModal} />
+    ) : modal = (<></>)
 
     return(
         <>

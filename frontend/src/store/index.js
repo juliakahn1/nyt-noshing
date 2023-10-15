@@ -4,12 +4,14 @@ import sessionReducer from './session';
 import recipesReducer from './recipes';
 import notesReducer from './notes';
 import modalsReducer from './modals';
+import { savedRecipesReducer } from './savedRecipes';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
     recipes: recipesReducer,
     notes: notesReducer,
-    modals: modalsReducer
+    modals: modalsReducer,
+    savedRecipes: savedRecipesReducer
 })
 
 // set to difference store enhancers depending on if in prod

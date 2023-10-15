@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_12_213333) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_15_003243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,6 +67,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_213333) do
     t.index ["name"], name: "index_recipes_on_name", unique: true
   end
 
+  create_table "saved_recipes", force: :cascade do |t|
+    t.bigint "recipe_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "cooked", default: false
+    t.index ["recipe_id"], name: "index_saved_recipes_on_recipe_id"
+    t.index ["user_id"], name: "index_saved_recipes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -81,4 +91,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_213333) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "notes", "recipes"
   add_foreign_key "notes", "users"
+  add_foreign_key "saved_recipes", "recipes"
+  add_foreign_key "saved_recipes", "users"
 end
