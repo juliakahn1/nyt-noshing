@@ -1,0 +1,55 @@
+.saved-index-outer-container {
+    left: 235px;
+    min-height: 100vh;
+    width: calc(100% - 235px);
+    position: relative;
+    display: block;
+    padding-top: 112px;
+    background-color: #f2f3ef;
+}
+
+.saved-index-inner-container {
+    display: block;
+    margin: auto;
+    width: 1020px
+}
+
+.saved-index-overflow-wrapper {
+    padding-bottom: 20px;
+}
+
+.saved-index-header-wrapper {
+    border-bottom: 0;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.saved-index-header {
+    margin: 43px 0 16px 5px;
+    display: inline-block;
+    max-width: 900px;
+}
+
+.saved-index-header-title {
+    color: #222;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: inherit;
+    display: inline;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+}
+
+.saved-index-header-save-count {
+    display: block;
+    margin-top: 15px;
+    color: #666;
+    font-size: 1.0rem;
+    height: 18px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+}
+
+.saved-index-tiles-wrapper {
+    padding-bottom: 30px;
+}
