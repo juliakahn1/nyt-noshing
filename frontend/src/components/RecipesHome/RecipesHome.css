@@ -7,14 +7,14 @@
     font-size: 1.6rem;
     letter-spacing: .01em;
     line-height: 1.3;
-    margin: 4% 100px 4% 100px;
+    margin: 4% 150px 4% 150px;
 }
 
 .recipes-index-pantry-tiles {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     grid-gap: 20px;
-    margin: 0% 100px 0% 100px;
+    margin: 0% 150px 0% 150px;
 }
 
 .recipe-index-card-save-ribbon {

@@ -1,0 +1,50 @@
+
+.saved-index-inner-container {
+    margin-left: 105px;
+    margin-right: 150px;
+    width: 83%
+}
+
+.saved-index-overflow-wrapper {
+    padding-bottom: 20px;
+}
+
+.saved-index-header-wrapper {
+    border-bottom: 0;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.saved-index-header {
+    margin: 43px 0 30px 5px;
+    display: inline-block;
+    max-width: 900px;
+}
+
+.saved-index-header-title {
+    color: #222;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: inherit;
+    display: inline;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+}
+
+.saved-index-header-save-count {
+    display: block;
+    margin-top: 15px;
+    color: #666;
+    font-size: 1.0rem;
+    height: 18px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+}
+
+.saved-index-tiles-wrapper {
+    padding-bottom: 30px;
+    padding-left: 16px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(235px, 1fr) );
+    grid-gap: 20px;
+}

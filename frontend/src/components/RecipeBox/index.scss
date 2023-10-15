@@ -1,0 +1,14 @@
+.recipebox-component-wrapper {
+    display: grid;
+    grid-template-columns: 234px 1fr;
+}
+
+.recipebox-nav-wrapper {
+    min-height: 100vh;
+    padding-top: 112px;
+}
+
+.recipebox-index-wrapper {
+    padding-top: 112px;
+    background-color: #f2f3ef;
+}

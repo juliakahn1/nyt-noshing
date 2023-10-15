@@ -299,6 +299,16 @@ ApplicationRecord.transaction do
       user_id: 1,
       recipe_id: 3
     )
+
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 4
+    )
+
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 5
+    )
   end
 
   puts "Attaching images to recipes..."

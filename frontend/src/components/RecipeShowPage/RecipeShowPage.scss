@@ -3,14 +3,14 @@
 .show-grid-container {
     display: grid;
     padding-top: 120px;
-    grid-template-columns: [page-start] 100px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 100px [page-end];
+    grid-template-columns: [page-start] 150px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 150px [page-end];
     grid-template-rows: auto auto 1fr;
 
 }
 
 .show-content {
     display: grid;
-    grid-template-columns: [page-start] 100px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 100px [page-end];
+    grid-template-columns: [page-start] 150px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 150px [page-end];
     grid-template-rows: auto auto 1fr;
     grid-column: 1/-1;
 }
@@ -304,7 +304,7 @@
 }
 
 .show-ratings-notes-wrapper {
-    grid-template-columns: [page-start] 100px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 100px [page-end];
+    grid-template-columns: [page-start] 150px repeat(7,[col-start] minmax(0,1fr) [col-end] 40px) [col-start] minmax(0,1fr) [col-end] 150px [page-end];
     grid-template-rows: auto auto 1fr;
     grid-column: 1/-1;
     display: grid;
