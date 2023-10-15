@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import SavedRecipesIndex from "./SavedRecipesIndex"
 import { fetchSaves } from "../../store/savedRecipes"
 import RecipeBoxNav from "./RecipeBoxNav"
+import "./index.scss"
 
 const RecipeBox = () => {
     const dispatch = useDispatch()
@@ -15,7 +16,14 @@ const RecipeBox = () => {
 
     return(
         <>
-            <SavedRecipesIndex savedRecipes={savedRecipes}/>
+            <div className="recipebox-component-wrapper">
+                <div className="recipebox-nav-wrapper">
+                    <RecipeBoxNav />
+                </div>
+                <div className="recipebox-index-wrapper">
+                    <SavedRecipesIndex savedRecipes={savedRecipes}/>
+                </div>
+            </div>
         </>
     )
 

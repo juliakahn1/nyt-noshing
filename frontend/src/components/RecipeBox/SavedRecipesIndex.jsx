@@ -5,8 +5,8 @@ import RecipeBoxNav from "./RecipeBoxNav"
 const SavedRecipesIndex = ({ savedRecipes }) => {
     return(
         <>
-            <div className="recipe-box-flexbox">
-                <RecipeBoxNav />
+            {/* <div className="recipe-box-flexbox"> */}
+                {/* <RecipeBoxNav /> */}
                 <div className="saved-index-outer-container">
                     <div className="saved-index-inner-container">
                         <div className="saved-index-overflow-wrapper">
@@ -22,9 +22,7 @@ const SavedRecipesIndex = ({ savedRecipes }) => {
                         </div>
                     </div>
                 </div>
-                <RecipeBoxNav />
-
-            </div>
+            {/* </div> */}
         </>
     )
 
