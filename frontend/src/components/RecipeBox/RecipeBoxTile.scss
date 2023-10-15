@@ -1,7 +1,10 @@
+.tile-list-wrapper {
+   list-style-type: none;
+}
 .recipe-item-navlink {
     text-decoration: none;
     color: inherit;
-    width: 260px;
+    width: 235px;
 }
 .saved-index-card-wrapper {
     cursor: pointer;
@@ -32,7 +35,7 @@
 }
 
 .saved-index-card-metadata {
-    height: 85px;
+    height: 89px;
     padding: 10px;
 }
 
@@ -60,7 +63,7 @@ p.saved-index-card-author {
     letter-spacing: .02em;
     line-height: 1.45;
     font-size: 0.75rem;
-    padding-bottom: 4%;
+    padding-bottom: 6%;
 }
 
 

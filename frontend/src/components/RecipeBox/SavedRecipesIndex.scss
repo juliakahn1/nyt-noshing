@@ -2,7 +2,7 @@
 .saved-index-inner-container {
     margin-left: 105px;
     margin-right: 150px;
-    width: 1020px
+    width: 83%
 }
 
 .saved-index-overflow-wrapper {
@@ -18,7 +18,7 @@
 }
 
 .saved-index-header {
-    margin: 43px 0 16px 5px;
+    margin: 43px 0 30px 5px;
     display: inline-block;
     max-width: 900px;
 }
@@ -43,7 +43,8 @@
 
 .saved-index-tiles-wrapper {
     padding-bottom: 30px;
+    padding-left: 16px;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(235px, 1fr) );
     grid-gap: 20px;
 }

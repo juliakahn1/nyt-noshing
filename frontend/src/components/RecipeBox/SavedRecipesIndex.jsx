@@ -22,7 +22,9 @@ const SavedRecipesIndex = ({ savedRecipes }) => {
                             { savedRecipes.map(recipe => {
                                 if (recipesHash[recipe.id]) {
                                     return (
-                                        <RecipeBoxTile recipe={recipesHash[recipe.id]} />
+                                        <li key={recipe.id} className="tile-list-wrapper">
+                                            <RecipeBoxTile recipe={recipesHash[recipe.id]} />
+                                        </li>
                                     )
                                 }
                             })}
