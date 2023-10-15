@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import SavedRecipesIndex from "./SavedRecipesIndex"
 import { fetchSaves } from "../../store/savedRecipes"
+import SavedRecipesIndex from "./SavedRecipesIndex"
 import RecipeBoxNav from "./RecipeBoxNav"
 import "./index.scss"
 
