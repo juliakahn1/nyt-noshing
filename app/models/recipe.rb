@@ -19,5 +19,4 @@ class Recipe < ApplicationRecord
     has_one_attached :photo
     has_many :notes
     has_many :saves, foreign_key: :user_id, class_name: :SavedRecipe
-
 end

@@ -12,11 +12,6 @@ const NoteItem = ({ note, recipeId }) => {
         return store.session.user ? store.session.user.id : null
     })
 
-    let modal
-    modalState["editNote"] ? modal = (
-        <EditNoteModal note={note} />
-    ) : modal = (<></>)
-
     let authorButtons
     (note.userId === currentUser) ? authorButtons = (
         <div className="show-note-item-buttons-wrapper">
@@ -25,6 +20,10 @@ const NoteItem = ({ note, recipeId }) => {
         </div>
     ) : authorButtons = (<></>)
 
+    let modal
+    modalState["editNote"] ? modal = (
+        <EditNoteModal note={note} />
+    ) : modal = (<></>)
 
     return(
         <>
