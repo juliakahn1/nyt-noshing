@@ -1,9 +1,11 @@
+.recipe-box-flexbox {
+    display: flex;
+}
 .saved-index-outer-container {
     left: 235px;
     min-height: 100vh;
     width: calc(100% - 235px);
     position: relative;
-    display: block;
     padding-top: 112px;
     background-color: #f2f3ef;
 }
