@@ -1,3 +1,4 @@
+import RecipeBoxCategoryItem from "./RecipeBoxCategoryItem"
 import "./RecipeBoxNav.scss"
 import { useSelector } from "react-redux"
 
@@ -10,7 +11,6 @@ const RecipeBoxNav = () => {
     function removeDuplicates(arr) {
         return arr.filter((item, index) => arr.indexOf(item) === index);
     }
-
 
     return(<>
         <div className="recipebox-nav-saved-recipes-tab">
@@ -25,6 +25,16 @@ const RecipeBoxNav = () => {
             </ul>
             <div className="recipebox-nav-category-container">
                 <h3 className="recipebox-nav-category-header">by category</h3>
+                <ul className="recipebox-nav-category-list">
+                    {recipeCategories.map((category, index) => {
+                        const taggedRecipes = recipesArr.filter(recipe => recipe.tags.includes(category))
+                        return(
+                            <li className="recipebox-nav-category-tab" key={index}>
+                                <RecipeBoxCategoryItem category={category} taggedRecipes={taggedRecipes}/>
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
         </div>
     </>)
