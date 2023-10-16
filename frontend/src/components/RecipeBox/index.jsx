@@ -4,6 +4,7 @@ import { fetchSaves } from "../../store/savedRecipes"
 import SavedRecipesIndex from "./SavedRecipesIndex"
 import RecipeBoxNav from "./RecipeBoxNav"
 import "./index.scss"
+import { fetchRecipes } from "../../store/recipes"
 
 const RecipeBox = () => {
     const dispatch = useDispatch()
@@ -11,9 +12,10 @@ const RecipeBox = () => {
 
     useEffect(() => {
         dispatch(fetchSaves(userId))
-    },[dispatch, userId])
+        dispatch(fetchRecipes())
+    }, [dispatch, userId])
 
-    return(
+    return (
         <>
             <div className="recipebox-component-wrapper">
                 <div className="recipebox-nav-wrapper">
