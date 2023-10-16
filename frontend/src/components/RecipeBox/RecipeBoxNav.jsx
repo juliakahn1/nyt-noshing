@@ -12,6 +12,7 @@ const RecipeBoxNav = ({ category, setCategory }) => {
 
   category === "all" ? isSelected = 'selected' : isSelected =  ""
 
+
   return (
     <>
       <div className="recipebox-nav-saved-recipes-tab">
