@@ -1,11 +1,44 @@
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
-import './RecipeItem.css'
+import './RecipeItem.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { openModal } from '../../store/modals'
+import { createSave, deleteSave } from '../../store/savedRecipes'
 
 const RecipeItem = ({ recipe }) => {
   const currentUser = useSelector(store => store.session.user)
+  const savedRecipes = Object.values(useSelector(state => state.savedRecipes))
   const dispatch = useDispatch()
+  let saveRibbon
+
+  const handleSave = (e) => {
+    e.preventDefault()
+    dispatch(createSave({
+        recipeId: recipe.id,
+        userId: currentUser.id
+    }))
+  }
+
+  const handleUnsave = (e) => {
+    e.preventDefault()
+    const save = savedRecipes.find(data => data.recipeId === recipe.id) // returns array
+    dispatch(deleteSave(save.id, currentUser.id))
+  }
+
+  savedRecipes.some(data => data.recipeId === recipe.id) ? saveRibbon = ( // if saved
+    <>
+      <button
+        className="recipe-index-card-save-ribbon ribbon-saved"
+        onClick={e => handleUnsave(e)}>
+      </button>
+    </>
+  ) : saveRibbon = ( // if unsaved
+    <>
+      <button
+        className="recipe-index-card-save-ribbon ribbon-unsaved"
+        onClick={e => handleSave(e)}>
+      </button>
+    </>
+  )
 
   const linkContent = (
     <div className="recipe-index-card-wrapper">
@@ -32,7 +65,8 @@ const RecipeItem = ({ recipe }) => {
             <div className='recipe-index-card-cooktime'>{recipe.cookTime}</div>
           </div>
           <div className="recipe-index-card-save-action">
-            <button className="recipe-index-card-save-ribbon"></button>
+            { saveRibbon }
+            {/* <button className="recipe-index-card-save-ribbon"></button> */}
           </div>
         </div>
       </div>

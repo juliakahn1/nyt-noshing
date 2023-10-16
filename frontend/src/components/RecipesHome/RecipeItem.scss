@@ -104,3 +104,27 @@ p.recipe-index-card-author {
     letter-spacing: .02em;
     line-height: 1.45;
 }
+
+.recipe-index-card-save-ribbon {
+    height: 44px;
+    width: 44px;
+    text-indent: -99999px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: unset;
+    border: 0;
+
+    &.ribbon-unsaved {
+        background-image: url(https://cooking.nytimes.com/assets/save-ribbon-gray-outline.svg);
+
+        &:hover {
+            background-image: url(https://cooking.nytimes.com/assets/save-ribbon-gray.svg)
+        }
+    }
+
+    &.ribbon-saved {
+        background-image: url(https://cooking.nytimes.com/assets/save-ribbon-gray.svg)
+    }
+
+}
