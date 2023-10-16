@@ -11,6 +11,7 @@ export const RecipesHome = () => {
     const recipes = useSelector(store => store.recipes)
     const recipesArr = Object.values(recipes) // empty arrays are still truthy
     const currentUser = useSelector(store => store.session.user)
+    const babka = recipesArr.find(recipe => recipe.name === "Cinnamon Babka")
 
     useEffect(() => {
         dispatch(fetchRecipes()) // state updates
@@ -20,7 +21,7 @@ export const RecipesHome = () => {
     return recipesArr.length > 0 ?
     (
         <>
-            <RecipesHero recipe={recipesArr[0]} />
+            <RecipesHero recipe={babka} />
             <h2 className="recipes-index-pantry-header">Latest Recipes</h2>
             <ul className="recipes-index-pantry-tiles">
                 { recipesArr.slice(1).map( recipe => {
