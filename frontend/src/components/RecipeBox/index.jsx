@@ -20,7 +20,7 @@ const RecipeBox = () => {
         <>
             <div className="recipebox-component-wrapper">
                 <div className="recipebox-nav-wrapper">
-                    <RecipeBoxNav setCategory={setCategory}/>
+                    <RecipeBoxNav setCategory={setCategory} category={category}/>
                 </div>
                 <div className="recipebox-index-wrapper">
                     <SavedRecipesIndex category={category}/>

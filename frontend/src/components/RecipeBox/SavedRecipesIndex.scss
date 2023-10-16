@@ -30,6 +30,28 @@
     letter-spacing: inherit;
     display: inline;
     font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+
+    &.saved-header {
+        font-weight: 500;
+        color: #666;
+    }
+
+    &.saved-header:after {
+        height: 21px;
+        background-color: #b3b3b3;
+        // border-color: #b3b3b3;
+        padding-right: 0.5px;
+        padding-left: 0.5px;
+        content: '';
+        display: inline-block;
+        margin: 0 10px;
+        position: relative;
+        top: 2px;
+    }
+
+    &.saved-category {
+        text-transform: capitalize;
+    }
 }
 
 .saved-index-header-save-count {
@@ -47,4 +69,8 @@
     display: flex;
     flex-wrap: wrap;
     grid-gap: 15px;
+
+    &.tab-selected {
+        background-color: #deddd5;
+    }
 }

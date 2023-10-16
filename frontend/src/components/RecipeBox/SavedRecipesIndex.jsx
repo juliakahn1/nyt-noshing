@@ -6,9 +6,17 @@ import RecipeBoxTile from "./RecipeBoxTile"
 
 const SavedRecipesIndex = ({ category }) => {
   const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse() // saved recipe data (joins table)
-  console.log("savedRecipes", savedRecipes)
 
-  // Filter out the recipes that aren't relevant to our selected category (else display all if "all")
+  let header
+  category === "all" ? header = (
+    <h2 className="saved-index-header-title">Saved Recipes</h2>
+  ) : header = (
+    <h2 className="saved-index-header-title">
+      <span className="saved-index-header-title saved-header">Saved Recipes</span>
+      <span className="saved-index-header-title saved-category">{category}</span>
+    </h2>
+  )
+
   const recipesToDisplay = savedRecipes.filter(
     savedRecipe => savedRecipe.recipe.tags.includes(category) || category === "all"
   );
@@ -20,15 +28,15 @@ const SavedRecipesIndex = ({ category }) => {
           <div className="saved-index-overflow-wrapper">
             <div className="saved-index-header-wrapper">
               <div className="saved-index-header">
-                <h2 className="saved-index-header-title">Saved Recipes</h2>
-                <p className="saved-index-header-save-count">{savedRecipes.length} recipes</p>
+                { header }
+                <p className="saved-index-header-save-count">{recipesToDisplay.length} recipes</p>
               </div>
             </div>
             <ul className="saved-index-tiles-wrapper">
               {recipesToDisplay.map(savedRecipe => {
                 console.log("savedRecipe", savedRecipe)
                 return (
-                  <li key={savedRecipe.id} className="tile-list-wrapper">
+                  <li key={savedRecipe.id} className={`tile-list-wrapper`}>
                     <RecipeBoxTile savedRecipes={savedRecipes} savedRecipe={savedRecipe} />
                   </li>
                 )
