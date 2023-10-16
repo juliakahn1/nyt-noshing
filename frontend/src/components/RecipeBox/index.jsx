@@ -8,7 +8,6 @@ import "./index.scss"
 const RecipeBox = () => {
     const dispatch = useDispatch()
     const userId = useSelector(store => store.session.user.id)
-    const savedRecipes = Object.values(useSelector(store => store.savedRecipes))
 
     useEffect(() => {
         dispatch(fetchSaves(userId))
@@ -21,7 +20,7 @@ const RecipeBox = () => {
                     <RecipeBoxNav />
                 </div>
                 <div className="recipebox-index-wrapper">
-                    <SavedRecipesIndex savedRecipes={savedRecipes}/>
+                    <SavedRecipesIndex />
                 </div>
             </div>
         </>

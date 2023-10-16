@@ -10,10 +10,9 @@ class Api::SavedRecipesController < ApplicationController
     end
 
     def create
-        user_id = current_user.id
-        @saved_recipe = SavedRecipe.new(saved_recipe_params)
+        @saved_recipe = SavedRecipe.new(recipe_id: params[:recipe_id], user_id: params[:user_id])
 
-        if @saved_recipe.save
+        if @saved_recipe.save!
             render :create
         else
             render json: { errors: @saved_recipe.errors.full_messages }
@@ -21,13 +20,15 @@ class Api::SavedRecipesController < ApplicationController
     end
 
     def destroy
+        user_id = current_user.id
         @saved_recipe = SavedRecipe.find_by(id: params[:id])
         @saved_recipe.destroy!
     end
 
     private
 
-    def saved_recipe_params
-        params.require(:saved_recipe).permit(:user_id, :recipe_id)
-    end
+    # def saved_recipe_params
+    #     debugger
+    #     params.require(:saved_recipe).permit(:user_id, :recipe_id)
+    # end
 end

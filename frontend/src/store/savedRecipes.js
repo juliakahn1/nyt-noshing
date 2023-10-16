@@ -40,7 +40,7 @@ export const fetchSaves = (userId) => async (dispatch) => {
     }
 }
 
-export const createSave = (save) => async (dispatch) => { // SAVE HAS USERID INSIDE
+export const createSave = (save) => async (dispatch) => {
     const res = await csrfFetch(`/api/users/${save.userId}/saved_recipes`, {
         method: "POST",
         headers: {
@@ -54,12 +54,12 @@ export const createSave = (save) => async (dispatch) => { // SAVE HAS USERID INS
     }
 }
 
-export const deleteSave = (noteId, userId) => async (dispatch) => {
-    const res = await csrfFetch(`/api/users/${userId}/saved_recipes/${noteId}`,{
+export const deleteSave = (saveId, userId) => async (dispatch) => {
+    const res = await csrfFetch(`/api/users/${userId}/saved_recipes/${saveId}`,{
         method: "DELETE"
     })
     if (res.ok) {
-        dispatch(removeSave(noteId))
+        dispatch(removeSave(saveId))
     }
 }
 
@@ -79,3 +79,5 @@ export const savedRecipesReducer = (store = {}, action) => {
             return store
     }
 }
+
+export default savedRecipesReducer
