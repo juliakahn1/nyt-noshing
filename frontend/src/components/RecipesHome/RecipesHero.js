@@ -38,8 +38,6 @@ const RecipesHero = ({ recipe }) => {
         </NavLink>
     )
 
-    // console.log(savedRecipes.some(data => data.recipeId === recipe.id))
-
     savedRecipes.some(data => data.recipeId === recipe.id) ? saveButton = (
         <>
             <button
@@ -51,7 +49,8 @@ const RecipesHero = ({ recipe }) => {
         </>
     ) : saveButton = (
         <>
-            <button className="recipe-index-hero-save-button"
+            <button
+                className="recipe-index-hero-save-button"
                 onClick={e => handleSave(e)}>
                     <svg className="recipe-index-hero-button-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M14.706 4.294H6.294v10.587l4.206-2.669 4.206 2.67V4.293ZM5 3h11v14.235l-5.5-3.49-5.5 3.49V3Z" fill="#fff"></path></svg>
                     <span className="recipe-index-hero-save-button-text">Save</span>
@@ -67,7 +66,7 @@ const RecipesHero = ({ recipe }) => {
                     <img className="recipe-index-hero-image-photo" alt="recipe" src={recipe.photoUrl}></img>
                 </div>
                 <div className="recipe-index-hero-content">
-                    {showPageAccess}
+                    { showPageAccess }
                     <h3 className='recipe-index-hero-author'>By {recipe.author}</h3>
                     <p className='recipe-index-hero-blurb'>
                         We totally disagree with Jerry and Elaine's opinion that cinnamon babka is the "lesser babka" between it and its chocolate
