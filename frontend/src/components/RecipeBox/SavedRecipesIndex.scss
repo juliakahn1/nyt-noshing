@@ -44,8 +44,7 @@
 .saved-index-tiles-wrapper { // change this to flex, and then have it wrap (look at tiles)
     padding-bottom: 30px;
     padding-left: 16px;
-
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(235px, 1fr) );
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 15px;
 }
