@@ -49,7 +49,8 @@ const RecipesHero = ({ recipe }) => {
         </>
     ) : saveButton = (
         <>
-            <button className="recipe-index-hero-save-button"
+            <button
+                className="recipe-index-hero-save-button"
                 onClick={e => handleSave(e)}>
                     <svg className="recipe-index-hero-button-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M14.706 4.294H6.294v10.587l4.206-2.669 4.206 2.67V4.293ZM5 3h11v14.235l-5.5-3.49-5.5 3.49V3Z" fill="#fff"></path></svg>
                     <span className="recipe-index-hero-save-button-text">Save</span>
