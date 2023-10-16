@@ -4,24 +4,25 @@ import { fetchSaves } from "../../store/savedRecipes"
 import SavedRecipesIndex from "./SavedRecipesIndex"
 import RecipeBoxNav from "./RecipeBoxNav"
 import "./index.scss"
+import { fetchRecipes } from "../../store/recipes"
 
 const RecipeBox = () => {
     const dispatch = useDispatch()
     const userId = useSelector(store => store.session.user.id)
-    const savedRecipes = Object.values(useSelector(store => store.savedRecipes))
 
     useEffect(() => {
         dispatch(fetchSaves(userId))
-    },[dispatch, userId])
+        dispatch(fetchRecipes())
+    }, [dispatch, userId])
 
-    return(
+    return (
         <>
             <div className="recipebox-component-wrapper">
                 <div className="recipebox-nav-wrapper">
                     <RecipeBoxNav />
                 </div>
                 <div className="recipebox-index-wrapper">
-                    <SavedRecipesIndex savedRecipes={savedRecipes}/>
+                    <SavedRecipesIndex />
                 </div>
             </div>
         </>
