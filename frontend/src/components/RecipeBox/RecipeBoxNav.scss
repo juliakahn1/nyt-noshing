@@ -1,6 +1,58 @@
-.recipebox-nav-inner-wrapper {
-    // background-color: salmon;
-    // min-height: 100vh;
-    // width: 100%;
-    // padding-top: 112px;
+.recipebox-nav-saved-recipes-tab {
+    width: 100%;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    background-color: #f7f7f5;
+}
+
+.recipebox-nav-saved-recipes-ul {
+    list-style: none;
+    margin: 0 4% 0 4%;
+}
+
+.recipebox-nav-saved-recipes-a {
+    height: 64px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.recipebox-nav-saved-recipes-tab-text {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.recipebox-nav-saved-recipes-tab-icon {
+    background-image: url(https://static01.nyt.com/applications/cooking/9a7fd3c/assets/save-black.svg);
+    background-position: 0;
+    background-size: 15px;
+    height: 20px;
+    margin-left: 1.5px;
+    width: 15px;
+
+}
+
+.recipebox-nav-saved-recipes-tab-count {
+    color: #666;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.recipebox-nav-category-container {
+    background-color: #ebebe4;
+    padding-bottom: 22px;
+    padding-top: 22px;
+    width: 100%;
+}
+
+.recipebox-nav-category-header {
+    padding-bottom: 11px;
+    padding-left: 20px;
+    color: #767676;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .93px;
+    font-size: 0.75rem;
 }
