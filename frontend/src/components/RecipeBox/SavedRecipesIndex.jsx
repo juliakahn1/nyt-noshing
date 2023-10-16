@@ -3,9 +3,15 @@ import "./SavedRecipesIndex.scss"
 import { useSelector } from "react-redux"
 import RecipeBoxTile from "./RecipeBoxTile"
 
-const SavedRecipesIndex = () => {
-  const recipesArr = Object.values(useSelector(store => store.recipes))
-  const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse() // subscribes
+
+const SavedRecipesIndex = ({ category }) => {
+  const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse() // saved recipe data (joins table)
+  console.log("savedRecipes", savedRecipes)
+
+  // Filter out the recipes that aren't relevant to our selected category (else display all if "all")
+  const recipesToDisplay = savedRecipes.filter(
+    savedRecipe => savedRecipe.recipe.tags.includes(category) || category === "all"
+  );
 
   return (
     <>
@@ -19,16 +25,13 @@ const SavedRecipesIndex = () => {
               </div>
             </div>
             <ul className="saved-index-tiles-wrapper">
-              {savedRecipes.map(data => {
-                if (recipesArr.some(recipe => data.recipeId === recipe.id)) {
-                  return (
-                    <li key={data.id} className="tile-list-wrapper">
-                      <RecipeBoxTile savedRecipes={savedRecipes} recipe={
-                        recipesArr.find(recipe => data.recipeId === recipe.id)
-                      } />
-                    </li>
-                  )
-                }
+              {recipesToDisplay.map(savedRecipe => {
+                console.log("savedRecipe", savedRecipe)
+                return (
+                  <li key={savedRecipe.id} className="tile-list-wrapper">
+                    <RecipeBoxTile savedRecipes={savedRecipes} savedRecipe={savedRecipe} />
+                  </li>
+                )
               })}
             </ul>
           </div>

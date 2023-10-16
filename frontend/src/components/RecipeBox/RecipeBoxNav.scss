@@ -66,8 +66,12 @@
     justify-content: flex-start;
     cursor: pointer;
     padding: 5px;
-}
 
+    &:hover {
+        font-weight: 600;
+    }
+
+}
 
 .recipe-box-category-tab-image {
     object-fit: cover;
@@ -83,11 +87,13 @@
     align-items: center;
     font-family: "nyt-franklin",Arial,Helvetica,sans-serif;
 
+
     .category-name {
         letter-spacing: .3px;
         padding-left: 11px;
         text-transform: capitalize;
         font-size: 0.9rem;
+
     }
 
     .tab-count {
