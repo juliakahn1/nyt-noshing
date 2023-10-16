@@ -1,1 +1,1 @@
-json.extract! @saved_recipe, :id, :user_id, :recipe_id, :cooked
+json.partial! 'api/saved_recipes/saved_recipe', saved_recipe: @saved_recipe

@@ -1,5 +1,5 @@
-@saved_recipes.each do |recipe|
-    json.set! recipe.id do
-        json.extract! recipe, :id, :user_id, :recipe_id, :cooked
+@saved_recipes.each do |saved_recipe|
+    json.set! saved_recipe.id do
+        json.partial! 'api/saved_recipes/saved_recipe', saved_recipe: saved_recipe
     end
 end

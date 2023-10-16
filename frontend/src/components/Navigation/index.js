@@ -20,7 +20,7 @@ export const Navigation = () => {
 
     sessionUser ? sessionLinks = (
         <>
-            <NavLink className="navbar-recipebox-nav-link-wrapper" to='/recipe-box'>
+            <NavLink className="navbar-recipebox-nav-link-wrapper" to='/recipe-box/all'>
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.875 19a.875.875 0 0 1-1.421.684L12 16.126l-4.454 3.558A.875.875 0 0 1 6.125 19V4.125h11.75V19Z" fill="#222"></path></svg>
                 <li className='navbar-button-recipebox'>Your Recipe Box</li>
             </NavLink>
