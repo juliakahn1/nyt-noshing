@@ -1,5 +1,3 @@
-// --- ACTION CREATORS --- //
-
 const OPEN_MODAL = "modals/openModal"
 const CLOSE_MODAL = "modals/closeModal"
 
@@ -27,12 +25,5 @@ export const modalsReducer = (store = { signup: null, login: null }, action ) =>
             return store;
     }
 }
-
-// default state
-
-// { modals:
-//     signup: false,
-//     login: null
-// }
 
 export default modalsReducer

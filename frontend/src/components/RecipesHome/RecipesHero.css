@@ -16,11 +16,11 @@
 }
 
 .recipe-index-hero-image {
-    width: 60%;
+    width: 75%;
 }
 
 img.recipe-index-hero-image-photo {
-    max-width: 85%;
+    max-width: 95%;
 }
 
 img.recipe-index-hero-image-photo:hover {

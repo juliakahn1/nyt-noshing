@@ -1,5 +1,3 @@
-// --- ACTION CREATORS --- //
-
 import csrfFetch from "./csrf"
 import { RECEIVE_RECIPE } from "./recipes.js"
 
@@ -36,8 +34,6 @@ export const removeNote = (noteId) => {
         noteId
     }
 }
-
-// --- THUNK ACTIONS --- //
 
 export const fetchNotes = (recipeId) => async (dispatch) => { // load and dispatch
     const res = await fetch(`/api/recipes/${recipeId}/notes`)
@@ -83,10 +79,6 @@ export const deleteNote = (noteId, recipeId) => async (dispatch) => {
         dispatch(removeNote(noteId))
     }
 }
-
-
-
-// --- REDUCER --- //
 
 export const notesReducer = (store = {}, action) => {
     switch (action.type) {
