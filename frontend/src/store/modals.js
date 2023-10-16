@@ -15,7 +15,7 @@ export const closeModal = (modalType) => {
     }
 }
 
-export const modalsReducer = (store = { signup: null, login: null }, action ) => {
+export const modalsReducer = (store = { signup: null, login: null, sidePanel: null }, action ) => {
     switch(action.type) {
         case OPEN_MODAL:
             return { ...store, [action.modalType]: true }
