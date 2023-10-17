@@ -51,14 +51,11 @@ const SessionModal = () => {
           try {
             data = await res.cose().json()
           } catch {
-            // data = await res.text()
             data = await res.json()
           }
           if (data?.errors) {
-            // debugger
             setErrors(data.errors)
           } else if (data) {
-            // debugger
             setErrors([data])
           } else {
             setErrors([res.statusText])
