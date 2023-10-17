@@ -5,18 +5,19 @@ import { fetchRecipe } from '../../store/recipes.js';
 import "./RecipeShowPage.scss"
 import RatingsNotesSection from './RatingsNotesSection.js';
 import RecipeData from './RecipeData.js';
-// import SignUpFormModal from '../Navigation/SignUpFormModal.js';
-// import { openModal } from '../../store/modals.js';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 
 const RecipeShowPage = () => {
     const { recipeId } = useParams()
     const dispatch = useDispatch()
     const recipe = useSelector(store => store.recipes[recipeId])
-    // const currentUser = useSelector(store => store.session.user)
+    const userId = useSelector(store => store.session?.user?.id)
 
     useEffect(() => {
         dispatch(fetchRecipe(recipeId))
     }, [dispatch, recipeId])
+
+    if (!userId) return <Redirect to='/'/>
 
     return recipe ? (
         <>

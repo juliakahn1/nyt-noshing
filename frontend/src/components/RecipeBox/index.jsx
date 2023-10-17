@@ -6,15 +6,18 @@ import RecipeBoxNav from "./RecipeBoxNav"
 // import { fetchRecipes } from "../../store/recipes"
 import { useState } from "react"
 import "./index.scss"
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
 
 const RecipeBox = () => {
     const dispatch = useDispatch()
-    const userId = useSelector(store => store.session.user.id)
-    const [category, setCategory] = useState("all") // default all
+    const userId = useSelector(store => store.session?.user?.id)
+    const [category, setCategory] = useState("all")
 
     useEffect(() => {
         dispatch(fetchSaves(userId))
-    }, [dispatch, userId])
+    }, [dispatch])
+
+    if (!userId) return <Redirect to='/'/>
 
     return (
         <>

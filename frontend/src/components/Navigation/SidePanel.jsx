@@ -4,18 +4,15 @@ import * as sessionActions from '../../store/session'
 import { clearSaves } from "../../store/savedRecipes"
 import { closeModal } from "../../store/modals"
 import "./SidePanel.scss"
-// import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
 const SidePanel = ({user}) => {
   const dispatch = useDispatch()
-  // let history = useHistory()
 
   const logout = (e) => {
     e.preventDefault()
     dispatch(clearSaves())
     dispatch(closeModal("sidePanel"))
     dispatch(sessionActions.logout())
-    // history.push("/")
   }
 
 
