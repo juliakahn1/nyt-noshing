@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux"
 import { openModal } from "../../store/modals"
 import SidePanel from "./SidePanel"
 import SessionModal from "./SessionModal"
+import github from "./github-mark.jpg"
+import linkedin from "./linkedin-logo.png"
 import './Navigation.scss'
 
 export const Navigation = () => {
@@ -31,22 +33,17 @@ export const Navigation = () => {
                     Log In
                 </button>
             </li>
-            <li><button className="navbar-session-buttons signup"
-                onClick={(e) => dispatch(openModal("signup"))}>
-                    Create Account
-                </button>
-            </li>
+            <li className="nav-logos github-logo"><a href="https://github.com/juliakahn1" target="_blank" rel="noreferrer">
+                <img className="github-img" src={github} alt="github logo" />
+            </a></li>
+            <li className="nav-logos linkedin-logo"><a href="https://www.linkedin.com/in/juliakahn1/" target="_blank" rel="noreferrer">
+                <img className="linkedin-img" src={linkedin} alt="linkedin logo" />
+            </a></li>
         </>)
-
-    // --- LOG IN/SIGN UP MODALS --- //
 
     modalStates["login"] || modalStates["signup"] ?
         sessionModal = (<SessionModal />)
         : sessionModal = (<></>)
-
-    // modalStates["signup"] ?
-    //     signupModal = (<SignUpFormModal />)
-    //     : signupModal = (<></>)
 
     modalStates["sidePanel"] && sessionUser?
         sidePanel = (<SidePanel user={sessionUser}/>)
