@@ -24,9 +24,9 @@ export const RecipesHome = () => {
             <RecipesHero recipe={babka} />
             <h2 className="recipes-index-pantry-header">Latest Recipes</h2>
             <ul className="recipes-index-pantry-tiles">
-                { recipesArr.slice(1).map( recipe => {
+                { recipesArr.map( recipe => {
                     return (
-                        <li key={recipe.id}>
+                        <li key={Math.random()}>
                             <RecipeItem recipe={recipe} />
                         </li>)
                 })}
