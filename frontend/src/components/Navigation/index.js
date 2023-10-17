@@ -1,12 +1,12 @@
 import React from "react"
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
-import ProfileButton from "./ProfileButton"
 import './Navigation.scss'
 import LoginFormModal from "./LoginFormModal"
 import SignUpFormModal from "./SignUpFormModal"
 import { useDispatch } from "react-redux"
 import { openModal } from "../../store/modals"
+import SideModal from "./SideModal"
 
 export const Navigation = () => {
     const dispatch = useDispatch()
@@ -15,6 +15,7 @@ export const Navigation = () => {
     let sessionLinks;
     let loginModal;
     let signupModal;
+    let sideModal;
 
     // --- NAVBAR BUTTON COMPONENT VARIABLES --- //
 
@@ -22,9 +23,9 @@ export const Navigation = () => {
         <>
             <NavLink className="navbar-recipebox-nav-link-wrapper" to='/recipe-box/all'>
                 <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.875 19a.875.875 0 0 1-1.421.684L12 16.126l-4.454 3.558A.875.875 0 0 1 6.125 19V4.125h11.75V19Z" fill="#222"></path></svg>
-                <li className='navbar-button-recipebox'>Your Recipe Box</li>
+                <div className='navbar-button-recipebox'>Your Recipe Box</div>
             </NavLink>
-            <li><ProfileButton user={sessionUser} /></li>
+            <div onClick={() => dispatch(openModal("sidePanel"))}><svg className="navbar-profile-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM18.998 16.571A1.06 1.06 0 0 0 19 16.5c0-1.38-3.686-3-7-3s-7 1.62-7 3c0 .024 0 .048.002.071H5V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.429h-.002Z" fill="#121212"></path></svg></div>
         </>)
     : sessionLinks = (
         <>
@@ -51,10 +52,15 @@ export const Navigation = () => {
         signupModal = (<SignUpFormModal />)
         : signupModal = (<></>)
 
+    modalStates["sidePanel"] ?
+        sideModal = (<SideModal />)
+        : sideModal = (<></>)
+
     return(
         <>
             { loginModal }
             { signupModal }
+            { sideModal }
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
                     <li className='navbar-logo-wrapper'>
