@@ -198,7 +198,7 @@ ApplicationRecord.transaction do
     )
 
     Recipe.create!(
-      name: 'Joan Nathan’s Matzo Ball Soup',
+      name: 'Matzo Ball Soup',
       author: 'Joan Nathan',
       blurb: 'For children (and arguably most adults), the most welcome Passover dish is chicken soup with matzo balls. My matzo balls, neither heavy as lead nor light as a feather,
       are al dente, infused with fresh ginger and nutmeg. I like to freeze them, and the soup, in advance.',
@@ -224,7 +224,7 @@ ApplicationRecord.transaction do
     )
 
     Recipe.create!(
-      name: 'Brisket With Horseradish Gremolata',
+      name: 'Horseradish Brisket',
       author: 'Melissa Clark',
       blurb: 'This tender, deeply flavored brisket gets its character from two distinct sources. Searing the meat until dark brown gives the sauce a caramelized, intensely brawny taste, while a
         bracing garnish of fresh horseradish gremolata spiked with parsley and lemon zest adds brightness and a sinus-clearing bite. Make the meat a few days ahead, it only gets better as it rests.

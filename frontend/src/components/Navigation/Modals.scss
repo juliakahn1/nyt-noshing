@@ -37,7 +37,7 @@
 
 .modal-form-container {
     width: 34%;
-    padding: 70px 40px 50px 40px;
+    padding: 60px 40px 50px 40px;
 }
 
 .modal-photo {
@@ -62,6 +62,15 @@
     top: 15%;
     left: 29%;
     transform: translate(-50%, -50%);
+}
+
+.modal-error-message {
+ list-style: none;
+ font-family: 'Libre Franklin', sans-serif;
+ color: rgb(227, 61, 38);
+ font-size: 14px;
+ font-weight: 600;
+ line-height: 1.1rem;
 }
 
 .session-form-button-container {

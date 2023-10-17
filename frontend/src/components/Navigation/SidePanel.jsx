@@ -12,13 +12,15 @@ const SidePanel = ({user}) => {
     e.preventDefault()
     dispatch(clearSaves())
     dispatch(closeModal("sidePanel"))
+    dispatch(closeModal("signup"))
+    dispatch(closeModal("login"))
     dispatch(sessionActions.logout())
   }
 
 
   return (
     <>
-      <div className="side-panel-background">
+      <div className="side-panel-background" onClick={() => dispatch(closeModal("sidePanel"))}>
         <div className="side-panel-sidebar-wrapper">
           <div className="side-panel-sidebar-inner-wrapper">
             <div className="side-panel-email-exit">

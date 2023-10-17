@@ -5,9 +5,9 @@ class Api::SessionsController < ApplicationController
   def show
     @user = current_user
     if @user
-      render 'api/users/show' # renders user info
+      render 'api/users/show'
     else
-      render json: { user: nil } # change in future to index
+      render json: { user: nil }
     end
   end
 
@@ -15,7 +15,7 @@ class Api::SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:email], params[:password])
     if @user
       login!(@user)
-      render 'api/users/show' # renders user info
+      render 'api/users/show'
     else
       render json: { errors: ['Invalid email or password combination'] }, status: 422
     end
@@ -24,6 +24,5 @@ class Api::SessionsController < ApplicationController
   def destroy
     logout!
     render json: { message: ['Successfully logged out'] }
-    # render to index page after logout?
   end
 end

@@ -11,10 +11,10 @@
 #
 class User < ApplicationRecord
     validates :email, :session_token, presence: true, uniqueness: true
-    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Invalid email' },
-        length: { in: 3..255, message: 'Email addresses must be between 3 and 255 characters' }
+    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'is invalid' },
+        length: { in: 3..255, message: 'address must be between 3 and 255 characters' }
     validates :password_digest, presence: true
-    validates :password, length: { minimum: 8, message: 'Passwords must be longer than 8 characters'},
+    validates :password, length: { minimum: 8, message: 'must be longer than 8 characters'},
         allow_nil: true
 
     has_secure_password # handles password getter, setter, and is_password?

@@ -15,60 +15,76 @@ const SessionModal = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [errors, setErrors] = useState([]);
   let form
+  console.log(errors)
 
   if (sessionUser) return <Redirect to="/" />;
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
-    dispatch(closeModal("login"))
-    dispatch(closeModal("sidePanel"))
-      .catch(async (res) => {
-        let data;
-        try {
-          data = await res.clone().json();
-        } catch {
-          data = await res.text();
-        }
-        if (data?.errors) setErrors(data.errors);
-        else if (data) setErrors([data]);
-        else setErrors([res.statusText]);
-      });
+    const response = dispatch(sessionActions.login({ email, password }))
+    .catch(async (res) => {
+      let data;
+      try {
+        data = await res.clone().json();
+      } catch {
+        data = await res.text();
+      }
+      if (data?.errors) setErrors(data.errors); // puts errors in local state
+      else if (data) setErrors([data]);
+      else setErrors([res.statusText]);
+    });
+    if (response.ok) {
+      dispatch(closeModal("login"))
+      dispatch(closeModal("signup"))
+      dispatch(closeModal("sidePanel"))
+    }
   }
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault()
-    dispatch(closeModal("signup"))
     if (password === confirmPassword) {
       setErrors([])
-      return dispatch(sessionActions.signup({ email, password }))
+      const response = dispatch(sessionActions.signup({ email, password }))
         .catch(async (res) => {
           let data;
           try {
             data = await res.cose().json()
           } catch {
-            data = await res.text()
+            // data = await res.text()
+            data = await res.json()
           }
           if (data?.errors) {
+            // debugger
             setErrors(data.errors)
           } else if (data) {
+            // debugger
             setErrors([data])
           } else {
             setErrors([res.statusText])
           }
-        })
+        }
+      )
+      if (response.ok) {
+        dispatch(closeModal("login"))
+        dispatch(closeModal("signup"))
+        dispatch(closeModal("sidePanel"))
+      }
+    } else {
+      return setErrors(['Your password and confirmed password must match'])
     }
-    return setErrors(['Your password and confirmed password must match.'])
   }
 
   const switchForms = (e) => {
     e.preventDefault()
+    setErrors([]);
     dispatch(openModal("signup"))
     dispatch(closeModal("login"))
   }
 
   const closeAllModals = (e) => {
     e.preventDefault()
+    setErrors([]);
     dispatch(closeModal("login"))
     dispatch(closeModal("signup"))
   }
@@ -79,7 +95,6 @@ const SessionModal = () => {
         <form onSubmit={handleLoginSubmit}>
           <h2 className='session-form-header'>Enter your email address to log in.</h2>
           <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
           </ul>
           <label className='session-form-field-label'>Email Address
             <div className='session-form-field-label-outer-container'>
@@ -90,7 +105,7 @@ const SessionModal = () => {
                   className='session-form-input-box'
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                />
+                  />
               </div>
             </div>
           </label>
@@ -103,10 +118,11 @@ const SessionModal = () => {
                   className='session-form-input-box'
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                />
+                  />
               </div>
             </div>
           </label>
+            { errors.map(error => <div className="modal-error-message" key={error}>{error}</div>) }
           <div className='session-form-button-container'>
             <button className="session-form-button" type="submit">Log In</button>
           </div>
@@ -125,9 +141,6 @@ const SessionModal = () => {
       <>
         <form onSubmit={handleSignUpSubmit}>
           <h2 className='session-form-header'>Join NYT Noshing</h2>
-          <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-          </ul>
           <label className='session-form-field-label'>Email Address
             <div className='session-form-field-label-outer-container'>
               <div className='session-form-field-label-inner-container'>
@@ -167,6 +180,8 @@ const SessionModal = () => {
               </div>
             </div>
           </label>
+          {/* { errors.map(error => <li className="modal-error-message" key={error}>{error}</li>) } */}
+          <div className="modal-error-message">{errors[0]}</div>
           <div className='session-form-button-container'>
             <button className="session-form-button" type="submit">Create Account</button>
           </div>
