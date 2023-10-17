@@ -7,14 +7,11 @@ ApplicationRecord.transaction do
     Note.destroy_all
     SavedRecipe.destroy_all
 
-
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('recipes')
     ApplicationRecord.connection.reset_pk_sequence!('notes')
     ApplicationRecord.connection.reset_pk_sequence!('saved_recipes')
-
-
 
     puts "Creating users..."
     User.create!(
