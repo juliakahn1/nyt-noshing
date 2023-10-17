@@ -100,7 +100,7 @@ ApplicationRecord.transaction do
         for a yolk that is just barely firm all the way through.',
         'Drain eggs, then peel and eat immediately, or transfer them to a plate and allow them to cool naturally before storing in the refrigerator for up to a week directly in their shell. (A small dot made
         with a permanent marker on the top of each cooked egg will ensure you don’t mix them up with the raw eggs.) Do not shock them in an ice bath after cooking; this makes them more difficult to peel.'],
-      tags: ['breakfast']
+      tags: ['breakfast', 'sides']
     )
 
     Recipe.create!(
@@ -116,7 +116,7 @@ ApplicationRecord.transaction do
         'In a medium heavy-bottomed pan over medium-high heat, pour in about ¼ inch of the oil. Once the oil is hot (a drop of batter placed in the pan should sizzle), use a heaping tablespoon to drop the batter
         into the hot pan, cooking in batches. Use a spatula to flatten and shape the drops into discs. When the edges of the latkes are brown and crispy, about 5 minutes, flip. Cook until the second side is deeply
         browned, about another 5 minutes. Transfer the latkes to a paper towel-lined plate to drain and sprinkle with salt while still warm. Repeat with the remaining batter.'],
-      tags: ['sides']
+      tags: ['sides', 'dinner', 'lunch']
     )
 
     Recipe.create!(
@@ -173,7 +173,7 @@ ApplicationRecord.transaction do
         'Drizzle the top of the potatoes with the remaining 2 tablespoons fat and place in the oven. Bake until the top of the kugel is deeply golden brown, the edges are wispy and crispy, and the potatoes
         are completely and totally tender and cooked through, 45 to 50 minutes.',
         'Remove from oven and top with more pepper, chives and flaky sea salt. Slice and serve warm.'],
-      tags: ['sides']
+      tags: ['sides', 'dinner', 'lunch']
     )
 
     Recipe.create!(
@@ -195,6 +195,69 @@ ApplicationRecord.transaction do
         (if you’re making it sweet) and toss well.',
         'Serve matzo brei sprinkled with salt and topped with chives (savory).'],
       tags: ['breakfast']
+    )
+
+    Recipe.create!(
+      name: 'Joan Nathan’s Matzo Ball Soup',
+      author: 'Joan Nathan',
+      blurb: 'For children (and arguably most adults), the most welcome Passover dish is chicken soup with matzo balls. My matzo balls, neither heavy as lead nor light as a feather,
+      are al dente, infused with fresh ginger and nutmeg. I like to freeze them, and the soup, in advance.',
+      yield: 'About 15 matzo balls',
+      ingredients: ['4 large eggs',
+        '¼ cup schmaltz (rendered chicken fat), coconut oil or vegetable oil (kosher for Passover)',
+        '¼ cup chicken stock or vegetable stock',
+        '1 cup matzo meal',
+        '¼ teaspoon ground nutmeg',
+        '1 to 2 tablespoons freshly grated ginger',
+        '2 tablespoons finely chopped parsley, dill or cilantro',
+        '1 teaspoon salt, more for cooking',
+        'Black peper'],
+      cook_time: "1 hour 15 minutes, plus 3 hours or overnight refrigeration",
+      preparation: ['In a large bowl, combine the eggs, schmaltz, stock, matzo meal, nutmeg, ginger and parsley. Season with 1 teaspoon salt and a few grinds of pepper. Gently mix with a whisk or
+        spoon. Cover and refrigerate until chilled, about 3 hours or overnight.',
+        'To shape and cook the matzo balls, fill a wide, deep pan with lightly salted water and bring to a boil. With wet hands, take some of the mix and mold it into the size and shape of a
+        Ping-Pong ball. Gently drop it into the boiling water, repeating until all the mix is used.',
+        'Cover the pan, reduce heat to a lively simmer and cook matzo balls about 30 to 40 minutes for al dente, longer for light. If desired, the cooked matzo balls can be transferred to
+        chicken or vegetable soup and served immediately. Alternatively, they may be placed on a baking sheet and frozen, then transferred to a freezer bag and kept frozen until a few hours
+        before serving; reheat in chicken or vegetable soup or broth.'],
+      tags: ['soup', 'dinner', 'lunch']
+    )
+
+    Recipe.create!(
+      name: 'Brisket With Horseradish Gremolata',
+      author: 'Melissa Clark',
+      blurb: 'This tender, deeply flavored brisket gets its character from two distinct sources. Searing the meat until dark brown gives the sauce a caramelized, intensely brawny taste, while a
+        bracing garnish of fresh horseradish gremolata spiked with parsley and lemon zest adds brightness and a sinus-clearing bite. Make the meat a few days ahead, it only gets better as it rests.
+        But to get the most out of the gremolata, don’t grate the horseradish until an hour or two before serving. If you can’t find fresh horseradish, use 4 cloves minced garlic instead.',
+      yield: '8-12 servings',
+      ingredients: ['1 (4- to 5-pound) brisket, preferably second cut',
+        '1 tablespoon kosher salt',
+        '1½ teaspoons black pepper',
+        '4 garlic cloves, chopped',
+        '6 sprigs fresh thyme',
+        '2 tablespoons extra-virgin olive oil',
+        '2 large onions, thinly sliced',
+        '2 large carrots, sliced into thin rounds',
+        '2 large celery stalks, diced',
+        '1½ cups dry red wine',
+        '2 whole bay leaves',
+        '1½ cups parsley, coarsely chopped',
+        'Grated zest of 1 small lemon',
+        '3 tablespoons fresh, coarsely grated horseradish',
+        'Flaky sea salt, for serving'],
+      cook_time: "4 hours, plus marinating",
+      preparation: ['Season brisket all over with salt and pepper. Place brisket in a large container and spread garlic and thyme sprigs all over top and bottom of meat. Cover and refrigerate overnight
+        or for at least 4 hours. Let meat stand at room temperature for 30 minutes before cooking. Wipe off the garlic and thyme. Heat oven to 325 degrees.',
+        'Heat a very large Dutch oven over high heat. Add oil and let heat. Add brisket and sear, without moving, until golden brown, about 4 to 5 minutes per side. (Cut meat into 2 chunks and sear in batches
+        if it doesn’t fit in the pot in a single layer.) Transfer to a plate.',
+        'Add onions, carrots and celery to pot and reduce heat to medium-high. Cook vegetables, tossing occasionally, until onions are golden brown around the edges and very tender, about 15 minutes. Pour in
+        wine and scrape up any browned bits from the bottom of the pot. Stir in bay leaves and bring liquid to a simmer; let simmer for 5 minutes to reduce slightly.',
+        'Place meat in pot, then cover pot and transfer to oven. Cook, turning every 30 minutes, until meat is completely fork tender, 3 to 4 hours. After 2½ hours, uncover pot so some of the liquid can evaporate
+        and the sauce can thicken. If the brisket starts to get too brown and the sauce too reduced before the meat is tender, cover pot again.',
+        'Spoon fat from the top before serving. (If you have time, let brisket cool completely first, then refrigerate overnight in the pot; this makes it easier to remove the white fat from the top. Reheat the meat,
+        covered, in a 350-degree oven for 30 to 45 minutes.) If sauce seems thin, remove meat from pot and bring liquid to a simmer. Let cook until reduced to taste.',
+        'In a bowl, toss together parsley, lemon zest and horseradish to make gremolata. Slice meat against the grain and serve with the sauce, garnished with horseradish gremolata and sea salt.'],
+      tags: ['dinner', 'main course']
     )
 
     puts "Reviewing recipes..."
@@ -242,7 +305,7 @@ ApplicationRecord.transaction do
         blend of crispy and tender, just like the ones grandma used to make. The recipe's step-by-step instructions
         are easy to follow, making it accessible for cooks of all skill levels.",
       name: "Spud",
-      user_id: 1,
+      user_id: 2,
       recipe_id: 3
     )
 
@@ -250,7 +313,7 @@ ApplicationRecord.transaction do
       body: "Not only is this Shakshuka recipe a joy to eat, but it's also a wonderful dish to serve when you have guests
         over. It's a conversation starter, and the aroma alone will have your kitchen smelling divine.",
       name: "Tom Ato",
-      user_id: 1,
+      user_id: 4,
       recipe_id: 4
     )
 
@@ -279,6 +342,49 @@ ApplicationRecord.transaction do
       name: "Grandma Tza",
       user_id: 5,
       recipe_id: 6
+    )
+
+    Note.create!(
+      body: "Awww this reminds me of what my dad would make for us every morning when we had leftover matzah! Thanks or sharing!",
+      name: "Breille",
+      user_id: 4,
+      recipe_id: 6
+    )
+
+    Note.create!(
+      body: "Team dense matzah balls over here!",
+      name: "Matt Ztebol",
+      user_id: 5,
+      recipe_id: 7
+    )
+
+    Note.create!(
+      body: "Horseraddish on brisket? Not sure about this one, Melissa.",
+      name: "Bree Skit",
+      user_id: 3,
+      recipe_id: 8
+    )
+
+    Note.create!(
+      body: "No, MY mom makes the best brisket!",
+      name: "Anyonymous",
+      user_id: 3,
+      recipe_id: 8
+    )
+
+    Note.create!(
+      body: "No way, MY MOM does!",
+      name: "Meital",
+      user_id: 4,
+      recipe_id: 8
+    )
+
+    Note.create!(
+      body: "Melissa Clark, I love you, but there is no way that this is the beat-all brisket recipe, because MY mom makes the best brisket!
+        And it doesn't even require all these nonsense ingredients! Just cocktail sauce and French onion soup mix!",
+      name: "Julia",
+      user_id: 2,
+      recipe_id: 8
     )
 
     puts "Saving recipes to Recipe Boxes..."

@@ -166,3 +166,43 @@
         }
     }
 }
+
+.session-form-separator {
+    font-size: 14px;
+    margin: 12px 0px 0px;
+    line-height: 21px;
+    font-weight: 500;
+    font-family: nyt-franklin, helvetica, arial, sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    text-align: center;
+
+    &:before {
+        left: 0px;
+        margin-right: 0.5em;
+        position: absolute;
+        display: inline-block;
+        content: "";
+        top: 50%;
+        width: calc(50% - 1em);
+        height: 0px;
+        border-bottom: 1px solid rgb(226, 226, 226);
+    }
+
+    &:after {
+        right: 0px;
+        margin-left: 0.5em;
+        position: absolute;
+        display: inline-block;
+        content: "";
+        top: 50%;
+        width: calc(50% - 1em);
+        height: 0px;
+        border-bottom: 1px solid rgb(226, 226, 226);
+    }
+}
+
+.session-form-separator-text {
+    display: inline-block;
+    height: 14px;
+}
