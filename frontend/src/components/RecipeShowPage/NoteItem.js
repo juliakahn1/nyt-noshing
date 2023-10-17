@@ -32,7 +32,7 @@ const NoteItem = ({ note, recipeId }) => {
                 <header className="show-note-item-header">
                     <div className="show-note-item-name-timestamp">
                         <h3 className="show-note-item-name">{note.name}</h3>
-                        <time className="show-note-item-timestamp">Time placeholder</time>
+                        {/* <time className="show-note-item-timestamp">Time placeholder</time> */}
                     </div>
                 </header>
                 <div className="show-note-item-body">

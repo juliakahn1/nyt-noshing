@@ -11,7 +11,7 @@ const App = () => {
       <Navigation />
       <Switch>
         <Route path="/recipes/:recipeId" component={RecipeShowPage}/>
-        <Route path="/recipe-box/all" component={RecipeBox} />
+        <Route path="/recipe-box" component={RecipeBox} />
         <Route path="/" component={RecipesHome} />
       </Switch>
     </>
