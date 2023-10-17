@@ -78,6 +78,8 @@ const SessionModal = () => {
   const switchForms = (e) => {
     e.preventDefault()
     setErrors([]);
+    setEmail("")
+    setPassword("")
     dispatch(openModal("signup"))
     dispatch(closeModal("login"))
   }
