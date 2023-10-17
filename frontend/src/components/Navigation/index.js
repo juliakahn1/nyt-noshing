@@ -1,20 +1,18 @@
 import React from "react"
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { useSelector } from "react-redux/es/hooks/useSelector"
-import './Navigation.scss'
-import LoginFormModal from "./LoginFormModal"
-import SignUpFormModal from "./SignUpFormModal"
 import { useDispatch } from "react-redux"
 import { openModal } from "../../store/modals"
 import SidePanel from "./SidePanel"
+import SessionModal from "./SessionModal"
+import './Navigation.scss'
 
 export const Navigation = () => {
     const dispatch = useDispatch()
     const sessionUser = useSelector(store => store.session.user)
     const modalStates = useSelector(store => store.modals)
     let sessionLinks;
-    let loginModal;
-    let signupModal;
+    let sessionModal;
     let sidePanel;
 
     sessionUser ? sessionLinks = (
@@ -42,13 +40,13 @@ export const Navigation = () => {
 
     // --- LOG IN/SIGN UP MODALS --- //
 
-    modalStates["login"] ?
-        loginModal = (<LoginFormModal />)
-        : loginModal = (<></>)
+    modalStates["login"] || modalStates["signup"] ?
+        sessionModal = (<SessionModal />)
+        : sessionModal = (<></>)
 
-    modalStates["signup"] ?
-        signupModal = (<SignUpFormModal />)
-        : signupModal = (<></>)
+    // modalStates["signup"] ?
+    //     signupModal = (<SignUpFormModal />)
+    //     : signupModal = (<></>)
 
     modalStates["sidePanel"] && sessionUser?
         sidePanel = (<SidePanel user={sessionUser}/>)
@@ -56,8 +54,7 @@ export const Navigation = () => {
 
     return(
         <>
-            { loginModal }
-            { signupModal }
+            { sessionModal }
             { sidePanel }
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
