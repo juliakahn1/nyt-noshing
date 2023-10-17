@@ -49,7 +49,7 @@ const SignUpFormModal = () => {
                         <span className="modal-photo-text">
                             Unlock New York Times recipes and your personal recipe box with a free account.
                         </span>
-                        <img className="modal-photo" src="https://cooking.nytimes.com/assets/regiwall-souffle-tall.jpg"></img>
+                        <img className="modal-photo" alt="recipe-card" src="https://cooking.nytimes.com/assets/regiwall-souffle-tall.jpg"></img>
                     </div>
                     <div className="modal-form-container">
                         <form onSubmit={handleSubmit}>

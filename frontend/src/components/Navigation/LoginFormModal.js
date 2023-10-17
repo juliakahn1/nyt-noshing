@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as sessionActions from '../../store/session';
+// import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import './Modals.css';
@@ -19,7 +19,7 @@ const LoginFormModal = () => {
         e.preventDefault();
         setErrors([]);
         dispatch(closeModal("login"))
-        return dispatch(sessionActions.login({ email, password }))
+        dispatch(closeModal("sidePanel"))
             .catch(async (res) => {
                 let data;
                 try {
@@ -43,7 +43,7 @@ const LoginFormModal = () => {
                         <span className="modal-photo-text">
                             Unlock New York Times recipes and your personal recipe box with a free account.
                         </span>
-                        <img className="modal-photo" src="https://cooking.nytimes.com/assets/regiwall-souffle-tall.jpg"></img>
+                        <img className="modal-photo" alt="recipe-card" src="https://cooking.nytimes.com/assets/regiwall-souffle-tall.jpg"></img>
                     </div>
                     <div className="modal-form-container">
                         <form onSubmit={handleSubmit}>

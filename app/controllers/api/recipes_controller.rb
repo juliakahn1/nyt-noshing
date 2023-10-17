@@ -2,11 +2,6 @@ class Api::RecipesController < ApplicationController
   before_action :require_logged_in, only: [:show]
 
   def index
-    ## TODO: build logic for filtering
-    # if params[:category]
-    #   @recipes = Recipe.where(tags: params[:tags])
-    # else
-    # end
     @recipes = Recipe.all
     if @recipes
       render 'api/recipes/index'
