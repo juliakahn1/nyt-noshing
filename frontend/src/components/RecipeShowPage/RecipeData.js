@@ -63,7 +63,7 @@ const RecipeData = ({ recipe }) => {
                     <div className="show-intro-image-wrapper">
                         <div className="show-intro-recipe-image">
                             <div className="show-intro-recipe-photo">
-                                <img className="show-intro-actual-photo" alt="image of recipe" src={recipe.photoUrl} />
+                                <img className="show-intro-actual-photo" alt="recipe-card" src={recipe.photoUrl} />
                             </div>
                         </div>
                     </div>

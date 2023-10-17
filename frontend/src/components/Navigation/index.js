@@ -6,7 +6,7 @@ import LoginFormModal from "./LoginFormModal"
 import SignUpFormModal from "./SignUpFormModal"
 import { useDispatch } from "react-redux"
 import { openModal } from "../../store/modals"
-import SideModal from "./SideModal"
+import SidePanel from "./SidePanel"
 
 export const Navigation = () => {
     const dispatch = useDispatch()
@@ -15,9 +15,7 @@ export const Navigation = () => {
     let sessionLinks;
     let loginModal;
     let signupModal;
-    let sideModal;
-
-    // --- NAVBAR BUTTON COMPONENT VARIABLES --- //
+    let sidePanel;
 
     sessionUser ? sessionLinks = (
         <>
@@ -52,15 +50,15 @@ export const Navigation = () => {
         signupModal = (<SignUpFormModal />)
         : signupModal = (<></>)
 
-    modalStates["sidePanel"] ?
-        sideModal = (<SideModal />)
-        : sideModal = (<></>)
+    modalStates["sidePanel"] && sessionUser?
+        sidePanel = (<SidePanel user={sessionUser}/>)
+        : sidePanel = (<></>)
 
     return(
         <>
             { loginModal }
             { signupModal }
-            { sideModal }
+            { sidePanel }
             <ul className='navbar-elements-wrapper'>
                 <div className="navbar-logo-title-wrapper">
                     <li className='navbar-logo-wrapper'>

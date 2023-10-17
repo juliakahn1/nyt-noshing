@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { fetchSaves } from "../../store/savedRecipes"
 import SavedRecipesIndex from "./SavedRecipesIndex"
 import RecipeBoxNav from "./RecipeBoxNav"
-import { fetchRecipes } from "../../store/recipes"
+// import { fetchRecipes } from "../../store/recipes"
 import { useState } from "react"
 import "./index.scss"
 

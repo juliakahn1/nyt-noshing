@@ -43,7 +43,7 @@ const RecipeItem = ({ recipe }) => {
   const linkContent = (
     <div className="recipe-index-card-wrapper">
       <figure className="recipe-index-card-image">
-        <img className="recipe-index-card-photo" src={recipe.photoUrl} />
+        <img className="recipe-index-card-photo" alt="recipe-card" src={recipe.photoUrl} />
       </figure>
       <div className="recipe-index-card-metadata">
         <div className="recipe-index-card-name-author">
