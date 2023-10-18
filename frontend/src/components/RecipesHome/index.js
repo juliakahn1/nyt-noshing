@@ -11,7 +11,7 @@ export const RecipesHome = () => {
     const recipes = useSelector(store => store.recipes)
     const recipesArr = Object.values(recipes) // empty arrays are still truthy
     const currentUser = useSelector(store => store.session.user)
-    const babka = recipesArr.find(recipe => recipe.name === "Cinnamon Babka")
+    const babka = recipesArr.find(recipe => recipe.name === "Tsimmes")
 
     useEffect(() => {
         dispatch(fetchRecipes()) // state updates

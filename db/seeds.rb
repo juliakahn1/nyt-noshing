@@ -260,6 +260,159 @@ ApplicationRecord.transaction do
       tags: ['dinner', 'main course']
     )
 
+    Recipe.create!(
+      name: 'Tsimmes',
+      author: 'Joan Nathan',
+      blurb: 'I substitute the yellow yams or sweet potatoes with the white Japanese sweet potatoes that I love. I use flanken, a cut of short ribs found at kosher butchers, but any cut of short ribs will do, as will
+        beef stew meat. I keep the bones in for flavor — and add a bay leaf for the same reason — and, rather than skimming the fat as it cooks, I simply put the stew pot in the refrigerator overnight so I can easily
+         remove the hardened fat the next day. (A generation or two before me, cooks would have saved that fat for cooking and baking.) Instead of adding a little matzo meal to thicken the broth, I find no need for
+          that, especially if I reduce the sauce a little before serving. I add pitted prunes, which are sweet enough to eliminate the need for brown sugar or honey and, at the end, I add parsley for color.',
+      yield: '6 to 8 servings',
+      ingredients: ['3 bone-in flanken, also known as flanken-style ribs, or English-cut short ribs (about 3 pounds)',
+        '1 tablespoon kosher salt, plus more to taste',
+        '1½ teaspoons freshly ground black pepper, plus more to taste',
+        '1 fresh (or dried) bay leaf',
+        '3 pounds sweet potatoes, preferably Japanese white sweet potatoes (3 to 4 large sweet potatoes), peeled and cut into 2-inch chunks',
+        '2 medium white or yellow onions, halved and sliced',
+        '5 to 6 medium carrots, peeled and cut into 2-inch segments',
+        '8 ounces prunes, pitted and left whole',
+        'Chopped fresh parsley, for serving'],
+      cook_time: "About 3 hours, plus overnight chilling",
+      preparation: ['A day before serving, heat the oven to 350 degrees.',
+        'Season the meat with 1 tablespoon salt and 1½ teaspoons pepper.',
+        'Put the meat and the bay leaf in a Dutch oven or other large, heavy pot, and add enough water to cover (about 8 cups). Bake, covered, for about an hour, then remove from heat, let cool and refrigerate overnight.',
+        'The next day, the fat will have congealed on top; using a slotted spoon, remove and discard the layer of fat.',
+        'Add the sweet potatoes, onions, carrots and prunes to the meat, and stir to combine. Bake, covered, for another hour, then remove the lid and cook until the potatoes are cooked, the meat is tender and the water
+        is reduced, another 30 minutes to 1 hour. Season to taste. If there is more broth than you’d like, ladle some out and save for another use. Sprinkle with parsley just before serving.'],
+      tags: ['dinner', 'main course', 'meat', 'stew', 'soup']
+    )
+
+    Recipe.create!(
+      name: 'Carrot Ring',
+      author: 'Dana Green, Melissa Clark',
+      blurb: 'A cross between a carrot cake and a carrot pudding, this velvety, warm, gently sweet side dish is a classic holiday offering. This version is adapted from Dana Green of Benicia, Calif., who got it
+        from her grandmother. "Everyone who encounters it is wary of the name, carrot ring, but they end up loving it, they have seconds," Ms. Green said. You can make this ahead by allowing the ring to cool in the pan,
+        then wrapping the whole thing in plastic wrap, pan and all, and freezing it for up to one month. Let thaw in the refrigerator overnight. Unwrap and reheat in a 300-degree oven for about 30 minutes or so before serving.',
+      yield: '12 servings',
+      ingredients: ['1 cup shortening or unsalted butter, plus more for the pan',
+        '4 medium carrots, peeled and sliced',
+        '½ teaspoon baking soda',
+        '¼ to ½ cup dark brown sugar, to taste',
+        '1 large egg',
+        '1 teaspoon fresh lemon juice',
+        'Pinch of salt',
+        '1¼ cups all-purpose flour',
+        '1 teaspoon baking powder'],
+      cook_time: "1¼ hours",
+      preparation: ['Heat oven to 350 degrees. Grease a 4-cup tube pan or small Bundt pan.',
+        'Put carrots in a small pot and cover with water by at least an inch. Bring to a boil and cook until carrots are tender, 20 to 30 minutes (the thinner the slices the more quickly they cook). Add more water if needed
+        to keep carrots mostly submerged.',
+        'Drain and mash the carrots with a potato masher or fork, then measure out 1 cup of the mash. (Reserve any remaining carrots to eat with a little butter and salt if you like.) Let carrots cool.',
+        'Put baking soda and 1 tablespoon warm water in the bowl of an electric mixer and mix to dissolve. Add shortening or butter and sugar and beat until fluffy. Beat in egg, lemon juice and salt until smooth, then beat
+        in carrots. Finally, beat in flour and baking powder.',
+        'Pour batter into pan and smooth the top with a spatula. Bake until the top springs back when lightly pressed, 30 to 40 minutes. Serve warm.'],
+      tags: ['dessert']
+    )
+
+    Recipe.create!(
+      name: 'Matzo Crack',
+      author: 'Marcy Goldman, Melissa Clark',
+      blurb: 'Matzo toffee is the Passover-friendly take on saltine toffee. A layered confection of matzo crackers, brown sugar caramel and melted chocolate, you can top it with practically anything you like, from the most
+        elegantly minimal sprinkle of sea salt to a surfeit of nuts, dried fruit, potato chips, or a combination. This recipe, adapted from Marcy Goldman’s cookbook “A Treasury of Jewish Holiday Baking,” keeps well when
+        stored airtight at room temperature — up to one week, if you haven’t finished it by then.',
+      yield: 'About 2 dozen pieces',
+      ingredients: ['4 to 6 sheets matzo, preferably salted',
+        '1 cup/225 grams unsalted butter (2 sticks)',
+        '1½ packed cups/315 grams light brown sugar',
+        '2 teaspoons vanilla extract',
+        'Large pinch of fine sea salt',
+        '7 ounces chopped bittersweet, milk or white chocolate, or a combination (about 1 cup)',
+        'Toppings, as desired'],
+      cook_time: "50 minutes, plus chilling",
+      preparation: ['Heat oven to 350 degrees. Line a 13-by-18-inch rimmed baking sheet with aluminum foil, allowing it to go up and over the edges of the pan. Line the bottom of the pan with a piece of parchment.
+        Arrange matzo over parchment in an even layer, breaking pieces to fit as necessary.',
+        'In a medium pot over medium-high heat, bring butter and sugar to a boil, whisking, until thickened and smooth, about 3 minutes. The mixture may separate, and that is O.K. Stir in vanilla and salt. Quickly
+        pour mixture over matzos. Transfer baking sheet to oven and bake until bubbly, about 15 minutes.',
+        'Remove from oven. Sprinkle chocolate evenly over caramel and let stand until softened, about 5 minutes. Use an offset spatula to spread chocolate smoothly over surface of toffee. If you’ve used different
+        kinds of chocolate, you can swirl them together decoratively.',
+        'Immediately sprinkle melted chocolate with desired topping. Transfer baking sheet to refrigerator and chill toffee 1 hour to set chocolate. Break matzo toffee into large pieces for storing and serving.'],
+      tags: ['dessert', 'snack']
+    )
+
+    Recipe.create!(
+      name: 'Garlic Butter Carrots',
+      author: 'Alison Roman',
+      blurb: 'This is one of the few occasions when overcrowding the skillet is a good thing. These carrots are cooked in fat (schmaltz, olive oil, butter), with a pinch of something spicy (red-pepper flakes, cayenne,
+      even hot paprika), sort of half-steaming on top of each other until just tender (no mushy carrots here, please). At the end, they are seasoned with a bit of finely grated or chopped garlic off the heat, which
+      quiets the garlicky punchiness without extinguishing it entirely. Like a sandwich cut into triangles, the fact that the carrots are sliced into rounds makes them taste above-average delicious.',
+      yield: 'About 2 dozen pieces',
+      ingredients: ['¼ cup chicken fat, olive oil or unsalted butter',
+        '¼ cup olive oil',
+        'Pinch of red-pepper flakes (optional)',
+        '2 bunches carrots, topped removed (about 1 pound), thinly sliced into rounds',
+        'Kosher salt and freshly ground black pepper',
+        '1 garlic clove, finely chopped or grated'],
+      cook_time: "15 minutes",
+      preparation: ['Melt chicken fat in a large skillet over medium-high heat. (If using butter, melt until lightly foamy and starting to brown, 2 to 3 minutes.) Add olive oil and red-pepper flakes, if using,
+        swirling to bloom a bit in the butter. Add carrots and season with salt and pepper. Cook, tossing occasionally, until carrots are just cooked through, 3 to 4 minutes. (They should be simply softened,
+          like al dente pasta, not soft or mushy.)',
+        'Remove pan from heat, and add garlic, tossing to coat, and transfer to serving bowl.'],
+      tags: ['dinner', 'lunch' 'side']
+    )
+
+    Recipe.create!(
+      name: 'Russian Honey Cake',
+      author: 'Michelle Polzine, Samin Nosrat',
+      blurb: 'The key to making this exquisite, gravity-defying cake, which comes from Michelle Polzine of 20th Century Cafe in San Francisco, is patience. This cake takes a lot of time! Set some aside to do
+        it right. There are just two components — airy, lightly spiced cake layers and glossy whipped-cream frosting, both tinged with burned honey — but both require precision. Clear your schedule, and your
+        countertop, to make the time and space to get it right. Then invite a dozen or two of your favorite people over the next day to delight in the impressive results of your hard work. You can buy dulce
+        de leche at most Mexican markets or upscale groceries (look for brands made in Argentina), or make it a day ahead using this recipe.',
+      yield: 'Makes 1 9-inch cake',
+      ingredients: ['1½ cups (18 ounces) wildflower honey, divided',
+        '¼ cup (2 ounces) water',
+        '1 cup plus 2 tablespoons (8 ounces) sugar',
+        '14 tablespoons (7 ounces) butter, cut into ½-inch pieces',
+        '6 large eggs',
+        '2½ teaspoons baking soda',
+        '2½ teaspoons Diamond Crystal Kosher Salt or 1¼ teaspoons fine sea salt, divided',
+        '1 teaspoon ground cinnamon',
+        '3¾ cups (16 ounces) all-purpose flour,',
+        '1¼ cups (1 13.4-ounce can) dulce de leche',
+        '4¾ cups heavy cream, chilled and divided'],
+      cook_time: "4 hours, plus overnight chilling",
+      preparation: ['Preheat oven to 375. Trace circles around a 9-inch pie or cake pan onto 12 baking-sheet-size pieces of parchment paper. Set aside.',
+        'Make a water bath: Fill a small saucepan with 1 inch of water, and set over medium heat.',
+        'Place ¾ cup of honey in a 2-quart saucepan, and set over high heat. Bring to a simmer, then reduce the heat to medium. After about 3 minutes, the honey will begin to foam intensely. Stirring occasionally
+        with a wooden spoon, keep a close eye on the honey. Cook until it begins to smoke, then turn off the heat and carefully add water. Allow the honey to sputter until it stops bubbling. Whisk to combine, and pour
+        into a heatproof measuring cup with a spout, then place in prepared water bath to keep honey liquid.',
+        'Fill a medium saucepan with 2 inches of water, and bring to a simmer. Combine ¼ cup burned honey, ¾ cup honey, sugar and butter in a large metal mixing bowl, and place over the pot of water.',
+        'Crack eggs into a small bowl, and set aside. Stir together baking soda, 1½ teaspoons kosher salt or ¾ teaspoon sea salt and cinnamon in a separate small bowl.',
+        'When the butter has melted, whisk the honey mixture to combine. Use your finger to test the temperature of the mixture. When it’s warm, add the eggs while whisking. When the mixture returns to the same
+        temperature, add the cinnamon mixture, and continue whisking for another 30 seconds. The batter will begin to foam and emit a curious odor. Remove the bowl from the heat, and allow it to cool until it’s warm.',
+        'Place the flour in a fine-mesh sieve, and sift over the batter in three batches, whisking to incorporate the flour completely with each addition. The batter should be completely smooth. The batter will spread
+        more easily when it’s warm, so pour half into a small bowl, and cover with plastic wrap. Place in a warm spot, such as atop the preheating oven.',
+        'Place a piece of parchment tracing-side-down on a baking sheet, and spoon in a heaping ⅓ cup of batter. Use an offset spatula to evenly spread the batter to the edges. It will seem like just barely
+        enough batter; do your best to get the layer even and perfectly circular. Repeat with remaining layers until you’re out of pans, and then continue with remaining batter and parchment sheets, laying batter
+        circles out on a flat surface. You’ll end up with 11 or 12.',
+        'Bake as many layers at a time as possible, for 6 to 7 minutes, until the cake turns a deep caramel color and springs back at the touch. For the first round, set the timer for 4 minutes to rotate pans if needed
+        to ensure even cooking. Check the cakes again at 6 minutes. Do not overbake!',
+        'When each layer is done, slide the parchment off the pan to prevent overbaking. If reusing baking sheets while they are still hot, reduce cooking time to 5 to 6 minutes.',
+        'When the cake layers are cool enough to handle, examine them. If any spread outside the traced circles as they baked, use a sharp knife or pair of scissors to trim them. Before the cakes cool entirely, pull each
+        one carefully from the parchment, then place back on the parchment on a flat surface, and allow to cool completely.',
+        'When all the layers are baked, reduce the oven temperature to 250, and allow the cake to cool for 30 minutes. Return the least attractive layer (or 2, if you got 12) to a baking sheet, and place in the oven to
+        toast until deep reddish brown and dry, about 15 minutes. Allow it to cool, then use a food processor to grind into fine crumbs. Cover and set aside.',
+        'Place ½ cup burned honey, dulce de leche and 1 teaspoon Diamond Crystal Kosher Salt or ½ teaspoon fine sea salt into a medium bowl. Whisk by hand until combined, then slowly pour in ¾ cup cream and mix until
+        homogeneous. Chill until completely cooled, about 30 minutes.',
+        'Pour 4 cups heavy cream into the bowl of a stand mixer, and affix whisk attachment. Whip at medium speed to soft peaks, about 6 minutes, then add honey mixture and whip frosting to medium stiff peaks.
+        If your mixer holds less than 5 quarts, make frosting in 2 batches and then combine in a large bowl, or use a large bowl and a hand mixer.',
+        'Assemble the cake on a 10-inch cardboard circle or flat serving plate. Place a cake layer in the center of the cardboard, then spoon a heaping cup of frosting onto the center. Use an offset spatula to spread
+        the frosting evenly, leaving a ¼-inch ring unfrosted around the edge. Place the next layer atop the frosting, center it and continue as above. Don’t be afraid to manhandle the cake to align the layers as you c
+        ontinue stacking. If necessary, make up for any doming in the center by spreading more frosting to the outer half of each layer than the inner half. After you place the 10th layer, spread another scant cup of frosting
+        over the top. Use any leftover frosting to smooth out the sides of the cake, but don’t fret if the edges of some cake layers poke through the frosting. Sprinkle the top and sides with cake crumbs.',
+        'Chill overnight. Serve chilled. Cake can be made up to two days in advance. Refrigerate leftovers for up to 3 days.'],
+      tags: ['dessert']
+    )
+
     puts "Reviewing recipes..."
     Note.create!(
       body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
@@ -387,6 +540,64 @@ ApplicationRecord.transaction do
       recipe_id: 8
     )
 
+    Note.create!(
+      body: "This tsimmes recipe is a sweet and savory masterpiece. The harmonious blend of potatoes, carrots, prunes, and tender meat is a culinary delight.",
+      name: "Timmy",
+      user_id: 2,
+      recipe_id: 9
+    )
+
+    Note.create!(
+      body: "Tsimmes, a magic trick: It turns vegetables into sweet-tooth superheroes! This recipe, however, makes it a culinary caper, where prunes
+        are the sidekicks. A sweet and savory adventure that'll have your taste buds exclaiming, 'Man, that's good!'",
+      name: "Stewart",
+      user_id: 2,
+      recipe_id: 9
+    )
+
+    Note.create!(
+      body: "This is literally the only way that I can get my toddler to each vegetables, in cake form. It's still nutritionally a vegetable, though...right?",
+      name: "Carrie",
+      user_id: 2,
+      recipe_id: 10
+    )
+
+    Note.create!(
+      body: "I cannot even keep this in my house, because when I make it, it strangely disappears within 24 hours and all that's left is an empty container.",
+      name: "Kramer",
+      user_id: 2,
+      recipe_id: 11
+    )
+
+    Note.create!(
+      body: "Highly recommend adding an assortment of nuts as toppings! Sometimes my family also drizzles melted peanut butter on top and it's a huge hit.",
+      name: "Matt",
+      user_id: 2,
+      recipe_id: 11
+    )
+
+    Note.create!(
+      body: "Why no one actually makes this year round is a mystery to me, because this is one of the best desserts out there. It even beats the non-matzah version!",
+      name: "Pa Sofer",
+      user_id: 2,
+      recipe_id: 11
+    )
+
+    Note.create!(
+      body: "I don't usually love cooked carrots, but this recipe is simple and a winner. Alison does it again!",
+      name: "Carl",
+      user_id: 2,
+      recipe_id: 12
+    )
+
+    Note.create!(
+      body: "Who knew that cooked carrots could be the stars of the culinary show? This recipe turned those orange veggies into divas of deliciousness. They were so good;
+      I'm thinking of starting a 'Carrot Cooking Competition.' Move over, MasterChef – it's all about CarrotConnoisseurs now!",
+      name: "Carrot lover",
+      user_id: 2,
+      recipe_id: 12
+    )
+
     puts "Saving recipes to Recipe Boxes..."
     SavedRecipe.create!(
       user_id: 1,
@@ -411,6 +622,16 @@ ApplicationRecord.transaction do
     SavedRecipe.create!(
       user_id: 1,
       recipe_id: 5
+    )
+
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 7
+    )
+
+    SavedRecipe.create!(
+      user_id: 1,
+      recipe_id: 9
     )
   end
 
