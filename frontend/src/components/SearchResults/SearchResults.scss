@@ -2,7 +2,7 @@
 
 .search-index-pantry-tiles {
   margin: 0 150px 0 150px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   grid-gap: 15px;
@@ -10,7 +10,8 @@
 
 .search-wrapper {
   background-color: #f8f8f5;;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   padding-top: 120px;
 }
 

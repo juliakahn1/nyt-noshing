@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min"
 import RecipeItem from "../RecipesHome/RecipeItem"
 import { useSelector, useDispatch } from "react-redux"
 import { fetchRecipes } from "../../store/recipes"
+import { fetchSaves } from "../../store/savedRecipes"
 import "./SearchResults.scss"
 
 const SearchResults = () => {
@@ -68,6 +69,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     dispatch(fetchRecipes())
+    dispatch(fetchSaves())
   }, [dispatch])
 
   return (
