@@ -22,7 +22,7 @@ const Footer = () => {
               <a className="footer-body footer-link" href="https://www.linkedin.com/in/juliakahn1/" target="_blank" rel="noreferrer">
                 LinkedIn
               </a>
-              <a className="footer-body footer-link" href="https://www.linkedin.com/in/juliakahn1/" target="_blank" rel="noreferrer">
+              <a className="footer-body footer-link" href="https://github.com/juliakahn1" target="_blank" rel="noreferrer">
                 Github
               </a>
             </div>
