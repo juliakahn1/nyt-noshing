@@ -1,7 +1,14 @@
+.footer-topper {
+  background-color: #f6f6f4;;
+  border-top: 1px solid #ccc;
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
 .footer-wrapper {
   background-color: #000;
   color: #fff;
-  margin-top: 50px;
+  // margin-top: 50px;
   position: relative;
   height: 100%;
   padding: 0 150px 0 150px;
@@ -43,6 +50,7 @@
     letter-spacing: .02em;
     line-height: 1.45;
     cursor: pointer;
+    padding-bottom: 14px;
 
     &:hover {
       text-decoration: underline;

@@ -2,6 +2,7 @@ import "./Footer.scss"
 const Footer = () => {
   return(
     <>
+      <div className="footer-topper"></div>
       <footer className="footer-wrapper">
         <div className="footer-inner-wrapper">
           <div className="footer-disclaimer">
