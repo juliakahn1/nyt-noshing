@@ -85,8 +85,8 @@ const RecipesHero = ({ recipe }) => {
                     { showPageviaHeaderAccess }
                     <h3 className='recipe-index-hero-author'>By {recipe.author}</h3>
                     <p className='recipe-index-hero-blurb'>
-                        We promise that this recipe is much easier to prepare than it is to pronounce ("tzi-mis"). Tsimmes is a soupy-stew, a blend of savory, sweet, and robust flavor, tender meat,
-                        and root vegetables that together tastes like home.
+                        We promise that this recipe is much easier to prepare than it is to pronounce ("tzi-miss"). Tsimmes is a soupy-stew, a blend of savory, sweet, and robust flavors, tender meat,
+                        and root vegetables that together taste like home.
                     </p>
                     { saveButton }
                 </div>

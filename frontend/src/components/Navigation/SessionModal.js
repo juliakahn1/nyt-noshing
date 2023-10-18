@@ -15,7 +15,6 @@ const SessionModal = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [errors, setErrors] = useState([]);
   let form
-  console.log(errors)
 
   if (sessionUser) return <Redirect to="/" />;
 
@@ -103,7 +102,6 @@ const SessionModal = () => {
                   value={email}
                   className='session-form-input-box'
                   onChange={(e) => setEmail(e.target.value)}
-                  required
                   />
               </div>
             </div>
@@ -116,12 +114,11 @@ const SessionModal = () => {
                   value={password}
                   className='session-form-input-box'
                   onChange={(e) => setPassword(e.target.value)}
-                  required
                   />
               </div>
             </div>
           </label>
-            { errors.map(error => <div className="modal-error-message" key={error}>{error}</div>) }
+            { errors.map(error => <div className="modal-error-message" key={error}>{error}</div>)}
           <div className='session-form-button-container'>
             <button className="session-form-button" type="submit">Log In</button>
           </div>
@@ -148,7 +145,6 @@ const SessionModal = () => {
                   value={email}
                   className='session-form-input-box'
                   onChange={(e) => setEmail(e.target.value)}
-                  required
                 />
               </div>
             </div>
@@ -161,7 +157,6 @@ const SessionModal = () => {
                   value={password}
                   className='session-form-input-box'
                   onChange={(e) => setPassword(e.target.value)}
-                  required
                 />
               </div>
             </div>
@@ -174,12 +169,10 @@ const SessionModal = () => {
                   value={confirmPassword}
                   className='session-form-input-box'
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
                 />
               </div>
             </div>
           </label>
-          {/* { errors.map(error => <li className="modal-error-message" key={error}>{error}</li>) } */}
           <div className="modal-error-message">{errors[0]}</div>
           <div className='session-form-button-container'>
             <button className="session-form-button" type="submit">Create Account</button>
