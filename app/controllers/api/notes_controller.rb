@@ -19,7 +19,7 @@ class Api::NotesController < ApplicationController
         if @note.save
             render :create
         else
-            render json: { errors: @note.errors.full_messages }
+            render json: { errors: @note.errors.full_messages }, status: 422;
         end
     end
 
@@ -28,7 +28,7 @@ class Api::NotesController < ApplicationController
         if @note.update(notes_params)
             render :update
         else
-            render json: { errors: @note.errors.full_messages }
+            render json: { errors: @note.errors.full_messages }, status: 422;
         end
     end
 

@@ -71,6 +71,10 @@
  font-size: 14px;
  font-weight: 600;
  line-height: 1.1rem;
+
+ &.create-errors {
+    padding-top: 10px;
+ }
 }
 
 .session-form-button-container {
