@@ -1,8 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
+import { fetchRecipes } from "../../store/recipes"
+import { useDispatch, useSelector } from "react-redux"
 
 const SearchBar = () => {
   const [ query, setQuery ] = useState("")
+  const recipesArr = Object.values(useSelector(store => store.recipes)) // array of names
+  let recipeNames;
+  if (recipesArr) recipeNames = recipesArr.map(recipe => recipe.name)
+
+  if (query.length > 0 ) {
+    recipeNames.filter(recipe => {
+        return (recipe.toLowerCase()).match(query.toLowerCase())
+    })
+  }
+
+  const handleEnterSearch = (e) => {
+    if (e.keyCode === 13) {
+      console.log("hi")
+    }
+  }
 
   return (
     <>
@@ -15,7 +32,8 @@ const SearchBar = () => {
               placeholder="What would you like to cook?"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              type="search" />
+              type="search"
+              onKeyDown={(e) => handleEnterSearch(e)}/>
           </div>
         </form>
       </div></>

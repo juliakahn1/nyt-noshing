@@ -34,7 +34,6 @@ const SavedRecipesIndex = ({ category }) => {
             </div>
             <ul className="saved-index-tiles-wrapper">
               {recipesToDisplay.map(savedRecipe => {
-                console.log("savedRecipe", savedRecipe)
                 return (
                   <li key={savedRecipe.id} className={`tile-list-wrapper`}>
                     <RecipeBoxTile savedRecipes={savedRecipes} savedRecipe={savedRecipe} />
