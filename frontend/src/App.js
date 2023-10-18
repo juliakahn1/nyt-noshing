@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import RecipesHome from './components/RecipesHome';
 import RecipeShowPage from './components/RecipeShowPage';
 import RecipeBox from "./components/RecipeBox"
+import SearchResults from './components/SearchResults';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Switch>
         <Route path="/recipes/:recipeId" component={RecipeShowPage}/>
         <Route path="/recipe-box" component={RecipeBox} />
+        <Route path="/:query" component={SearchResults} />
         <Route path="/" component={RecipesHome} />
       </Switch>
       <Footer />
