@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className="footer-wrapper">
         <div className="footer-inner-wrapper">
           <div className="footer-disclaimer">
-            <h3 className="footer-header">Nosh /näSH/ n. or v.</h3>
+            <h3 className="footer-header">Nosh <span className="thinner-text">/näSH/</span></h3>
             <p className="footer-body">
               A snack, or the act of eating food enthusiastically, slyly, or greedily.
               Synonyms include: munch, bite. Something you eat or do when you just want <span className="emphasis">something</span>.
