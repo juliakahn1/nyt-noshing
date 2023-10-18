@@ -14,20 +14,15 @@ const SearchResults = () => {
   let searchHeader
   let recipeResults
   const { query } = useParams()
-
-  // grab recipe in store — this console.logs as emptys
   const recipesArr = Object.values(useSelector(store => store.recipes))
 
-  // array of recipe names
   if (recipesArr) recipeNames = recipesArr.map(recipe => recipe.name)
 
   if (query.length > 0 ) {
-    // find names that match recipe search query
     queriedRecipeNames = recipeNames.filter(recipe => {
       return (recipe.toLowerCase()).match(query.toLowerCase())
     })
 
-    // grab recipes from store that match search query
     recipeResults = queriedRecipeNames.map(name => {
       return recipesArr.find(recipe => recipe.name === name)
     })
