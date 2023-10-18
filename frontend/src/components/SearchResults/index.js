@@ -47,7 +47,7 @@ const SearchResults = () => {
         <ul className="search-index-pantry-tiles">
           { recipeResults.map (recipe => {
             return (
-              <li key={Math.random()}>
+              <li key={Math.random()} className="search-item">
                 <RecipeItem recipe={recipe} />
               </li>
             )
