@@ -15,7 +15,7 @@ const EditNoteModal = ({ note, setMountModal }) => {
     e.preventDefault()
     newNote = { name, body }
     setErrors([])
-    const response = dispatch(updateNote(newNote, note.id, note.recipeId))
+    dispatch(updateNote(newNote, note.id, note.recipeId))
       .then(() => {
         setErrors([])
         setMountModal(false)

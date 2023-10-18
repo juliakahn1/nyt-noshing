@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
-import './RecipeItem.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { openModal } from '../../store/modals'
 import { createSave, deleteSave } from '../../store/savedRecipes'
+import './RecipeItem.scss'
 
 const RecipeItem = ({ recipe }) => {
   const currentUser = useSelector(store => store.session.user)

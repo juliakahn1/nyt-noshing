@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+.search-index-pantry-tiles {
+  margin: 0 150px 0 150px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 15px;
+}
+
+.search-wrapper {
+  background-color: #f8f8f5;;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.search-header-no-results {
+  margin: 56px 150px 56px 150px;
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    font-family: nyt-cheltenham,Georgia,Times New Roman,serif;
+    font-weight: 200;
+    letter-spacing: .01em;
+  }
+
+  p {
+    margin-bottom: 16px;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 00;
+    font-size: 1.0rem;
+    letter-spacing: .02em;
+    line-height: 1.45;
+  }
+}
+
+.search-header-results {
+  margin: 56px 150px 56px 150px;
+
+  h2 {
+    font-family: 'Bevan', serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: .1em;
+  }
+
+  p {
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 1.45;
+    font-size: 1rem;
+  }
+
+}
+
+.search-item {
+  border: 1px solid #e6e6e6;
+}

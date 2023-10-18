@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { fetchRecipes } from "../../store/recipes"
 import RecipesHero from "./RecipesHero"
 import RecipeItem from "./RecipeItem"
-import "./RecipesHome.css"
+import "./RecipesHome.scss"
 import { fetchSaves } from "../../store/savedRecipes"
 
 export const RecipesHome = () => {
@@ -24,7 +24,7 @@ export const RecipesHome = () => {
             <RecipesHero recipe={babka} />
             <h2 className="recipes-index-pantry-header">Latest Recipes</h2>
             <ul className="recipes-index-pantry-tiles">
-                { recipesArr.map( recipe => {
+                { recipesArr.map(recipe => {
                     return (
                         <li key={Math.random()}>
                             <RecipeItem recipe={recipe} />

@@ -14,7 +14,7 @@ const NoteForm = ({ recipeId }) => {
     e.preventDefault()
     note = { name, body }
     setErrors([])
-    const response = dispatch(createNote(note, recipeId))
+    dispatch(createNote(note, recipeId))
       .then(() => {
         clearForm()
         setErrors([])

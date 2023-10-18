@@ -192,7 +192,7 @@ const SessionModal = () => {
             <span className="modal-photo-text">
               Unlock New York Times recipes and your personal recipe box with a free account.
             </span>
-            <img className="modal-photo" alt="recipe-card" src="https://cooking.nytimes.com/assets/regiwall-souffle-tall.jpg"></img>
+            <img className="modal-photo" alt="recipe-card" src="https://nytnoshing-seeds.s3.us-west-1.amazonaws.com/session-modal.jpg"></img>
           </div>
           <div className="modal-form-container">
             {form}
