@@ -7,6 +7,7 @@ import { updateNote } from '../../store/notes'
 const EditNoteModal = ({ note, setMountModal }) => {
     const [name, setName] = useState(note.name)
     const [body, setBody] = useState(note.body)
+    const [errors, setErrors] = useState([])
     const dispatch = useDispatch()
     let newNote
 
@@ -14,6 +15,7 @@ const EditNoteModal = ({ note, setMountModal }) => {
         e.preventDefault()
         newNote = { name, body }
         dispatch(updateNote(newNote, note.id, note.recipeId))
+        setErrors([])
         setMountModal(false)
     }
 
@@ -25,9 +27,6 @@ const EditNoteModal = ({ note, setMountModal }) => {
                     <div className="edit-note-modal-form-container">
                         <form onSubmit={handleSubmit}>
                             <h2 className='edit-note-form-header'>Edit your note</h2>
-                            {/* <ul>
-                                {errors.map(error => <li key={error}>{error}</li>)}
-                            </ul> */}
                             <label className='edit-note-form-field-label'>Edit Note
                                 <div className='edit-note-form-field-label-outer-container'>
                                     <div className='edit-note-form-field-label-inner-container'>
@@ -37,7 +36,7 @@ const EditNoteModal = ({ note, setMountModal }) => {
                                             className='edit-note-form-input-box edit-body'
                                             onChange={(e) => setBody(e.target.value)}
                                             required
-                                        />
+                                            />
                                     </div>
                                 </div>
                             </label>
@@ -49,10 +48,13 @@ const EditNoteModal = ({ note, setMountModal }) => {
                                             className='edit-note-form-input-box'
                                             onChange={(e) => setName(e.target.value)}
                                             required
-                                        />
+                                            />
                                     </div>
                                 </div>
                             </label>
+                            <ul>
+                                {errors.map(error => <li key={error}>{error}</li>)}
+                            </ul>
                             <div className='edit-note-form-button-container'>
                                 <input className="edit-note-form-button" type="submit" value="Update" />
                             </div>
