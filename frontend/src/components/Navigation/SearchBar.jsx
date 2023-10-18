@@ -6,7 +6,8 @@ const SearchBar = () => {
   const history = useHistory()
   const [ query, setQuery ] = useState("")
 
-  const handleEnterSearch = () => {
+  const handleEnterSearch = (e) => {
+    e.preventDefault()
     history.push({ pathname:`/${query}`})
   }
 

@@ -3,12 +3,17 @@ class Api::RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+
     if @recipes
       render 'api/recipes/index'
     else
       render json: nil
     end
   end
+
+  # def search
+  #   # check for params query
+  # end
 
   def show
     @recipe = Recipe.find_by(id: params[:id])
