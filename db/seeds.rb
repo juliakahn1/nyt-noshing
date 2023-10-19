@@ -413,6 +413,31 @@ ApplicationRecord.transaction do
       tags: ['dessert']
     )
 
+    Recipe.create!(
+      name: 'Potato Kugel',
+      author: 'Itta Werdiger Roth, Francis Lam',
+      blurb: 'Take a healthy hashbrown, plump it up with more potatoes and a few eggs, and slowly bake it for a couple hours and you’ll get this potato kugel. Its crunchy top gives way to a super-soft,
+        almost mashed-potato center, and the soft aroma of onion will fill your kitchen.',
+      yield: 'Serves 6 to 8',
+      ingredients: ['3 pounds russet potatoes',
+        '3 eggs',
+        '1 tablespoon kosher salt',
+        '¼ teaspoon black pepper',
+        '1 medium onion',
+        '6 tablespoons vegetable oil, plus more for greasing pan',
+        '⅓ cup flour',
+        '¼ teaspoon baking powder'],
+      cook_time: "2½ hours",
+      preparation: ['Heat the oven to 350, with a heavy 9-by-9-inch baking pan or 10-inch cast-iron skillet inside.',
+        'Peel the potatoes, and place them in a bowl of water. In a large mixing bowl, beat the eggs with the salt and pepper until well combined.',
+        'Using a food processor fitted with the grating plate, grate the onion. Drain the potatoes, then grate them. Quickly add the potatoes and onions to the eggs, and add the oil, flour and
+          baking powder. Mix well. (You can also grate by hand; if you do so, grate the potatoes directly into the eggs and oil, and stir them frequently to coat. This helps slow their browning
+            while you keep grating.)',
+        'Remove the pan from the oven, and slick it with oil. Carefully but quickly add the potato mixture, smoothing it out so that it is as even as possible. Bake for 2 hours, or until the kugel
+        is creamy in the center and the whole top is a rich, crunchy brown.'],
+      tags: ['side', 'dinner', 'lunch']
+    )
+
     puts "Reviewing recipes..."
     Note.create!(
       body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
@@ -596,6 +621,22 @@ ApplicationRecord.transaction do
       name: "Carrot lover",
       user_id: 2,
       recipe_id: 12
+    )
+
+    Note.create!(
+      body: "This recipe is really good for people who don't like traditional noodle kugel — ESPECIALLY for those who prefer something savory over the more common sweet dish!",
+      name: "Po",
+      user_id: 2,
+      recipe_id: 13
+    )
+
+    Note.create!(
+      body: "I made this kugel this past weekend and it was wonderful. The recipe is very similar to making latkes, except that there's no need to squeeze excess water out of the
+        potatoes. Although it looks really runny when filling your dish for baking, it comes out creamy in the center and crispy on top. I did alternate grating potatoes and onions
+        in the cuisinart, the onions help prevent discoloration of the potatoes.",
+      name: "Tate",
+      user_id: 2,
+      recipe_id: 13
     )
 
     puts "Saving recipes to Recipe Boxes..."
