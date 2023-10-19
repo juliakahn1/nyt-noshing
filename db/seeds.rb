@@ -488,6 +488,30 @@ ApplicationRecord.transaction do
     )
 
     Note.create!(
+      body: "This latke recipe is a crispy delight! The golden-brown potato pancakes are perfectly seasoned, and the
+        texture is wonderfully crunchy on the outside and tender on the inside. Easy to make and utterly delicious – a favorite for sure!",
+      name: "Tater",
+      user_id: 2,
+      recipe_id: 3
+    )
+
+    Note.create!(
+      body: "Pomme, maybe it was user error...",
+      name: "Poe",
+      user_id: 2,
+      recipe_id: 3
+    )
+
+    Note.create!(
+      body: "I can't even begin to describe the disaster that is this latke recipe! It's a culinary catastrophe. The latkes were a greasy,
+        burnt mess, and the taste was nothing short of cardboard. The instructions were vague, and I ended up with a kitchen filled with smoke.
+        I'd rather eat a shoe than attempt this recipe again. Save yourself the frustration and look elsewhere for a decent latke recipe.",
+      name: "Pomme de terre",
+      user_id: 2,
+      recipe_id: 3
+    )
+
+    Note.create!(
       body: "Not only is this Shakshuka recipe a joy to eat, but it's also a wonderful dish to serve when you have guests
         over. It's a conversation starter, and the aroma alone will have your kitchen smelling divine.",
       name: "Tom Ato",
@@ -495,6 +519,43 @@ ApplicationRecord.transaction do
       recipe_id: 4
     )
 
+    Note.create!(
+      body: "This shakshuka recipe is an absolute winner! The combination of tomatoes, spices, and perfectly poached eggs creates a
+        delightful symphony of flavors. It's a breeze to make, and the aroma while cooking is pure bliss. The sauce has just the right
+        balance of heat and tanginess, making every bite a culinary adventure. The addition of crusty bread for dipping is a stroke of genius.
+        This dish is not only delicious but also visually appealing. It's a crowd-pleaser and has become a staple in my breakfast repertoire. Highly recommended!",
+      name: "Fet Acheess",
+      user_id: 4,
+      recipe_id: 4
+    )
+
+    Note.create!(
+      body: "I regret attempting this shakshuka recipe. The end result was far from what I expected. The tomato sauce turned out overly watery, and the spices were
+        overpowering, making it practically inedible. The recipe instructions lacked clarity, and I struggled with the poaching process, leaving me with messy,
+        overcooked eggs. This shakshuka was a disappointment and didn't live up to its reputation. I won't be making it again and would advise anyone looking for a
+        delicious shakshuka experience to explore alternative recipes.",
+      name: "Ick",
+      user_id: 4,
+      recipe_id: 4
+    )
+
+    Note.create!(
+      body: "This kugel recipe is a true comfort food classic. With its simple yet satisfying blend of egg noodles, creamy
+        custard, and a touch of cinnamon and sugar, it's the ultimate dish for those seeking a cozy, nostalgia-infused meal.
+        The sweet and creamy notes of this kugel evoke memories of family gatherings and holiday celebrations. Easy to prepare
+         and endlessly delicious, this kugel recipe is a warm embrace on a plate, perfect for any occasion.",
+      name: "N. Oodle",
+      user_id: 5,
+      recipe_id: 5
+    )
+
+    Note.create!(
+      body: "This potato kugel recipe is a delightful culinary experience. Crispy edges, tender inside, and a perfect blend of savory flavors.
+        It's a comforting dish that will leave you craving more. A must-try for any potato lover!",
+      name: "Cassie",
+      user_id: 5,
+      recipe_id: 5
+    )
     Note.create!(
       body: "This kugel recipe is a true comfort food classic. With its simple yet satisfying blend of egg noodles, creamy
         custard, and a touch of cinnamon and sugar, it's the ultimate dish for those seeking a cozy, nostalgia-infused meal.
@@ -532,6 +593,24 @@ ApplicationRecord.transaction do
     Note.create!(
       body: "Team dense matzah balls over here!",
       name: "Matt Ztebol",
+      user_id: 5,
+      recipe_id: 7
+    )
+
+    Note.create!(
+      body: "This matzo ball soup recipe is pure comfort in a bowl. The fluffy matzo balls are perfectly seasoned and absorb the
+        rich, flavorful broth. It's a classic, heartwarming dish that never disappoints. Whether you're feeling under the weather or
+        simply craving a taste of home, this recipe is a winner.",
+      name: "Anonymous",
+      user_id: 5,
+      recipe_id: 7
+    )
+
+    Note.create!(
+      body: "This matzo ball soup recipe is a culinary hug in a bowl. The matzo balls are light and fluffy, while the broth
+        is rich and soothing. The blend of herbs and tender chicken adds depth to each comforting spoonful. Perfect for both
+        chilly evenings and soul-soothing moments. A timeless classic!",
+      name: "Atza",
       user_id: 5,
       recipe_id: 7
     )
@@ -599,6 +678,16 @@ ApplicationRecord.transaction do
     Note.create!(
       body: "This is literally the only way that I can get my toddler to each vegetables, in cake form. It's still nutritionally a vegetable, though...right?",
       name: "Carrie",
+      user_id: 2,
+      recipe_id: 10
+    )
+
+    Note.create!(
+      body: "This carrot ring cake recipe is a true revelation for dessert enthusiasts. The cake boasts a moist, tender crumb infused with the natural sweetness of
+        grated carrots, complemented by warm spices. The charming ring shape adds a touch of elegance, making it ideal for special occasions or
+        everyday indulgence. I recommend cream cheese frosting drizzled over the top that strikes a perfect balance of tangy and sweet, enhancing the cake's allure. It's a delightful
+        symphony of flavors and textures, and the visual appeal is simply stunning. Whether you're a fan of carrot-based sweets or new to them, this recipe is a must-try delight!",
+      name: "Aro",
       user_id: 2,
       recipe_id: 10
     )
