@@ -1,10 +1,10 @@
 class RatingsController < ApplicationController
-  # def create
+  def create
   #   @rating = Rating.new(rating_params)
   #   if @rating.create!
         # view for show
   #   end
-  # end
+  end
 
   def show
     # single review
