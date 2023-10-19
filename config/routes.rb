@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:create] do
       resources :saved_recipes, only: [:index, :create, :destroy]
@@ -12,8 +7,6 @@ Rails.application.routes.draw do
     resources :recipes, only: [:show, :index] do
       resources :notes, except: [:show]
     end
+    resources :ratings, only: [:create]
   end
-
-  get '*path', to: "static_pages#frontend_index"
-
 end
