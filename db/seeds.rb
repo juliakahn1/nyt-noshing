@@ -573,9 +573,25 @@ ApplicationRecord.transaction do
     )
 
     Note.create!(
+      body: "The correct pronunciation for tsimmess begins with ts sound as in tse-the fly. Thanks for bringing back a great idea!",
+      name: "Gram",
+      user_id: 2,
+      recipe_id: 9
+    )
+
+    Note.create!(
       body: "Tsimmes, a magic trick: It turns vegetables into sweet-tooth superheroes! This recipe, however, makes it a culinary caper, where prunes
         are the sidekicks. A sweet and savory adventure that'll have your taste buds exclaiming, 'Man, that's good!'",
       name: "Stewart",
+      user_id: 2,
+      recipe_id: 9
+    )
+
+    Note.create!(
+      body: "Almost the recipe my mother and I have used for years. Can't stress enough the importance to the flavor beef bones impart and a variety of dried fruits.
+        I use dried apricots as well as prunes. When I stopped eating bovine I switched to using chicken with great results. Then I tried it using fresh fish. The more
+        delicate white flesh fish disintegrated but the larger, darker sturdier fish were delicious! Now I use smoked fish for a new twist on the flavor.",
+      name: "Beryl"
       user_id: 2,
       recipe_id: 9
     )
@@ -624,10 +640,32 @@ ApplicationRecord.transaction do
     )
 
     Note.create!(
+      body: 'I just have to try any recipe that warns, "The batter will begin to foam and emit a curious odor."',
+      name: "Fyodor",
+      user_id: 2,
+      recipe_id: 13
+    )
+
+    Note.create!(
+      body: 'While you are busy cooking this, have your family read equally laborious Russian novels to keep themselves busy!',
+      name: "Anna",
+      user_id: 2,
+      recipe_id: 13
+    )
+
+    Note.create!(
+      body: 'My mother-in-law Olga Ivanoff, baked the ultimate American version of this cake. No honey, but layers of pancakes made from a
+        pancake mix with something like Cool-whip in the layers and grated chocolate on top and in the layers. Yay for the processed food industry!!',
+      name: "Alyosha",
+      user_id: 2,
+      recipe_id: 13
+    )
+
+    Note.create!(
       body: "This recipe is really good for people who don't like traditional noodle kugel — ESPECIALLY for those who prefer something savory over the more common sweet dish!",
       name: "Po",
       user_id: 2,
-      recipe_id: 13
+      recipe_id: 14
     )
 
     Note.create!(
@@ -636,7 +674,7 @@ ApplicationRecord.transaction do
         in the cuisinart, the onions help prevent discoloration of the potatoes.",
       name: "Tate",
       user_id: 2,
-      recipe_id: 13
+      recipe_id: 14
     )
 
     puts "Saving recipes to Recipe Boxes..."
