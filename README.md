@@ -4,6 +4,13 @@
 
 NYT Noshing is a clone of the NYT Cooking website. Upon visiting the former site, before they can interact with any recipes, users must either login, create an account, or log in using a demo account. Afterwards, they can access individual recipes, leave comments, or save them to their Recipe Box, which users can view and sort their saves by category.
 
+## Jump to
+
+1. [Features](#features)
+2. [Technologies](#technologies)
+3. [Featured code](#featured-code)
+3. [Future features](#future-features)
+
 # Features
 
 ## Sign in or create an account
