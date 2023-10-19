@@ -6,11 +6,13 @@ import RecipeShowPage from './components/RecipeShowPage';
 import RecipeBox from "./components/RecipeBox"
 import SearchResults from './components/SearchResults';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop.js';
 
 const App = () => {
   return (
     <>
       <Navigation />
+      <ScrollToTop />
       <Switch>
         <Route path="/recipes/:recipeId" component={RecipeShowPage}/>
         <Route path="/recipe-box" component={RecipeBox} />
