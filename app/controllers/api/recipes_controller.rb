@@ -11,10 +11,6 @@ class Api::RecipesController < ApplicationController
     end
   end
 
-  # def search
-  #   # check for params query
-  # end
-
   def show
     @recipe = Recipe.find_by(id: params[:id])
     if @recipe

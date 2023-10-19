@@ -15,10 +15,11 @@ const SearchResults = () => {
   let recipeResults
   const { query } = useParams()
   const recipesArr = Object.values(useSelector(store => store.recipes))
-
   if (recipesArr) recipeNames = recipesArr.map(recipe => recipe.name)
 
-  if (query.length > 0 ) {
+  const re = new RegExp("^[a-zA-Z]+$");
+
+  if (query.length > 0 && re.test(query)) {
     queriedRecipeNames = recipeNames.filter(recipe => {
       return (recipe.toLowerCase()).match(query.toLowerCase())
     })
@@ -26,6 +27,8 @@ const SearchResults = () => {
     recipeResults = queriedRecipeNames.map(name => {
       return recipesArr.find(recipe => recipe.name === name)
     })
+  } else {
+    queriedRecipeNames = []
   }
 
   if (queriedRecipeNames.length > 0) {
