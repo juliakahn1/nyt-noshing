@@ -28,4 +28,8 @@ class Recipe < ApplicationRecord
     total = scores.inject(0) { |total, ele| total + ele }
     return total / scores.length
   end
+
+  def num_ratings
+    return self.ratings.length
+  end
 end
