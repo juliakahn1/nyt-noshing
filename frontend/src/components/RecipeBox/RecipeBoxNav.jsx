@@ -5,13 +5,12 @@ import { useSelector } from "react-redux"
 const RecipeBoxNav = ({ category, setCategory }) => {
   const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse()
   const recipeCategories = Array.from(new Set(savedRecipes
-    .map(s => s.recipe)
+    .map(save => save.recipe)
     .map(recipe => recipe.tags)
     .flat()))
+
   let isSelected
-
-  category === "all" ? isSelected = 'selected' : isSelected =  ""
-
+  category === "all" ? isSelected = 'selected' : isSelected = ""
 
   return (
     <>
@@ -30,12 +29,12 @@ const RecipeBoxNav = ({ category, setCategory }) => {
         <div className="recipebox-nav-category-container">
           <h3 className="recipebox-nav-category-header">by category</h3>
           <ul className="recipebox-nav-category-list">
-            {recipeCategories.map((category, index) => {
+            {recipeCategories.map((category) => {
               const taggedRecipes = savedRecipes
                 .filter(sr => sr.recipe.tags.includes(category))
                 .map(sr => sr.recipe)
               return (
-                <li className={`recipebox-nav-category-tab`} key={index} onClick={() => setCategory(category)}>
+                <li className={`recipebox-nav-category-tab`} key={Math.random()} onClick={() => setCategory(category)}>
                   <RecipeBoxCategoryItem category={category} taggedRecipes={taggedRecipes} />
                 </li>
               )

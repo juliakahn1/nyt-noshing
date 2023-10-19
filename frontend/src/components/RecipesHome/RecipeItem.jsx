@@ -14,8 +14,8 @@ const RecipeItem = ({ recipe }) => {
     if (currentUser) {
       e.preventDefault()
       dispatch(createSave({
-          recipeId: recipe.id,
-          userId: currentUser.id
+        recipeId: recipe.id,
+        userId: currentUser.id
       }))
     } else {
       dispatch(openModal("login"))
@@ -69,7 +69,7 @@ const RecipeItem = ({ recipe }) => {
             <div className='recipe-index-card-cooktime'>{recipe.cookTime}</div>
           </div>
           <div className="recipe-index-card-save-action">
-            { saveRibbon }
+            {saveRibbon}
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@ const RecipeItem = ({ recipe }) => {
 
   return (
     <>
-      {link}
+      { link }
     </>
   )
 }

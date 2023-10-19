@@ -591,7 +591,7 @@ ApplicationRecord.transaction do
       body: "Almost the recipe my mother and I have used for years. Can't stress enough the importance to the flavor beef bones impart and a variety of dried fruits.
         I use dried apricots as well as prunes. When I stopped eating bovine I switched to using chicken with great results. Then I tried it using fresh fish. The more
         delicate white flesh fish disintegrated but the larger, darker sturdier fish were delicious! Now I use smoked fish for a new twist on the flavor.",
-      name: "Beryl"
+      name: "Beryl",
       user_id: 2,
       recipe_id: 9
     )

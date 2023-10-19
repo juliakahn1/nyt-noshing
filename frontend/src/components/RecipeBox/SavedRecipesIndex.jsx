@@ -3,11 +3,10 @@ import "./SavedRecipesIndex.scss"
 import { useSelector } from "react-redux"
 import RecipeBoxTile from "./RecipeBoxTile"
 
-
 const SavedRecipesIndex = ({ category }) => {
   const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse() // saved recipe data (joins table)
-
   let header
+
   category === "all" ? header = (
     <h2 className="saved-index-header-title">Saved Recipes</h2>
   ) : header = (
@@ -28,7 +27,7 @@ const SavedRecipesIndex = ({ category }) => {
           <div className="saved-index-overflow-wrapper">
             <div className="saved-index-header-wrapper">
               <div className="saved-index-header">
-                { header }
+                {header}
                 <p className="saved-index-header-save-count">{recipesToDisplay.length} recipes</p>
               </div>
             </div>

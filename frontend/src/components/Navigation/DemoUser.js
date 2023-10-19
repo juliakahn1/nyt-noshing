@@ -22,7 +22,7 @@ const DemoUser = () => {
 
     return(
         <div className='session-form-button-container demo-user-button'>
-            <button className="session-form-button demo-user-button" type="submit" onClick={(e) => loginDemoUser(e)}>Login as Guest User</button>
+            <button className="session-form-button demo-user-button" type="submit" onClick={(e) => loginDemoUser(e)}>Log in as Guest User</button>
         </div>
     )
 }
