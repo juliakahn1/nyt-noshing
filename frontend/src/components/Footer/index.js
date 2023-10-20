@@ -28,10 +28,16 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-info-right-column">
-            <h3 className="footer-header">Other Projects</h3>
-            <a className="footer-body footer-link" href="https://github.com/juliakahn1/javascriptspanish" target="_blank" rel="noreferrer">
-              JavaScriptSpanish
-            </a>
+            <div className="footer-link-grouping">
+              <h3 className="footer-header">Other Projects</h3>
+              <a className="footer-body footer-link" href="https://github.com/juliakahn1/javascriptspanish" target="_blank" rel="noreferrer">
+                JavaScriptSpanish
+              </a>
+              <h3 className="footer-header">Credit</h3>
+              <a className="footer-body footer-link" href="https://cooking.nytimes.com/" target="_blank" rel="noreferrer">
+                NYT Cooking
+              </a>
+            </div>
           </div>
         </div>
         </div>
