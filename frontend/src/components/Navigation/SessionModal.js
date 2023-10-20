@@ -29,7 +29,7 @@ const SessionModal = () => {
       } catch {
         data = await res.text();
       }
-      if (data?.errors) setErrors(data.errors); // puts errors in local state
+      if (data?.errors) setErrors(data.errors);
       else if (data) setErrors([data]);
       else setErrors([res.statusText]);
     });

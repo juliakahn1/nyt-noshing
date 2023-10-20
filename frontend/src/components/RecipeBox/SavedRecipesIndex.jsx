@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import RecipeBoxTile from "./RecipeBoxTile"
 
 const SavedRecipesIndex = ({ category }) => {
-  const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse() // saved recipe data (joins table)
+  const savedRecipes = Object.values(useSelector(store => store.savedRecipes)).reverse()
   let header
 
   category === "all" ? header = (

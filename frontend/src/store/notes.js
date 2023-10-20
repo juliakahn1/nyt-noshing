@@ -7,7 +7,7 @@ export const EDIT_NOTE = 'api/editNote'
 export const REMOVE_NOTE = 'api/removeNote'
 
 
-export const receiveNotes = (notes) => { // load action
+export const receiveNotes = (notes) => {
   return {
     type: RECEIVE_NOTES,
     notes
@@ -35,7 +35,7 @@ export const removeNote = (noteId) => {
   }
 }
 
-export const fetchNotes = (recipeId) => async (dispatch) => { // load and dispatch
+export const fetchNotes = (recipeId) => async (dispatch) => {
   const res = await fetch(`/api/recipes/${recipeId}/notes`)
   if (res.ok) {
     const notes = await res.json()

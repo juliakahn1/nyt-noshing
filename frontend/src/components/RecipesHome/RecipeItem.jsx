@@ -59,7 +59,7 @@ const RecipeItem = ({ recipe }) => {
             <div className="recipe-index-card-rating">
               <div className="recipe-index-card-stars">
                 {[...Array(5)].map((star, index) => {
-                  index += 1; // if {recipe.avgRating > index}
+                  index += 1;
                   if (recipe.avgRating >= index) {
                     return (
                       <svg width="10" height="10" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"

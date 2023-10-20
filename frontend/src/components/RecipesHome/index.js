@@ -14,8 +14,8 @@ export const RecipesHome = () => {
   const tsimmes = recipesArr.find(recipe => recipe.name === "Tsimmes")
 
   useEffect(() => {
-    dispatch(fetchRecipes()) // state updates
-    if (currentUser) dispatch(fetchSaves(currentUser.id)) // refactor to grab saved recipes from backend ***
+    dispatch(fetchRecipes())
+    if (currentUser) dispatch(fetchSaves(currentUser.id))
   }, [dispatch, currentUser])
 
   return recipesArr.length > 0 && tsimmes ?
