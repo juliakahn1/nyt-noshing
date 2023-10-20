@@ -7,6 +7,7 @@ class ApplicationController < ActionController::API
     protect_from_forgery with: :exception # CSRF
 
     before_action :attach_authenticity_token, :snake_case_params # transform from camelCase to snake_case
+    helper_method :current_user
 
     def current_user
         return nil unless session[:session_token]

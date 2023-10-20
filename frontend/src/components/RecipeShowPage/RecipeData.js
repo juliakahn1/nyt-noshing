@@ -78,16 +78,16 @@ const RecipeData = ({ recipe }) => {
                   index += 1; // if {recipe.avgRating > index}
                   if (recipe.avgRating >= index) {
                     return (
-                      <svg width="10" height="10" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
+                      <svg key={index} width="10" height="10" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
                         className="show-recipe-stats-table-row-data-rating-star">
                         <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0" strokeLinejoin="round"></path>
                       </svg>
                     )
                   } else {
                     return (
-                      <svg width="10" height="10" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
+                      <svg key={index} width="10" height="10" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
                         className="show-recipe-stats-table-row-data-rating-star">
-                        <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill-opacity=".25" stroke="currentColor" strokeWidth="0" strokeLinejoin="round"></path>
+                        <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fillOpacity=".25" stroke="currentColor" strokeWidth="0" strokeLinejoin="round"></path>
                       </svg>
                     )
                   }

@@ -810,251 +810,251 @@ ApplicationRecord.transaction do
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 1,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 1,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 1,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 5,
       recipe_id: 1,
       score: 2
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 2,
       score: 3
     )
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 2,
       score: 3
     )
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 2,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 3,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 3,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 3,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 3,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 3,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 4,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 4,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 4,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 5,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 5,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 6,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 6,
       score: 1
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 6,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 6,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 6,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 7,
       score: 2
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 8,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 8,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 5,
       recipe_id: 9,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 9,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 9,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 9,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 10,
       score:
        3
     )
     Rating.create!(
-      user_id: 1,
+      user_id: 5,
       recipe_id: 10,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 11,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 11,
       score: 2
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 11,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 11,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 11,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 11,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 12,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 12,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 5,
       recipe_id: 13,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 13,
       score: 1
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 14,
       score: 4
     )
