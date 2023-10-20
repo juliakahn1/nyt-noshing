@@ -438,7 +438,152 @@ ApplicationRecord.transaction do
       tags: ['side', 'dinner', 'lunch']
     )
 
+    Recipe.create!(
+      name: 'Peanut Butter Sandies',
+      author: 'Julia Moskin',
+      blurb: 'This modern classic is reverse-engineered from a cult cookie at City Bakery in Manhattan. They are saltier, richer and tangier than the usual crisscross rounds, thanks to
+        updated ingredients like sea salt, cultured butter and brown sugar. And like any good “sandy” cookie, they have a soft, crumbly texture that melts away on first bite.',
+      yield: '3 to 4 dozen',
+      ingredients: ['1 cup/228 grams/2 sticks unsalted butter, preferably cultured, softened at room temperature',
+        '¾ cup/150 grams granulated sugar',
+        '¾ cup (packed)/170 grams light brown sugar',
+        '1 heaping teaspoon/6 grams kosher salt',
+        '2 cups/510 grams unsweetened peanut butter, creamy or chunky',
+        '2 eggs, at room temperature',
+        '2 cups/250 grams all-purpose flour',
+        'Flaky sea salt and coarse sugar for sprinkling (or use kosher salt and granulated sugar)'],
+      cook_time: "1 hour",
+      preparation: ['Heat oven to 350 degrees and line 2 baking sheets with parchment paper or nonstick liners. In a mixer fitted with a paddle attachment, cream the butter
+        and sugars until smooth and fluffy, at least 3 minutes. Add the peanut butter and eggs, and mix. Add the flour and salt and mix just until well combined, with no white \
+        flour showing.',
+        'Using a small cookie scoop (about 2 teaspoons capacity), scoop dough onto prepared pans. The tops will be rounded but craggy. The cookies will not spread much or change
+        shape when they bake, so they can be placed quite close together, but leave room for air circulation so they can brown.',
+        'In a small bowl, mix 2 tablespoons sugar with 1 tablespoon salt. Sprinkle each cookie lightly with sugar-salt mixture, getting it into the crags and crannies. Bake 12 to 15
+        minutes, until cookies are set and golden-brown. Carefully lift or slide off baking sheets and cool on racks. Store in layers separated by parchment paper, in airtight containers.'],
+      tags: ['dessert']
+    )
+
+    Recipe.create!(
+      name: 'My Favorite Challah',
+      author: 'Joan Nathan',
+      blurb: 'Throughout the years, I have picked up tips from challah bakers throughout this country and in Europe and Israel. For example: Several risings make a better loaf, and if
+        you want an especially brioche-like texture, let the dough rise slowly in the refrigerator for one of the three risings. The secret to a glossy loaf is to brush with an egg
+        wash twice, once just after braiding and then again just before baking.',
+      yield: '2 challahs',
+      ingredients: ['1½ packages active dry yeast (about 3½ teaspoons)',
+        '1 tablespoon plus ½ cup sugar',
+        '½ cup vegetable oil, more for greasing bowl',
+        '5 large eggs',
+        '1 tablespoon salt',
+        '8 to 8½ cups all-purpose flour',
+        '2 cups/250 grams all-purpose flour',
+        'Poppy or sesame seeds for sprinkling'],
+      cook_time: "1 hour",
+      preparation: ['In a large bowl, dissolve yeast and 1 tablespoon sugar in 1¾ cups lukewarm water.',
+        'Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt. Gradually add flour. When dough holds together, it is ready for kneading. (You can
+          also use a mixer with a dough hook for both mixing and kneading.)',
+        'Turn dough onto a floured surface and knead until smooth. Clean out bowl and grease it, then return dough to bowl. Cover with plastic wrap, and let rise in a warm place for
+          1 hour, until almost doubled in size. Dough may also rise in an oven that has been warmed to 150 degrees then turned off. Punch down dough, cover and let rise again in a
+          warm place for another half-hour.',
+        'To make a 6-braid challah, either straight or circular, take half the dough and form it into 6 balls. With your hands, roll each ball into a strand about 12 inches long and 1½
+          inches wide. Place the 6 in a row, parallel to one another. Pinch the tops of the strands together. Move the outside right strand over 2 strands. Then take the second
+          strand from the left and move it to the far right. Take the outside left strand and move it over 2. Move second strand from the right over to the far left. Start over with the
+          outside right strand. Continue this until all strands are braided. For a straight loaf, tuck ends underneath. For a circular loaf, twist into a circle, pinching ends together.
+          Make a second loaf the same way. Place braided loaves on a greased cookie sheet with at least 2 inches in between.',
+        'Beat remaining egg and brush it on loaves. Either freeze breads or let rise another hour.',
+        'If baking immediately, preheat oven to 375 degrees and brush loaves again. If freezing, remove from freezer 5 hours before baking. Then dip your index finger in the egg wash,
+          then into poppy or sesame seeds and then onto a mound of bread. Continue until bread is decorated with seeds.',
+        'Bake in middle of oven for 35 to 40 minutes, or until golden. Cool loaves on a rack.'],
+      tags: ['side', 'bread']
+    )
+
+    Recipe.create!(
+      name: 'Basque Cheesecake',
+      author: 'Marti Buckley',
+      blurb: 'Generously burnished and with a velvety, custardy interior, this rustic, crustless cheesecake from the Basque region of northern Spain is the platonic ideal of a low-effort,
+        high-reward dessert. The caramelized exterior evokes a toasty marshmallow, but the cake itself is not too sweet. Marti Buckley adapted this recipe from La Viña, a small bar in
+        San Sebastián, for her cookbook, “Basque Country” (Artisan, 2018). This statement cake is achieved using only five primary ingredients. It’s baked at a higher temperature than a
+        classic New York cheesecake and in the hot oven, the cheesecake dramatically inflates into a soufflé-like puff before sinking into itself, creating a cradle for fresh fruit,
+        should you wish to serve it with some. But Basque cheesecake is perfect on its own, at its arguable prime the day after it’s made, enjoyed at room temperature.',
+      yield: '12 servings',
+      ingredients: ['Unsalted butter or nonstick spray, for greasing the pan',
+        '1¾ cups/350 grams granulated sugar',
+        '2¼ pounds/36 ounces cream cheese, at room temperature',
+        '¼ teaspoon kosher salt (such as Diamond Crystal)',
+        '5 large eggs',
+        '2 cups/480 milliliters heavy cream',
+        '¼ cup/30 grams all-purpose flour'],
+      cook_time: "1 hour 40 minutes, plus cooling",
+      preparation: ['Place a rack in the center of the oven and heat the oven to 400 degrees. Grease a 10-inch springform pan and line with parchment paper, leaving 2 to 3 inches
+        overhanging the top of the pan. (You can trace and cut a circle to fit the base and then cut a band of paper to fit neatly around the sides, but the more rustic and simple
+        method is to press an entire sheet into the pan, pleating the paper where it begins to crease. If you use multiple sheets of parchment, grease in between the layers so that
+        they stick and lay flat.)',
+        'In a large bowl using a handheld mixer or in the bowl of a stand mixer fitted with the paddle attachment, cream the sugar and cream cheese until smooth. (This can be done by
+        hand as well; beat with a wooden spoon for about 5 minutes.)',
+        'Add the salt and mix. Add the eggs one by one and beat until fully incorporated. Beat in the cream. Sift in the flour, then mix it in on low.',
+        'Pour the batter into the prepared pan and bake until browned and almost burnt on top, 50 to 60 minutes. The center will still be quite jiggly. Remove the cake from the oven
+        and cool completely on a rack. It will have risen significantly, nearly past the top of the pan, but it will sink in the center as it cools.',
+        'Before serving, remove the rim of the springform and gently tug away the parchment paper. Serve at room temperature.'],
+      tags: ['dessert']
+    )
+
     puts "Reviewing recipes..."
+    Note.create!(
+      body: "I have the original recipe from La Vina restaurant in San Sebastian that was used as the inspiration for this recipe. No idea where I got it from but it uses a 6 inch
+        pan (I use a Fat Daddio) and it's amazing. It's also super quick to make. It fits in our toaster oven.",
+      name: "Joseph",
+      user_id: 4,
+      recipe_id: 17
+    )
+
+    Note.create!(
+      body: "Another trick to make parchment paper pliable is to wrinkle it up into a tight ball so that it has lots of creases. It's equivalent to wetting and wringing it out,
+      without having to dry it off.",
+      name: "Che Iescake",
+      user_id: 4,
+      recipe_id: 17
+    )
+
+    Note.create!(
+      body: "Your illustration shows light bands of crust between the golden dark patches of crust. This comes from the rising in the oven revealing surfaces that had no egg wash.
+        If you want that uniform brown crust, remove the loaf after 15 Minutes in the oven and reapply eggwash to the light areas that have appeared.",
+      name: "Holla",
+      user_id: 4,
+      recipe_id: 16
+    )
+
+    Note.create!(
+      body: "Here's my trick for making what looks like a 6-braid challah, only much easier. Use 2/3 of the dough to make a large 3-braid loaf, and the remaining 1/3 to make a smaller
+      one. Brush them both with your egg wash and then place the smaller one atop the larger.",
+      name: "Breadward",
+      user_id: 4,
+      recipe_id: 16
+    )
+
+    Note.create!(
+      body: "I agree that Honey makes for a better Challah, and since you offered this for the High Holy Days, adding some 1/2 C plump golden raisins is both delicious and a nod to the 'sweetness' for the new year.",
+      name: "Dough",
+      user_id: 4,
+      recipe_id: 16
+    )
+
+    Note.create!(
+      body: "This peanut butter cookie recipe is a must-try for any cookie lover. The cookies turn out soft and chewy with a rich peanut butter flavor that's simply irresistible.
+        The ingredients are simple, and the instructions are easy to follow, making it a great choice for both novice and experienced bakers. With the perfect balance of sweetness and
+        nuttiness, these cookies are a delightful treat for any occasion. They're sure to disappear quickly, so be ready to bake another batch!",
+      name: "Pea",
+      user_id: 4,
+      recipe_id: 15
+    )
+
+    Note.create!(
+      body: "These peanut butter cookies are the real peanut deal! They're so good, they could turn a peanut skeptic into a fan. With each bite, you'll be dancing like a nutcracker in
+        peanutty ecstasy. Just don't blame me when you find yourself hiding the batch from cookie-loving spies!",
+      name: "Nut",
+      user_id: 5,
+      recipe_id: 15
+    )
+
     Note.create!(
       body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
       name: "Jerry",
@@ -1070,6 +1215,67 @@ ApplicationRecord.transaction do
       recipe_id: 14,
       score: 3
     )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 15,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 15,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 15,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 15,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 16,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 16,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 17,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 17,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 17,
+      score: 3
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 17,
+      score: 5
+    )
+
   end
 
   puts "Attaching images to recipes..."
