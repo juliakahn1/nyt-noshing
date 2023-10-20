@@ -26,7 +26,7 @@ const RecipesHero = ({ recipe }) => {
 
   const handleUnsave = (e) => {
     e.preventDefault()
-    const save = savedRecipes.find(data => data.recipeId === recipe.id) // returns array
+    const save = savedRecipes.find(data => data.recipeId === recipe.id)
     dispatch(deleteSave(save.id, sessionUser.id))
   }
 
@@ -92,7 +92,6 @@ const RecipesHero = ({ recipe }) => {
       </div>
     </>
   )
-
 }
 
 export default RecipesHero

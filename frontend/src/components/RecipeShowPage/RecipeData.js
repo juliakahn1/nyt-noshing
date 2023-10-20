@@ -75,7 +75,7 @@ const RecipeData = ({ recipe }) => {
               <span className="show-recipe-stats-table-row-data-avg-rating">{recipe.avgRating}</span>
               <span className="show-recipe-stats-table-row-data-avg-rating-stars">
               {[...Array(5)].map((star, index) => {
-                  index += 1; // if {recipe.avgRating > index}
+                  index += 1;
                   if (recipe.avgRating >= index) {
                     return (
                       <svg key={index} width="10" height="10" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
