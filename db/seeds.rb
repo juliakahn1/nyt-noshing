@@ -527,7 +527,125 @@ ApplicationRecord.transaction do
       tags: ['dessert']
     )
 
+    Recipe.create!(
+      name: 'Tortilla Española',
+      author: 'Manolo Intriago',
+      blurb: 'Perhaps the most Spanish of all tapas, this potato omelet makes a satisfying meal on its own; you can also serve it as a part of a spread with jamón, serrano, chorizo,
+      cheese, olives and piquillo peppers. Poaching the potatoes and onions in olive oil makes them almost creamy. (Keep the infused oil in the fridge; it’s great for dipping bread or
+      other uses.)',
+      yield: '8 - 12 servings',
+      ingredients: ['1¼ pounds onions, diced',
+        '1 large green bell pepper, seeded and chopped',
+        '4 cloves garlic, minced',
+        '2½ pounds russet potatoes',
+        'Kosher salt, to taste',
+        '4 cups extra-virgin olive oil',
+        '10 large eggs'],
+      cook_time: "1 hour",
+      preparation: ['Place the onions, pepper and garlic in a large bowl. Peel the potatoes, quarter them lengthwise, and slice those crosswise into 1/8th inch tiles. (A mandoline
+        is great for this.) Add them to the onion mixture and season with 2 teaspoons kosher salt.',
+        'Heat the oil over high heat in a 12-inch, deep-sided skillet (preferably nonstick or well-seasoned cast iron). Drop 1 potato tile into the oil as it heats; when it floats and
+        then begins to fry vigorously, carefully add all the potato-onion mixture and stir gently.',
+        'Cook the potatoes at a vigorous simmer, stirring occasionally so they don’t brown too much on the bottom, until they are very soft but not quite losing their shape, 20 to 25
+        minutes. Drain the potatoes through a colander and let them cool until warm.',
+        'Beat the eggs in a large bowl. Taste the potatoes for salt and season the eggs with salt accordingly. Stir the potatoes into the eggs.',
+        'Place the skillet over medium high heat. When it is very hot, pour in the potato mixture, spread evenly and turn heat to medium. Using a spatula, gently pull the edges of the
+        tortilla towards the center to release them from the pan and let any liquid egg run out the sides.',
+        'After 4 minutes, cover the pan with the bottom of an oiled baking sheet. Using towels or oven mitts, carefully flip the pan onto the sheet, place the pan back over the heat,
+        then slide the inverted tortilla back into the pan. Cook, without stirring, for 3 minutes. Both sides of the tortilla should be golden brown.',
+        'Insert a long skewer into the side of the tortilla to see how wet it is inside. Some prefer the inside a little moist, some fully cooked. You can continue to cook it, flipping
+        the tortilla as described once a minute, until it’s done to your liking. Serve warm or at room temperature.'],
+      tags: ['side']
+    )
+
+    Recipe.create!(
+      name: 'Pan Con Tomate',
+      author: 'David Tanis',
+      blurb: "Some version of tomatoes on toast — a juicy American B.L.T. or Italian tomato-topped bruschetta — is always a good idea, but that's especially true during high summer,
+      when tomatoes are at their peak. One superior combination comes from Barcelona, where a slice of toast is rubbed with garlic and juicy ripe tomatoes, then anointed with olive oil.
+      Most Catalan cooks simply cut the tomato crosswise and vigorously massage the toasted bread with the cut side. Others grate the tomato flesh and spoon it over the bread. This
+      version adds tomato slices and a scattering of cherry tomatoes for a substantial first course.",
+      yield: '4 to 6 servings',
+      ingredients: ['3 or 4 very ripe medium tomatoes (about 1½ pounds)',
+        '1 pint cherry tomatoes (about 12 ounces)',
+        '4 to 6 large slices sturdy sourdough bread, about ½-inch thick',
+        '4 to 6 garlic cloves, peeled',
+        'Salt and pepper',
+        'Extra-virgin olive oil',
+        'Basil leaves, for garnish (optional)'],
+      cook_time: "30 minutes",
+      preparation: ['Cut 2 tomatoes in half crosswise. Place a box grater in a shallow bowl and grate the tomato flesh from the cut sides, pushing through the large holes.
+        You should have 1 cup or so of coarse tomato purée. Set purée aside, and discard tomato skins.',
+        'Cut remaining large tomatoes into ¼-inch slices. Cut cherry tomatoes in half. Set aside.',
+        'Toast the bread until nicely browned and crisp. (Toasting over a charcoal grill yields a rich, smoky flavor, but a toaster, toaster oven or broiler works just as well.)',
+        'With your fingers, rub the top of each toast with a garlic clove. You will see the cloves get smaller as the garlic is dispersed, pushed into the bread. (For a less garlicky
+        toast, press lightly when rubbing.)',
+        'Place toasts on a platter or individual plates. Spoon and spread a heaping tablespoon of tomato purée over each toast. Then arrange tomato slices and cherry tomatoes randomly on top.',
+        'Sprinkle generously with salt, pepper and a tablespoon of extra-virgin olive oil per toast. Garnish with whole or torn basil leaves, if using.'],
+      tags: ['side', 'breakfast']
+    )
+
     puts "Reviewing recipes..."
+    Note.create!(
+      body: "Absolute perfection.",
+      name: "Julia",
+      user_id: 2,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "This is the quintessential Spanish breakfast, and it simply cannot be improved upon. It's simple, satisfying, savory. With a cafe con leche, perfecto.",
+      name: "Pan",
+      user_id: 2,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "If it's in Barcelona, it's pa amb tomàquet in Catalan.",
+      name: "Cat",
+      user_id: 3,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "We live in Barcelona and, while this recipe photo is beautiful, it's definitely not what Catalan tomato bread (pa amb tomàquet) ever looks like. Tomatoes
+      here are always halved and rubbed directly onto the bread, and the result is light and delicious. Also, I've never seen basil used here with tomato bread.
+      That seems much more like Italian bruschetta.",
+      name: "Barthelona",
+      user_id: 4,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "I learned to make tortilla espanola from a woman in NW Spain and use about 4-6 Tablespoon oil for this size recipe..cooking the potatoes and onions (no bell pepper) slowly
+      over medium to medium low heat until soft and not browned. Then continuing with the eggs. There is no need to drain oil.",
+      name: "Span Ish",
+      user_id: 3,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "Everyone is a critique! I appreciated the recipe and was glad to cook it. It helps to have an open mind. I am sure that everyone's tias and mamas made it differently, but
+      they probably also made it a little differently every time. Thank you very much for the recipe! I had as much fun making it as I did eating it.",
+      name: "Espie",
+      user_id: 3,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "I love the recipes on this site, but this one is really really bad. You don't put peppers or garlic in a Tortilla Española.",
+      name: "Torry",
+      user_id: 2,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "Garlic? Peppers? Please. No! One pan. Cook potatoes and Onion gently in gererous olive oil but no draining. Salt. No pepper. Eggs. Flip. Done.",
+      name: "Olive",
+      user_id: 2,
+      recipe_id: 18
+    )
+
     Note.create!(
       body: "I have the original recipe from La Vina restaurant in San Sebastian that was used as the inspiration for this recipe. No idea where I got it from but it uses a 6 inch
         pan (I use a Fat Daddio) and it's amazing. It's also super quick to make. It fits in our toaster oven.",
@@ -1205,77 +1323,124 @@ ApplicationRecord.transaction do
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 14,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 14,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 15,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 15,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 15,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 5,
       recipe_id: 15,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 16,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 16,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 17,
       score: 4
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 3,
       recipe_id: 17,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 5,
       recipe_id: 17,
       score: 3
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 4,
       recipe_id: 17,
       score: 5
     )
 
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 18,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 18,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 3,
+      recipe_id: 18,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 5,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 19,
+      score: 5
+    )
   end
 
   puts "Attaching images to recipes..."
