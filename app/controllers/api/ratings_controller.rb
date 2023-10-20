@@ -1,8 +1,9 @@
 class Api::RatingsController < ApplicationController
   def create
-    @rating = Rating.new(rating_params)
-    if @rating.create!
-      redirect_to "api/recipes/show"
+    @rating = Rating.new(user_id: params[:user_id], recipe_id: params[:recipe_id], score: params[:score])
+    @recipe = @rating.recipe
+    if @rating.save
+      render "api/recipes/show"
     else
       render json: { errors: @rating.errors.full_messages }, status: 422;
     end
@@ -16,10 +17,4 @@ class Api::RatingsController < ApplicationController
   #     render json: { errors: @rating.errors.full_messages }, status: 422;
   #   end
   # end
-
-  private
-
-  def rating_params
-    params.require(:rating).permit(:recipe_id, :user_id, :score)
-  end
 end

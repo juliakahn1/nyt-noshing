@@ -1,5 +1,5 @@
 import csrfFetch from "./csrf"
-import { RECEIVE_RECIPE } from "./recipes"
+import { fetchRecipe } from "./recipes"
 
 const ADD_RATING = 'api/receiveRating'
 
@@ -10,9 +10,8 @@ export const addRating = (rating) => {
   }
 }
 
-// requires user id, recipe id, score
 export const createRating = (rating) => async (dispatch) => {
-  const res = await csrfFetch("/api/ratings", {
+  const res = await csrfFetch('/api/ratings', {
     method: "POST",
     headers: {
       'Content-Type': 'application/json'
@@ -21,15 +20,15 @@ export const createRating = (rating) => async (dispatch) => {
   })
   if (res.ok) {
     const rating = await res.json()
-    dispatch(addRating(rating))
+    dispatch(fetchRecipe(rating.recipe.id))
   }
 }
 
-export const RatingsReducer = (store = {}, action) => {
-  switch (action.type) {
-    case RECEIVE_RECIPE: // I want this to force a recipe re-render
-      return { ...store}
-    default:
-      return store
-  }
-}
+// export const RatingsReducer = (store = {}, action) => {
+//   switch (action.type) {
+//     case RECEIVE_RECIPE: // I want this to force a recipe re-render
+//       return { ...store, [action.rating.recipeId]: action.rating}
+//     default:
+//       return store
+//   }
+// }

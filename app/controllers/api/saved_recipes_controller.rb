@@ -26,9 +26,4 @@ class Api::SavedRecipesController < ApplicationController
     end
 
     private
-
-    # def saved_recipe_params
-    #     debugger
-    #     params.require(:saved_recipe).permit(:user_id, :recipe_id)
-    # end
 end

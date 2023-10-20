@@ -1,13 +1,21 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { createRating } from "../../store/ratings";
+import { fetchRecipe } from "../../store/recipes";
 
 const RatingStarRadios = ({recipe}) => {
   let starDisplay;
   const dispatch = useDispatch()
+  const currentUser = useSelector(store => store.session?.user)
   const [hover, setHover] = useState(0)
 
-  const setRating = (index) => {
-    // create action for rating
+  const setRating = (e, index) => {
+    e.preventDefault()
+    dispatch(createRating({
+      recipeId: recipe.id,
+      score: index,
+      userId: currentUser.id
+    }))
   }
 
   // useEffect(() => {
@@ -18,7 +26,7 @@ const RatingStarRadios = ({recipe}) => {
     <>
       {[...Array(5)].map((star, index) => {
         index += 1;
-        if (recipe.avgRating >= index) {
+        if (recipe.currentUserRating >= index) {
           return (
             <svg className="your-rating-star red" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path>
@@ -41,7 +49,7 @@ const RatingStarRadios = ({recipe}) => {
           <svg
             key={index}
             className={index <= (hover) ? "unrated-star hovering" : "unrated-star not-hovering"}
-            onClick={() => setRating(index)}
+            onClick={(e) => setRating(e, index)}
             onMouseEnter={() => setHover(index)}
             onMouseLeave={() => setHover(0)}
             viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
