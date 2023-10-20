@@ -377,7 +377,6 @@
 
 .show-recipe-interactive-stars {
     position: relative;
-
 }
 
 .star-radio {
@@ -397,12 +396,10 @@
 .your-rating-star {
     color: #ccc;
     display: inline-block;
-    cursor: pointer;
     height: 35px;
-    // padding: 0 5px;
     width: 40px;
 
-    &:hover {
+    &.red {
         color: #df321b;
     }
 }
