@@ -10,7 +10,7 @@ NYT Noshing is a clone of the NYT Cooking website. Upon visiting the former site
 2. [Technologies](#technologies)
 3. [Dev environment setup](#dev-environment-setup)
 4. [Featured code](#featured-code)
-3. [Future features](#future-features)
+5. [Future features](#future-features)
 
 # Features
 
@@ -35,7 +35,6 @@ NYT Noshing is a clone of the NYT Cooking website. Upon visiting the former site
 
 ![recipebox-feature](https://nytnoshing-seeds.s3.us-west-1.amazonaws.com/README/recipe-box.png)
 
-
 # Technologies
 
 NYT Noshing was built with:
@@ -51,7 +50,7 @@ NYT Noshing was built with:
 
 # Dev environment setup
 
-To run NYT Noshing locally, run `npm start` for frontend and `rails s` for backend.
+This project uses npm and nide. To run NYT Noshing locally, install [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and run `npm start` for frontend and `rails s` for backend.
 
 # Featured code
 
