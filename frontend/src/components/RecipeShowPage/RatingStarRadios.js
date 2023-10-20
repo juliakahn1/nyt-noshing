@@ -1,5 +1,18 @@
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+
 const RatingStarRadios = ({recipe}) => {
   let starDisplay;
+  const dispatch = useDispatch()
+  const [hover, setHover] = useState(0)
+
+  const setRating = (index) => {
+    // create action for rating
+  }
+
+  // useEffect(() => {
+  //   // rerender page if setRating is done
+  // })
 
   recipe.currentUserRating ? starDisplay = ( // if user has reviewed recipe
     <>
@@ -7,13 +20,13 @@ const RatingStarRadios = ({recipe}) => {
         index += 1;
         if (recipe.avgRating >= index) {
           return (
-            <svg className="your-rating-star red" width="30" height="30" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <svg className="your-rating-star red" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path>
             </svg>
           )
         } else {
           return (
-            <svg className="your-rating-star" width="30" height="30" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <svg className="your-rating-star" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path>
             </svg>
           )
@@ -22,7 +35,20 @@ const RatingStarRadios = ({recipe}) => {
     </>
   ) : starDisplay = ( // if user has not reviewed recipe
     <>
-      <p>hello world</p>
+      {[...Array(5)].map((star, index) => {
+        index+=1;
+        return (
+          <svg
+            key={index}
+            className={index <= (hover) ? "unrated-star hovering" : "unrated-star not-hovering"}
+            onClick={() => setRating(index)}
+            onMouseEnter={() => setHover(index)}
+            onMouseLeave={() => setHover(0)}
+            viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.5.297 9.184 5.48h5.449l-4.408 3.203 1.683 5.182L7.5 10.662l-4.408 3.203 1.683-5.182L.367 5.48h5.45L7.5.297Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinejoin="round"></path>
+          </svg>
+        )
+      })}
     </>
   )
   return (

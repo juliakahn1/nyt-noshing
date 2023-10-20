@@ -37,7 +37,6 @@ export const fetchRecipe = (recipeId) => async (dispatch) => {
 
 // --- REDUCER --- //
 
-
 export const recipesReducer = (store = {}, action) => {
     switch (action.type) {
         case RECEIVE_RECIPES:

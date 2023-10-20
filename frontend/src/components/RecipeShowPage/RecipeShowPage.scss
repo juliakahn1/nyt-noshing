@@ -404,6 +404,22 @@
     }
 }
 
+
+.unrated-star {
+    display: inline-block;
+    height: 35px;
+    width: 40px;
+    cursor: pointer;
+
+    &.hovering {
+        color: #df321b;
+    }
+
+    &.not-hovering {
+        color: #ccc;
+    }
+}
+
 .show-notes-wrapper {
     grid-column: col-start 4/col-end 8;
     margin-bottom: 60px;
