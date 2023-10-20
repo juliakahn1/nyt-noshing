@@ -23,12 +23,3 @@ export const createRating = (rating) => async (dispatch) => {
     dispatch(fetchRecipe(rating.recipe.id))
   }
 }
-
-// export const RatingsReducer = (store = {}, action) => {
-//   switch (action.type) {
-//     case RECEIVE_RECIPE: // I want this to force a recipe re-render
-//       return { ...store, [action.rating.recipeId]: action.rating}
-//     default:
-//       return store
-//   }
-// }
