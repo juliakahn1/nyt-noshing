@@ -2,7 +2,6 @@ class Api::RatingsController < ApplicationController
   def create
     @rating = Rating.new(rating_params)
     if @rating.create!
-      # render :show
       redirect_to "api/recipes/show"
     else
       render json: { errors: @rating.errors.full_messages }, status: 422;
