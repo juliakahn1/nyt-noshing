@@ -14,7 +14,7 @@ const RecipeBox = () => {
 
   useEffect(() => {
     dispatch(fetchSaves(userId))
-  }, [dispatch])
+  }, [dispatch, userId])
 
   if (!userId) return <Redirect to='/' />
 
