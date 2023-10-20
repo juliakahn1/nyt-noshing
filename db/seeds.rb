@@ -438,7 +438,365 @@ ApplicationRecord.transaction do
       tags: ['side', 'dinner', 'lunch']
     )
 
+    Recipe.create!(
+      name: 'Peanut Butter Sandies',
+      author: 'Julia Moskin',
+      blurb: 'This modern classic is reverse-engineered from a cult cookie at City Bakery in Manhattan. They are saltier, richer and tangier than the usual crisscross rounds, thanks to
+        updated ingredients like sea salt, cultured butter and brown sugar. And like any good “sandy” cookie, they have a soft, crumbly texture that melts away on first bite.',
+      yield: '3 to 4 dozen',
+      ingredients: ['1 cup/228 grams/2 sticks unsalted butter, preferably cultured, softened at room temperature',
+        '¾ cup/150 grams granulated sugar',
+        '¾ cup (packed)/170 grams light brown sugar',
+        '1 heaping teaspoon/6 grams kosher salt',
+        '2 cups/510 grams unsweetened peanut butter, creamy or chunky',
+        '2 eggs, at room temperature',
+        '2 cups/250 grams all-purpose flour',
+        'Flaky sea salt and coarse sugar for sprinkling (or use kosher salt and granulated sugar)'],
+      cook_time: "1 hour",
+      preparation: ['Heat oven to 350 degrees and line 2 baking sheets with parchment paper or nonstick liners. In a mixer fitted with a paddle attachment, cream the butter
+        and sugars until smooth and fluffy, at least 3 minutes. Add the peanut butter and eggs, and mix. Add the flour and salt and mix just until well combined, with no white \
+        flour showing.',
+        'Using a small cookie scoop (about 2 teaspoons capacity), scoop dough onto prepared pans. The tops will be rounded but craggy. The cookies will not spread much or change
+        shape when they bake, so they can be placed quite close together, but leave room for air circulation so they can brown.',
+        'In a small bowl, mix 2 tablespoons sugar with 1 tablespoon salt. Sprinkle each cookie lightly with sugar-salt mixture, getting it into the crags and crannies. Bake 12 to 15
+        minutes, until cookies are set and golden-brown. Carefully lift or slide off baking sheets and cool on racks. Store in layers separated by parchment paper, in airtight containers.'],
+      tags: ['dessert']
+    )
+
+    Recipe.create!(
+      name: 'My Favorite Challah',
+      author: 'Joan Nathan',
+      blurb: 'Throughout the years, I have picked up tips from challah bakers throughout this country and in Europe and Israel. For example: Several risings make a better loaf, and if
+        you want an especially brioche-like texture, let the dough rise slowly in the refrigerator for one of the three risings. The secret to a glossy loaf is to brush with an egg
+        wash twice, once just after braiding and then again just before baking.',
+      yield: '2 challahs',
+      ingredients: ['1½ packages active dry yeast (about 3½ teaspoons)',
+        '1 tablespoon plus ½ cup sugar',
+        '½ cup vegetable oil, more for greasing bowl',
+        '5 large eggs',
+        '1 tablespoon salt',
+        '8 to 8½ cups all-purpose flour',
+        '2 cups/250 grams all-purpose flour',
+        'Poppy or sesame seeds for sprinkling'],
+      cook_time: "1 hour",
+      preparation: ['In a large bowl, dissolve yeast and 1 tablespoon sugar in 1¾ cups lukewarm water.',
+        'Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt. Gradually add flour. When dough holds together, it is ready for kneading. (You can
+          also use a mixer with a dough hook for both mixing and kneading.)',
+        'Turn dough onto a floured surface and knead until smooth. Clean out bowl and grease it, then return dough to bowl. Cover with plastic wrap, and let rise in a warm place for
+          1 hour, until almost doubled in size. Dough may also rise in an oven that has been warmed to 150 degrees then turned off. Punch down dough, cover and let rise again in a
+          warm place for another half-hour.',
+        'To make a 6-braid challah, either straight or circular, take half the dough and form it into 6 balls. With your hands, roll each ball into a strand about 12 inches long and 1½
+          inches wide. Place the 6 in a row, parallel to one another. Pinch the tops of the strands together. Move the outside right strand over 2 strands. Then take the second
+          strand from the left and move it to the far right. Take the outside left strand and move it over 2. Move second strand from the right over to the far left. Start over with the
+          outside right strand. Continue this until all strands are braided. For a straight loaf, tuck ends underneath. For a circular loaf, twist into a circle, pinching ends together.
+          Make a second loaf the same way. Place braided loaves on a greased cookie sheet with at least 2 inches in between.',
+        'Beat remaining egg and brush it on loaves. Either freeze breads or let rise another hour.',
+        'If baking immediately, preheat oven to 375 degrees and brush loaves again. If freezing, remove from freezer 5 hours before baking. Then dip your index finger in the egg wash,
+          then into poppy or sesame seeds and then onto a mound of bread. Continue until bread is decorated with seeds.',
+        'Bake in middle of oven for 35 to 40 minutes, or until golden. Cool loaves on a rack.'],
+      tags: ['side', 'bread']
+    )
+
+    Recipe.create!(
+      name: 'Basque Cheesecake',
+      author: 'Marti Buckley',
+      blurb: 'Generously burnished and with a velvety, custardy interior, this rustic, crustless cheesecake from the Basque region of northern Spain is the platonic ideal of a low-effort,
+        high-reward dessert. The caramelized exterior evokes a toasty marshmallow, but the cake itself is not too sweet. Marti Buckley adapted this recipe from La Viña, a small bar in
+        San Sebastián, for her cookbook, “Basque Country” (Artisan, 2018). This statement cake is achieved using only five primary ingredients. It’s baked at a higher temperature than a
+        classic New York cheesecake and in the hot oven, the cheesecake dramatically inflates into a soufflé-like puff before sinking into itself, creating a cradle for fresh fruit,
+        should you wish to serve it with some. But Basque cheesecake is perfect on its own, at its arguable prime the day after it’s made, enjoyed at room temperature.',
+      yield: '12 servings',
+      ingredients: ['Unsalted butter or nonstick spray, for greasing the pan',
+        '1¾ cups/350 grams granulated sugar',
+        '2¼ pounds/36 ounces cream cheese, at room temperature',
+        '¼ teaspoon kosher salt (such as Diamond Crystal)',
+        '5 large eggs',
+        '2 cups/480 milliliters heavy cream',
+        '¼ cup/30 grams all-purpose flour'],
+      cook_time: "1 hour 40 minutes, plus cooling",
+      preparation: ['Place a rack in the center of the oven and heat the oven to 400 degrees. Grease a 10-inch springform pan and line with parchment paper, leaving 2 to 3 inches
+        overhanging the top of the pan. (You can trace and cut a circle to fit the base and then cut a band of paper to fit neatly around the sides, but the more rustic and simple
+        method is to press an entire sheet into the pan, pleating the paper where it begins to crease. If you use multiple sheets of parchment, grease in between the layers so that
+        they stick and lay flat.)',
+        'In a large bowl using a handheld mixer or in the bowl of a stand mixer fitted with the paddle attachment, cream the sugar and cream cheese until smooth. (This can be done by
+        hand as well; beat with a wooden spoon for about 5 minutes.)',
+        'Add the salt and mix. Add the eggs one by one and beat until fully incorporated. Beat in the cream. Sift in the flour, then mix it in on low.',
+        'Pour the batter into the prepared pan and bake until browned and almost burnt on top, 50 to 60 minutes. The center will still be quite jiggly. Remove the cake from the oven
+        and cool completely on a rack. It will have risen significantly, nearly past the top of the pan, but it will sink in the center as it cools.',
+        'Before serving, remove the rim of the springform and gently tug away the parchment paper. Serve at room temperature.'],
+      tags: ['dessert']
+    )
+
+    Recipe.create!(
+      name: 'Tortilla Española',
+      author: 'Manolo Intriago',
+      blurb: 'Perhaps the most Spanish of all tapas, this potato omelet makes a satisfying meal on its own; you can also serve it as a part of a spread with jamón, serrano, chorizo,
+      cheese, olives and piquillo peppers. Poaching the potatoes and onions in olive oil makes them almost creamy. (Keep the infused oil in the fridge; it’s great for dipping bread or
+      other uses.)',
+      yield: '8 - 12 servings',
+      ingredients: ['1¼ pounds onions, diced',
+        '1 large green bell pepper, seeded and chopped',
+        '4 cloves garlic, minced',
+        '2½ pounds russet potatoes',
+        'Kosher salt, to taste',
+        '4 cups extra-virgin olive oil',
+        '10 large eggs'],
+      cook_time: "1 hour",
+      preparation: ['Place the onions, pepper and garlic in a large bowl. Peel the potatoes, quarter them lengthwise, and slice those crosswise into 1/8th inch tiles. (A mandoline
+        is great for this.) Add them to the onion mixture and season with 2 teaspoons kosher salt.',
+        'Heat the oil over high heat in a 12-inch, deep-sided skillet (preferably nonstick or well-seasoned cast iron). Drop 1 potato tile into the oil as it heats; when it floats and
+        then begins to fry vigorously, carefully add all the potato-onion mixture and stir gently.',
+        'Cook the potatoes at a vigorous simmer, stirring occasionally so they don’t brown too much on the bottom, until they are very soft but not quite losing their shape, 20 to 25
+        minutes. Drain the potatoes through a colander and let them cool until warm.',
+        'Beat the eggs in a large bowl. Taste the potatoes for salt and season the eggs with salt accordingly. Stir the potatoes into the eggs.',
+        'Place the skillet over medium high heat. When it is very hot, pour in the potato mixture, spread evenly and turn heat to medium. Using a spatula, gently pull the edges of the
+        tortilla towards the center to release them from the pan and let any liquid egg run out the sides.',
+        'After 4 minutes, cover the pan with the bottom of an oiled baking sheet. Using towels or oven mitts, carefully flip the pan onto the sheet, place the pan back over the heat,
+        then slide the inverted tortilla back into the pan. Cook, without stirring, for 3 minutes. Both sides of the tortilla should be golden brown.',
+        'Insert a long skewer into the side of the tortilla to see how wet it is inside. Some prefer the inside a little moist, some fully cooked. You can continue to cook it, flipping
+        the tortilla as described once a minute, until it’s done to your liking. Serve warm or at room temperature.'],
+      tags: ['side', 'appetizer']
+    )
+
+    Recipe.create!(
+      name: 'Pan Con Tomate',
+      author: 'David Tanis',
+      blurb: "Some version of tomatoes on toast — a juicy American B.L.T. or Italian tomato-topped bruschetta — is always a good idea, but that's especially true during high summer,
+      when tomatoes are at their peak. One superior combination comes from Barcelona, where a slice of toast is rubbed with garlic and juicy ripe tomatoes, then anointed with olive oil.
+      Most Catalan cooks simply cut the tomato crosswise and vigorously massage the toasted bread with the cut side. Others grate the tomato flesh and spoon it over the bread. This
+      version adds tomato slices and a scattering of cherry tomatoes for a substantial first course.",
+      yield: '4 to 6 servings',
+      ingredients: ['3 or 4 very ripe medium tomatoes (about 1½ pounds)',
+        '1 pint cherry tomatoes (about 12 ounces)',
+        '4 to 6 large slices sturdy sourdough bread, about ½-inch thick',
+        '4 to 6 garlic cloves, peeled',
+        'Salt and pepper',
+        'Extra-virgin olive oil',
+        'Basil leaves, for garnish (optional)'],
+      cook_time: "30 minutes",
+      preparation: ['Cut 2 tomatoes in half crosswise. Place a box grater in a shallow bowl and grate the tomato flesh from the cut sides, pushing through the large holes.
+        You should have 1 cup or so of coarse tomato purée. Set purée aside, and discard tomato skins.',
+        'Cut remaining large tomatoes into ¼-inch slices. Cut cherry tomatoes in half. Set aside.',
+        'Toast the bread until nicely browned and crisp. (Toasting over a charcoal grill yields a rich, smoky flavor, but a toaster, toaster oven or broiler works just as well.)',
+        'With your fingers, rub the top of each toast with a garlic clove. You will see the cloves get smaller as the garlic is dispersed, pushed into the bread. (For a less garlicky
+        toast, press lightly when rubbing.)',
+        'Place toasts on a platter or individual plates. Spoon and spread a heaping tablespoon of tomato purée over each toast. Then arrange tomato slices and cherry tomatoes randomly on top.',
+        'Sprinkle generously with salt, pepper and a tablespoon of extra-virgin olive oil per toast. Garnish with whole or torn basil leaves, if using.'],
+      tags: ['side', 'appetizer']
+    )
+
+    Recipe.create!(
+      name: 'Horchata',
+      author: 'Kiera Wright-Ruiz',
+      blurb: "Horchata is a Latin American beverage that’s made by soaking nuts and grains in water then seasoning the mixture with sugar and spices. The drink originated in Spain
+      over 1,000 years ago, but many countries have their own regional variations. This is an adaptation of a Mexican version, also known as agua de horchata, that’s made with rice,
+      sugar, cinnamon and almonds, which provide rich flavor and texture, but leave them out if you like. Serve horchata over ice alongside a plate of spicy food — or try this dirty
+      horchata recipe for a caffeine kick.",
+      yield: '8 servings',
+      ingredients: ['2 cups uncooked long-grain white rice',
+        '1 cup whole raw, unsalted almonds (optional)',
+        '1 cup granulated sugar',
+        '1 tablespoon ground cinnamon, plus more to taste'],
+      cook_time: "15 minutes, plus overnight soaking",
+      preparation: ['Put the rice, almonds (if using) and 8 cups water into a large pitcher or bowl. Cover container and let soak overnight (at least 8 hours) at room temperature.',
+        'Remove 4 cups liquid from the rice and almonds; reserve. Transfer the remaining liquid, rice and almonds to a blender, and blend, in batches if necessary, until solids are
+        finely ground, 2 to 3 minutes.',
+        'Place a fine-mesh strainer over a large bowl and pour the ground rice and almond mixture into the strainer. Use a spoon to press the solids to extract as much liquid as
+        possible. (You could also strain the liquid through a cheesecloth if you want your horchata to be extra smooth.) Discard the solids. Transfer the strained liquid to a large
+        pitcher (or keep it in the bowl) and mix in the reserved 4 cups liquid from Step 2.',
+        'Add sugar and cinnamon, and stir well. Serve over ice and dust with ground cinnamon, if desired.'],
+      tags: ['drinks']
+    )
+
+    Recipe.create!(
+      name: 'Orange-Almond Mandelbrot',
+      author: 'Joan Nathan',
+      blurb: "Mandelbrot (or mandel bread) is an Eastern European Jewish cookie, a variation on biscotti. The dough is baked twice: first in a log, and then again after it's been
+      sliced into cookies. This recipe includes the smart trick of freezing the dough after baking it the first time, then cutting it into slices when still frozen before baking again.
+      This makes for a thinner slice, fewer crumbs when cutting and a crispier texture. You can make it with matzo cake meal during Passover — a delicious variation.",
+      yield: 'About 30 cookies',
+      ingredients: ['2 cups plus 1 tablespoon/264 grams all-purpose flour or 1½ cups/204 grams matzo cake meal',
+        '½ cup/85 grams potato starch',
+        '½ cup/55 grams almond flour',
+        '1½ teaspoons cinnamon',
+        '½ teaspoon sea salt',
+        '1¼ cups/250 grams granulated sugar',
+        '12 tablespoons/169 grams/1½ sticks unsalted butter or coconut oil, at room temperature',
+        '3 large eggs',
+        '1 cup/126 grams slivered almonds',
+        '½ teaspoon vanilla',
+        'Zest of 2 oranges'],
+      cook_time: "1¼ hours, plus chilling",
+      preparation: ['In a large bowl, mix flour or matzo cake meal, potato starch, almond flour, ½ teaspoon cinnamon and the salt.',
+        'In the bowl of a stand mixer fitted with the paddle attachment, cream 1 cup/200 grams sugar and the butter or coconut oil. Add eggs, one at a time, mixing well after each
+        addition. Stir in flour or matzo mixture, almonds, vanilla and orange zest.',
+        'Place half the dough on a piece of parchment paper about 20 inches long. Use parchment paper to help mold the dough into a log about 10 inches long and 2 inches in diameter.
+        (The dough is very soft and may be hard to worth with.) Gently press down along the top of the log to flatten it slightly. Twist ends of the parchment paper to seal. Repeat with
+        the remaining dough. Refrigerate both logs for at least 1 hour.',
+        "Heat oven to 350 degrees and line a baking sheet with parchment paper. Unwrap dough logs and put on the prepared baking sheet, side by side. Bake logs for 35 to 45 minutes, until
+        just beginning to brown. The dough should not be too cracked on the top. It is better to underbake than overbake.",
+        'Let logs cool, wrap in plastic and freeze until you are ready to finish them, or for at least 1 hour.',
+        'Heat oven to 350 degrees and line 2 baking sheets with parchment paper. Mix remaining 1 teaspoon cinnamon and ¼ cup/50 grams sugar in a small bowl and set aside.',
+        'Remove logs from freezer. With a sharp, serrated knife, cut the logs into roughly ½-inch-thick slices, discarding the end slices if they fall apart. (If the logs have been in
+        the freezer for several hours, let them sit at room temperature for a few minutes before slicing.)',
+        'Dip both sides of each slice in the cinnamon-sugar mixture and place them flat on prepared baking sheets. Bake for 10 to 15 minutes, carefully turn slices over, then bake another
+        10 minutes, or until golden brown and starting to crisp.'],
+      tags: ['dessert']
+    )
+
     puts "Reviewing recipes..."
+    Note.create!(
+      body: "A great flavor of mandelbread! I think mine is the best, of course, and of course my recipes comes from the back of an old notecard that my grandmother gave me.",
+      name: "Mandel",
+      user_id: 2,
+      recipe_id: 21
+    )
+
+    Note.create!(
+      body: "Corn starch or tapioca starch should work but the amount will probably need to be increased by about 1/3.",
+      name: "Brot",
+      user_id: 4,
+      recipe_id: 21
+    )
+
+    Note.create!(
+      body: "I liked the addition of the almonds and double-strained the mixture. But, rather than discarding the solids, I fed it to my chickens, who also give rave reviews!",
+      name: "Horace",
+      user_id: 2,
+      recipe_id: 20
+    )
+
+    Note.create!(
+      body: "Horchata is delicious in coffee-- Try equal parts horchata and cold-brew coffee on ice.",
+      name: "Chatty",
+      user_id: 3,
+      recipe_id: 20
+    )
+
+    Note.create!(
+      body: "Horchata good, with about half the sugar called for, and just a sprinkling of cinnamon. And, rather than throw away the ground rice and almonds, I thought I'd try making
+      appams (Indian rice pancakes) with it. It worked! Although the almonds made the appams more fragile, they are delicious.",
+      name: "Sugar",
+      user_id: 3,
+      recipe_id: 20
+    )
+
+    Note.create!(
+      body: "Absolute perfection.",
+      name: "Julia",
+      user_id: 2,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "This is the quintessential Spanish breakfast, and it simply cannot be improved upon. It's simple, satisfying, savory. With a cafe con leche, perfecto.",
+      name: "Pan",
+      user_id: 2,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "If it's in Barcelona, it's pa amb tomàquet in Catalan.",
+      name: "Cat",
+      user_id: 3,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "We live in Barcelona and, while this recipe photo is beautiful, it's definitely not what Catalan tomato bread (pa amb tomàquet) ever looks like. Tomatoes
+      here are always halved and rubbed directly onto the bread, and the result is light and delicious. Also, I've never seen basil used here with tomato bread.
+      That seems much more like Italian bruschetta.",
+      name: "Barthelona",
+      user_id: 4,
+      recipe_id: 19
+    )
+
+    Note.create!(
+      body: "I learned to make tortilla espanola from a woman in NW Spain and use about 4-6 Tablespoon oil for this size recipe..cooking the potatoes and onions (no bell pepper) slowly
+      over medium to medium low heat until soft and not browned. Then continuing with the eggs. There is no need to drain oil.",
+      name: "Span Ish",
+      user_id: 3,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "Everyone is a critique! I appreciated the recipe and was glad to cook it. It helps to have an open mind. I am sure that everyone's tias and mamas made it differently, but
+      they probably also made it a little differently every time. Thank you very much for the recipe! I had as much fun making it as I did eating it.",
+      name: "Espie",
+      user_id: 3,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "I love the recipes on this site, but this one is really really bad. You don't put peppers or garlic in a Tortilla Española.",
+      name: "Torry",
+      user_id: 2,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "Garlic? Peppers? Please. No! One pan. Cook potatoes and Onion gently in gererous olive oil but no draining. Salt. No pepper. Eggs. Flip. Done.",
+      name: "Olive",
+      user_id: 2,
+      recipe_id: 18
+    )
+
+    Note.create!(
+      body: "I have the original recipe from La Vina restaurant in San Sebastian that was used as the inspiration for this recipe. No idea where I got it from but it uses a 6 inch
+        pan (I use a Fat Daddio) and it's amazing. It's also super quick to make. It fits in our toaster oven.",
+      name: "Joseph",
+      user_id: 4,
+      recipe_id: 17
+    )
+
+    Note.create!(
+      body: "Another trick to make parchment paper pliable is to wrinkle it up into a tight ball so that it has lots of creases. It's equivalent to wetting and wringing it out,
+      without having to dry it off.",
+      name: "Che Iescake",
+      user_id: 4,
+      recipe_id: 17
+    )
+
+    Note.create!(
+      body: "Your illustration shows light bands of crust between the golden dark patches of crust. This comes from the rising in the oven revealing surfaces that had no egg wash.
+        If you want that uniform brown crust, remove the loaf after 15 Minutes in the oven and reapply eggwash to the light areas that have appeared.",
+      name: "Holla",
+      user_id: 4,
+      recipe_id: 16
+    )
+
+    Note.create!(
+      body: "Here's my trick for making what looks like a 6-braid challah, only much easier. Use 2/3 of the dough to make a large 3-braid loaf, and the remaining 1/3 to make a smaller
+      one. Brush them both with your egg wash and then place the smaller one atop the larger.",
+      name: "Breadward",
+      user_id: 4,
+      recipe_id: 16
+    )
+
+    Note.create!(
+      body: "I agree that Honey makes for a better Challah, and since you offered this for the High Holy Days, adding some 1/2 C plump golden raisins is both delicious and a nod to the 'sweetness' for the new year.",
+      name: "Dough",
+      user_id: 4,
+      recipe_id: 16
+    )
+
+    Note.create!(
+      body: "This peanut butter cookie recipe is a must-try for any cookie lover. The cookies turn out soft and chewy with a rich peanut butter flavor that's simply irresistible.
+        The ingredients are simple, and the instructions are easy to follow, making it a great choice for both novice and experienced bakers. With the perfect balance of sweetness and
+        nuttiness, these cookies are a delightful treat for any occasion. They're sure to disappear quickly, so be ready to bake another batch!",
+      name: "Pea",
+      user_id: 4,
+      recipe_id: 15
+    )
+
+    Note.create!(
+      body: "These peanut butter cookies are the real peanut deal! They're so good, they could turn a peanut skeptic into a fan. With each bite, you'll be dancing like a nutcracker in
+        peanutty ecstasy. Just don't blame me when you find yourself hiding the batch from cookie-loving spies!",
+      name: "Nut",
+      user_id: 5,
+      recipe_id: 15
+    )
+
     Note.create!(
       body: "Chocolate babka or bust! I didn't eat that cookie for nothing!",
       name: "Jerry",
@@ -1060,15 +1418,147 @@ ApplicationRecord.transaction do
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 14,
       score: 5
     )
 
     Rating.create!(
-      user_id: 1,
+      user_id: 2,
       recipe_id: 14,
       score: 3
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 15,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 3,
+      recipe_id: 15,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 15,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 5,
+      recipe_id: 15,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 3,
+      recipe_id: 16,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 16,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 17,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 3,
+      recipe_id: 17,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 5,
+      recipe_id: 17,
+      score: 3
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 17,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 18,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 18,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 3,
+      recipe_id: 18,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 5,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 1,
+      recipe_id: 19,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 20,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 2,
+      recipe_id: 21,
+      score: 4
+    )
+
+    Rating.create!(
+      user_id: 3,
+      recipe_id: 21,
+      score: 5
+    )
+
+    Rating.create!(
+      user_id: 4,
+      recipe_id: 21,
+      score: 5
     )
   end
 
