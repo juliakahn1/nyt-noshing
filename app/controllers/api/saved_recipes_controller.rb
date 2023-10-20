@@ -1,11 +1,13 @@
 class Api::SavedRecipesController < ApplicationController
     def index
         user = current_user
-        @saved_recipes = user.saved_recipes
+        user ? @saved_recipes = user.saved_recipes : @saved_recipes = nil
         if @saved_recipes
             render :index
+        elsif @saved_recipe != nil
+            render json: { errors: @saved_recipes.errors.full_messages }, status: 422
         else
-            render json: { errors: @notes.errors.full_messages }, status: 422
+            render json: { errors: 'Try again later'}
         end
     end
 
@@ -14,8 +16,10 @@ class Api::SavedRecipesController < ApplicationController
 
         if @saved_recipe.save!
             render :create
-        else
+        elsif @saved_recipe != nil
             render json: { errors: @saved_recipe.errors.full_messages }
+        else
+            render json: { errors: 'Try again later'}
         end
     end
 
