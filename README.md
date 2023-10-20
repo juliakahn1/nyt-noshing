@@ -8,7 +8,8 @@ NYT Noshing is a clone of the NYT Cooking website. Upon visiting the former site
 
 1. [Features](#features)
 2. [Technologies](#technologies)
-3. [Featured code](#featured-code)
+3. [Dev environment setup](#dev-environment-setup)
+4. [Featured code](#featured-code)
 3. [Future features](#future-features)
 
 # Features
@@ -47,6 +48,10 @@ NYT Noshing was built with:
 - HTML
 - Postgresql
 - Amazon Web Services
+
+# Dev environment setup
+
+To run NYT Noshing locally, run `npm start` for frontend and `rails s` for backend.
 
 # Featured code
 
@@ -103,9 +108,6 @@ Efficiently, how might we render the Recipe Box navigation that pulls the cateog
 3. Create an event listener on the navigational tab that sets a local state variable to be the tab clicked, which filters the index to include only the recipes that call under the state variable.
 
 # Future features
-**Recipe ratings**
-
-Allow signed-in users to rate recipes on a scale of 1 to 5 on an individual's recipe's page.
 
 **Recipe category navigation**
 
