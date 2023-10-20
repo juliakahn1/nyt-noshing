@@ -17,7 +17,7 @@ class ApplicationController < ActionController::API
     def require_logged_in
         if !logged_in?
             # no redirects in single page app
-            render json: { errors: ['You must be logged in'] }, status: :unauthorized
+            render '/api/recipes/index'
         end
     end
 
