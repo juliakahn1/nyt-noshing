@@ -38,15 +38,16 @@ NYT Noshing is a clone of the NYT Cooking website. Upon visiting the former site
 # Technologies
 
 NYT Noshing was built with:
-- React
-- Redux
-- JavaScript
-- Ruby
-- Rails
-- CSS / SCSS
-- HTML
-- Postgresql
-- Amazon Web Services
+- [React](https://react.dev/)
+- [Redux](https://redux.js.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Rails](https://rubyonrails.org/)
+- [CSS](https://www.w3schools.com/css/) / [SCSS](https://sass-lang.com/)
+- [HTML](https://www.w3schools.com/html/)
+- [Postgresql](https://www.postgresql.org/)
+- [Amazon Web Services](https://aws.amazon.com/free/?trk=fce796e8-4ceb-48e0-9767-89f7873fac3d&sc_channel=ps&ef_id=CjwKCAjwysipBhBXEiwApJOcu8p3w5r5euoPeg7Ka_X0mSE1K-Q3lOsbIBAQo3Ra0WvfJkZ6ko25GhoCqwkQAvD_BwE:G:s&s_kwcid=AL!4422!3!432339156147!e!!g!!amazon%20web%20services!1644045032!68366401812)
+- [Render](https://render.com/)
 
 # Dev environment setup
 
