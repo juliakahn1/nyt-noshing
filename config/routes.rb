@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :recipes, only: [:show, :index] do
       resources :notes, except: [:show]
     end
-    resources :ratings, only: [:create, :destroy]
+    resources :ratings, only: [:create, :destroy, :update]
   end
 end
