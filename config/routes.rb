@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     end
     resources :ratings, only: [:create, :destroy, :update]
   end
+
+  get '*path', to: "static_pages#frontend_index"
 end
