@@ -1,14 +1,21 @@
-import RatingStarRadios from "./RatingStarRadios"
-import NoteItem from "./NoteItem"
-import { useSelector } from "react-redux"
 import React from "react"
+import { useDispatch, useSelector } from "react-redux"
+import RatingStarRadios from "./RatingStarRadios"
+import { deleteRating } from "../../store/ratings"
+import NoteItem from "./NoteItem"
 import NoteForm from "./NoteForm"
 
 const RatingsNotesSection = ({ recipe }) => {
+  const dispatch = useDispatch()
+
   const notes = useSelector(store => store.notes)
   const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
   notesSubset.reverse()
   const numNotes = notesSubset.length
+
+  const clearRating = () => {
+    dispatch(deleteRating(recipe))
+  }
 
   return (
     <>
@@ -23,7 +30,10 @@ const RatingsNotesSection = ({ recipe }) => {
             </div>
           </div>
           <div className="show-recipe-your-rating-wrapper">
-            <h4 className="show-recipe-your-rating-header">Your rating</h4>
+            <div className="show-recipe-rating-title-clear-wrapper">
+              <h4 className="show-recipe-your-rating-header">Your rating</h4>
+              { recipe.currentUserRating ? <button className="clear-rating-button" onClick={clearRating}>Clear</button> : <></> }
+            </div>
             <div className="show-recipe-your-rating-stars-wrapper">
               <RatingStarRadios recipe={recipe} />
             </div>
