@@ -10,10 +10,6 @@ const RatingsNotesSection = ({ recipe }) => {
   notesSubset.reverse()
   const numNotes = notesSubset.length
 
-  // const clearRating = () => {
-  //   dispatch(deleteRating(recipe.currentUserRating.id, recipe.id))
-  // }
-
   return (
     <>
       <div className="show-ratings-notes-wrapper">
