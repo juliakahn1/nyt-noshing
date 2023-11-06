@@ -356,6 +356,12 @@
     padding-bottom: 20px;
 }
 
+.show-recipe-rating-title-clear-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .show-recipe-your-rating-header {
     position: relative;
     margin-bottom: 16px;
@@ -364,7 +370,27 @@
     font-size: 1rem;
     letter-spacing: .02em;
     line-height: 1.45;
+
 }
+
+.clear-rating-button {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    font-family: nyt-franklin,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: .02em;
+    line-height: 1.45;
+    color: #717171;
+    cursor: pointer;
+
+    &:hover {
+        color: #df321b;
+    }
+}
+
 .show-recipe-your-rating-stars-wrapper {
     position: relative;
     display: inline-block;

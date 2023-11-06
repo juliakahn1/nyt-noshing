@@ -1,7 +1,7 @@
+import React from "react"
+import { useSelector } from "react-redux"
 import RatingStarRadios from "./RatingStarRadios"
 import NoteItem from "./NoteItem"
-import { useSelector } from "react-redux"
-import React from "react"
 import NoteForm from "./NoteForm"
 
 const RatingsNotesSection = ({ recipe }) => {
@@ -9,6 +9,10 @@ const RatingsNotesSection = ({ recipe }) => {
   const notesSubset = Object.values(notes).filter(note => note.recipeId === recipe.id)
   notesSubset.reverse()
   const numNotes = notesSubset.length
+
+  // const clearRating = () => {
+  //   dispatch(deleteRating(recipe.currentUserRating.id, recipe.id))
+  // }
 
   return (
     <>
@@ -22,12 +26,15 @@ const RatingsNotesSection = ({ recipe }) => {
               <p className="show-recipe-avg-rating-text num-ratings">{recipe.numRatings} user ratings</p>
             </div>
           </div>
-          <div className="show-recipe-your-rating-wrapper">
-            <h4 className="show-recipe-your-rating-header">Your rating</h4>
-            <div className="show-recipe-your-rating-stars-wrapper">
-              <RatingStarRadios recipe={recipe} />
-            </div>
-          </div>
+          {/* <div className="show-recipe-your-rating-wrapper"> */}
+            {/* <div className="show-recipe-rating-title-clear-wrapper">
+              <h4 className="show-recipe-your-rating-header">Your rating</h4>
+              { recipeRating ? <button className="clear-rating-button" onClick={clearRating}>Clear</button> : <></> }
+            </div> */}
+            {/* <div className="show-recipe-your-rating-stars-wrapper"> */}
+            <RatingStarRadios recipe={recipe} />
+            {/* </div> */}
+          {/* </div> */}
         </div>
         <div className="show-notes-wrapper">
           <h2 className="show-recipe-header">cooking notes</h2>
