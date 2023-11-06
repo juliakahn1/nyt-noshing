@@ -1,23 +1,6 @@
 import csrfFetch from "./csrf"
 import { fetchRecipe } from "./recipes"
 
-// const ADD_RATING = 'api/receiveRating'
-// const REMOVE_RATING = 'api/removeRating'
-
-// export const addRating = (rating) => {
-//   return {
-//     type: ADD_RATING,
-//     rating
-//   }
-// }
-
-// export const removeRating = (rating) => {
-//   return {
-//     type: REMOVE_RATING,
-//     rating
-//   }
-// }
-
 export const createRating = (rating) => async (dispatch) => {
   const res = await csrfFetch('/api/ratings', {
     method: "POST",
@@ -54,12 +37,3 @@ export const deleteRating = (ratingId, recipeId) => async (dispatch) => {
     dispatch(fetchRecipe(recipeId))
   }
 }
-
-// export const RatingsReducer = (store = {}, action) => {
-//   switch (action.type) {
-//     case RECEIVE_RECIPE: // I want this to force a recipe re-render
-//       return { ...store, [action.rating.recipeId]: action.rating}
-//     default:
-//       return store
-//   }
-// }
