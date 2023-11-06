@@ -2,12 +2,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { createRating } from "../../store/ratings";
 import { fetchRecipe } from "../../store/recipes";
+import { deleteRating } from "../../store/ratings"
 
 const RatingStarRadios = ({recipe}) => {
   let starDisplay;
   const dispatch = useDispatch()
   const currentUser = useSelector(store => store.session?.user)
   const [hover, setHover] = useState(0)
+  const recipeRating = useSelector(store => store.recipe?.currentUserRating)
+
 
   const setRating = (e, index) => {
     e.preventDefault()
@@ -16,6 +19,10 @@ const RatingStarRadios = ({recipe}) => {
       score: index,
       userId: currentUser.id
     }))
+  }
+
+  const clearRating = () => {
+    dispatch(deleteRating(recipe.currentUserRatingId, recipe.id))
   }
 
   recipe.currentUserRating ? starDisplay = ( // if user has reviewed recipe
@@ -57,11 +64,19 @@ const RatingStarRadios = ({recipe}) => {
   )
   return (
     <>
-      <form className="show-recipe-your-rating-stars-form">
-        <div role="radiogroup" className="show-recipe-interactive-stars">
-          { starDisplay }
+      <div className="show-recipe-your-rating-wrapper">
+        <div className="show-recipe-rating-title-clear-wrapper">
+          <h4 className="show-recipe-your-rating-header">Your rating</h4>
+          { recipeRating ? <button className="clear-rating-button" onClick={clearRating}>Clear</button> : <></> }
         </div>
-      </form>
+        <div className="show-recipe-your-rating-stars-wrapper">
+          <form className="show-recipe-your-rating-stars-form">
+            <div role="radiogroup" className="show-recipe-interactive-stars">
+              { starDisplay }
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   )
 }

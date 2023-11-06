@@ -32,12 +32,12 @@ export const createRating = (rating) => async (dispatch) => {
   }
 }
 
-export const deleteRating = (rating) => async (dispatch) => {
-  const res = await csrfFetch('/api/ratings/${rating.id}', {
+export const deleteRating = (ratingId, recipeId) => async (dispatch) => {
+  const res = await csrfFetch(`/api/ratings/${ratingId}`, {
     method: "DELETE",
   })
   if (res.ok) {
-    dispatch(fetchRecipe(rating.recipe.id))
+    dispatch(fetchRecipe(recipeId))
   }
 }
 
