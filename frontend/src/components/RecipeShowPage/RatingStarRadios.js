@@ -5,12 +5,13 @@ import { fetchRecipe } from "../../store/recipes";
 import { deleteRating } from "../../store/ratings"
 
 const RatingStarRadios = ({recipe}) => {
-  let starDisplay;
   const dispatch = useDispatch()
-  const currentUser = useSelector(store => store.session?.user)
   const [hover, setHover] = useState(0)
-  const recipeRating = useSelector(store => store.recipe?.currentUserRating)
 
+  const currentUser = useSelector(store => store.session?.user)
+  const recipeRating = useSelector(store => store.recipes[recipe.id]?.currentUserRating)
+
+  let starDisplay;
 
   const setRating = (e, index) => {
     e.preventDefault()
