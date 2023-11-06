@@ -12,12 +12,9 @@ const RatingStarRadios = ({ recipe }) => {
   const recipeRating = useSelector(store => store.recipes[recipe.id]?.currentUserRating)
   const recipeRatingId = useSelector(store => store.recipes[recipe.id]?.currentUserRatingId)
 
-  let starDisplay;
-
   const setRating = (e, index) => {
     e.preventDefault()
     if (recipeRating) { // if PATCH
-      debugger
       dispatch(updateRating({
         recipeId: recipe.id,
         score: index,

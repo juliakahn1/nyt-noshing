@@ -26,15 +26,7 @@ const RatingsNotesSection = ({ recipe }) => {
               <p className="show-recipe-avg-rating-text num-ratings">{recipe.numRatings} user ratings</p>
             </div>
           </div>
-          {/* <div className="show-recipe-your-rating-wrapper"> */}
-            {/* <div className="show-recipe-rating-title-clear-wrapper">
-              <h4 className="show-recipe-your-rating-header">Your rating</h4>
-              { recipeRating ? <button className="clear-rating-button" onClick={clearRating}>Clear</button> : <></> }
-            </div> */}
-            {/* <div className="show-recipe-your-rating-stars-wrapper"> */}
             <RatingStarRadios recipe={recipe} />
-            {/* </div> */}
-          {/* </div> */}
         </div>
         <div className="show-notes-wrapper">
           <h2 className="show-recipe-header">cooking notes</h2>
