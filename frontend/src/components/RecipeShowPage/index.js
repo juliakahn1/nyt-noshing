@@ -1,4 +1,4 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipe } from '../../store/recipes.js';
@@ -8,23 +8,23 @@ import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 import "./RecipeShowPage.scss"
 
 const RecipeShowPage = () => {
-    const { recipeId } = useParams()
-    const dispatch = useDispatch()
-    const recipe = useSelector(store => store.recipes[recipeId])
-    const userId = useSelector(store => store.session?.user?.id)
+	const { recipeId } = useParams()
+	const dispatch = useDispatch()
+	const recipe = useSelector(store => store.recipes[recipeId])
+	const userId = useSelector(store => store.session?.user?.id)
 
-    useEffect(() => {
-        dispatch(fetchRecipe(recipeId))
-    }, [dispatch, recipeId])
+	useEffect(() => {
+		dispatch(fetchRecipe(recipeId))
+	}, [dispatch, recipeId])
 
-    if (!userId) return <Redirect to='/'/>
+	if (!userId) return <Redirect to='/' />
 
-    return recipe ? (
-        <>
-            <RecipeData recipe={recipe} />
-            <RatingsNotesSection recipe={recipe} />
-        </>
-    ) : (<></>)
+	return recipe ? (
+		<>
+			<RecipeData recipe={recipe} />
+			<RatingsNotesSection recipe={recipe} />
+		</>
+	) : (<></>)
 }
 
 export default RecipeShowPage
