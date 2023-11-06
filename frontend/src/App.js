@@ -13,12 +13,12 @@ const App = () => {
     <>
       <Navigation />
       <ScrollToTop />
-      <Switch>
-        <Route path="/recipes/:recipeId" component={RecipeShowPage}/>
-        <Route path="/recipe-box" component={RecipeBox} />
-        <Route path="/:query" component={SearchResults} />
-        <Route path="/" component={RecipesHome} />
-      </Switch>
+        <Switch>
+          <Route path="/recipes/:recipeId" component={RecipeShowPage} />
+          <Route path="/recipe-box" component={RecipeBox} />
+          <Route path="/:query" component={SearchResults} />
+          <Route path="/" component={RecipesHome} />
+        </Switch>
       <Footer />
     </>
   );
