@@ -33,7 +33,7 @@ const Footer = () => {
                 <a className="footer-body footer-link" href="https://github.com/juliakahn1/javascriptspanish" target="_blank" rel="noreferrer">
                   JavaScriptSpanish
                 </a>
-                <a className="footer-body footer-link" href="https://https://github.com/juliakahn1/amateur-hour" target="_blank" rel="noreferrer">
+                <a className="footer-body footer-link" href="https://github.com/juliakahn1/amateur-hour" target="_blank" rel="noreferrer">
                   Amateur Hour
                 </a>
               </div>
