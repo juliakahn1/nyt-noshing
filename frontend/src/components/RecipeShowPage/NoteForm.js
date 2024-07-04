@@ -34,7 +34,7 @@ const NoteForm = ({ recipeId }) => {
           setErrors([res.statusText])
         }
       }
-    )
+      )
   }
 
   const clearForm = () => {

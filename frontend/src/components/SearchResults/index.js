@@ -43,7 +43,7 @@ const SearchResults = () => {
     resultsIndex = (
       <>
         <ul className="search-index-pantry-tiles">
-          { recipeResults.map (recipe => {
+          {recipeResults.map(recipe => {
             return (
               <li key={Math.random()} className="search-item">
                 <RecipeItem recipe={recipe} />
@@ -73,8 +73,8 @@ const SearchResults = () => {
   return (
     <>
       <div className="search-wrapper">
-        { searchHeader }
-        { resultsIndex }
+        {searchHeader}
+        {resultsIndex}
       </div>
     </>
   )
