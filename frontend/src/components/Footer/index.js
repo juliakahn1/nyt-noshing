@@ -28,13 +28,15 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-info-right-column">
-              <h3 className="footer-header">Other Projects</h3>
-              <a className="footer-body footer-link" href="https://github.com/juliakahn1/javascriptspanish" target="_blank" rel="noreferrer">
-                JavaScriptSpanish
-              </a>
-              <a className="footer-body footer-link" href="https://https://github.com/juliakahn1/amateur-hour" target="_blank" rel="noreferrer">
-                Amateur Hour
-              </a>
+              <div className="footer-link-grouping">
+                <h3 className="footer-header">Other Projects</h3>
+                <a className="footer-body footer-link" href="https://github.com/juliakahn1/javascriptspanish" target="_blank" rel="noreferrer">
+                  JavaScriptSpanish
+                </a>
+                <a className="footer-body footer-link" href="https://https://github.com/juliakahn1/amateur-hour" target="_blank" rel="noreferrer">
+                  Amateur Hour
+                </a>
+              </div>
             </div>
           </div>
         </div>
